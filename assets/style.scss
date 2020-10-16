@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+$bg: 'https://res.cloudinary.com/dmeppscpx/image/upload/w_1920,f_auto,q_auto/v1602337522/sapiangroup/bg_sapian-group.png';
+$accent: #90e0ef;
+$accentDark: #205cff;
+$bgColor: #fff;
+$bgDark: #04005c;
+$footer: #1d262d;
+
+// 003ee7
+:root {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: $accent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background: $accentDark;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    height: 300vh;
+}
+
+h1,
+h2 {
+    font-size: clamp(28px, 15vw, 40px);
+    font-weight: 200;
+}
+
+nav {
+    .navbar-toggler {
+        &:focus {
+            outline: none !important;
+        }
+    }
+}
+
+.intro {
+    display: none !important; // remove after development
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: $accentDark;
+    animation: gone 2s ease forwards 4s;
+
+    .group {
+        opacity: 0;
+        animation: fade 2s ease forwards 3.5s;
+    }
+
+    @keyframes fade {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes gone {
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            height: 0;
+        }
+    }
+
+    .logo {
+        #sapian {
+            width: calc(20vw + 5rem);
+            animation: fill-line 2s ease forwards 3.5s !important;
+
+            path {
+                &:nth-child(1) {
+                    stroke-dasharray: 455.84344482421875px;
+                    stroke-dashoffset: 455.84344482421875px;
+                    animation: sapian 2s ease forwards;
+                }
+
+                &:nth-child(2) {
+                    stroke-dasharray: 455.8554992675781px;
+                    stroke-dashoffset: 455.8554992675781px;
+                    animation: sapian 2s ease forwards 0.3s;
+                }
+
+                &:nth-child(3) {
+                    stroke-dasharray: 246.47296142578125px;
+                    stroke-dashoffset: 246.47296142578125px;
+                    animation: sapian 2s ease forwards 0.6s;
+                }
+
+                &:nth-child(4) {
+                    stroke-dasharray: 635.5220947265625px;
+                    stroke-dashoffset: 635.5220947265625px;
+                    animation: sapian 2s ease forwards 0.9s;
+                }
+
+                &:nth-child(5) {
+                    stroke-dasharray: 499.5021057128906px;
+                    stroke-dashoffset: 499.5021057128906px;
+                    animation: sapian 2s ease forwards 1.2s;
+                }
+
+                &:nth-child(6) {
+                    stroke-dasharray: 559.6683349609375px;
+                    stroke-dashoffset: 559.6683349609375px;
+                    animation: sapian 2s ease forwards 1.5s;
+                }
+
+                @keyframes sapian {
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+
+            @keyframes fill-line {
+
+                to {
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: $bgColor;
+    color: $bgDark;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    animation: to-front 2s ease forwards 5s;
+
+    .sec-1 {
+        .learn-more {
+            margin-top: 1rem;
+            border: none;
+            background-color: $accentDark;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 4px;
+        }
+
+        #sapian-logo {
+            width: calc(10vw + 5rem);
+        }
+
+        .bg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            svg {
+                width: 100%;
+
+                #rotate {
+                    animation: rotates 120s forwards infinite;
+                    transform-origin: center;
+                    transform-box: fill-box;
+                }
+
+                @keyframes rotates {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+        @keyframes to-front {
+            to {
+                z-index: 3;
+            }
+        }
+
+        .main-content {
+            height: 70vh;
+
+            .heading {
+                svg {
+                    width: 30%;
+                }
+            }
+        }
+
+
+        .scroll-guid {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            border-radius: 25px;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            border: 3px solid #04005c;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            animation: scroll-guid 2s ease-in-out infinite;
+            transition: .3s;
+
+            &:hover {
+                transition: .3s;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            @keyframes scroll-guid {
+                0% {
+                    bottom: 40px;
+                }
+
+                50% {
+                    bottom: 55px;
+                }
+
+                100% {
+                    bottom: 40px;
+                }
+            }
+
+            .scroll {
+                position: absolute;
+                top: 10px;
+                border-radius: 50px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 5px;
+                height: 20px;
+                background-color: #04005c;
+
+                animation: scroll 2s ease-in-out infinite 2s;
+
+                @keyframes scroll {
+                    0% {
+                        top: 10px;
+                    }
+
+                    50% {
+                        top: 15px;
+                    }
+
+                    100% {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sec-2 {
+        position: relative;
+        color: white;
+        // height: 100vh;
+        margin-top: calc(5.2vh + 5vw);
+        background-color: $accentDark;
+        padding-bottom: 5rem;
+
+        p {
+            letter-spacing: 1.5px;
+        }
+
+        .map {
+            #map {
+
+                //animation: map 5s ease-in-out infinite;
+                @keyframes map {
+                    0% {
+                        transform: translateY(0px);
+                    }
+
+                    50% {
+                        transform: translateY(-5px);
+                    }
+
+                    100% {
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            #map-shadow {
+                opacity: 0.4;
+                transform: translateY(-3px);
+            }
+
+            .point {
+                path {
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    animation: countries 3s ease-in-out infinite;
+                }
+
+                @keyframes countries {
+                    0% {
+                        transform: scale(0);
+                        opacity: 1;
+                    }
+
+                    50% {
+                        transform: scale(1.5);
+                        opacity: 0.1;
+                    }
+
+                    75% {
+                        transform: scale(1.5);
+                        opacity: 0;
+
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .sec-3 {
+        // display: none;
+        padding: 5rem 0;
+        // height: 100vh;
+        background: url(img/bg-sec-3.svg);
+        background-size: 150%;
+        background-position: center;
+        position: relative;
+        color: white;
+
+        .side-img {
+
+            img {
+                backface-visibility: hidden !important;
+                transform: translateZ(0) !important;
+            }
+
+            width: 75%;
+            animation: move-clock 3s ease-in-out infinite;
+
+            @keyframes move-clock {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(10px);
+                }
+
+                100% {
+                    transform: translateY(0)
+                }
+            }
+        }
+    }
+
+    .sec-5 {
+        width: 100%;
+        height: 100vh;
+        background-color: #caf7ff;
+    }
+
+    .what-we-do {
+        p {
+            font-size: clamp(16px, 8vw, 1.2rem);
+        }
+
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        .comp-logo {
+            width: 340px;
+        }
+
+        .comp-p {
+            opacity: 0;
+        }
+
+        .companies {
+            // background: url(img/bg-test.svg);
+            background-size: 150%;
+            background-position: center;
+
+            // background-attachment: fixed;
+            .company {
+                width: clamp(40px, 10vw, 80px);
+                height: clamp(40px, 10vw, 80px);
+                border-radius: 3px;
+                background-color: red;
+                transition: .3s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
+            }
+
+            #qq {
+                background: url(img/subs/qq.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &:hover {
+                    &::after {
+                        font-size: 12px;
+                        content: 'Quantum Quorum';
+                    }
+                }
+            }
+
+            #sapianCapital {
+                background: url(img/subs/sapiancapital.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            #ollorun {
+                background: url(img/subs/ollorun.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            #sapianHospitality {
+                background: url(img/subs/Hospitality.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            #fgn {
+                background: url(img/subs/fgn.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            #ozeety {
+                background: url(img/subs/ozeety.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            #flashgroup {
+                background: url(img/subs/flashgroup.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+        }
+
+        // companies
+        // flashgroup
+        .flashgroup-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+
+            .flashgroup {
+                position: absolute;
+                color: white;
+                background-image: url(https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204222/FLASHMONI_IMAGES/images/home_jzznm2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 5rem 0;
+                width: 100%;
+                height: 100vh !important;
+                overflow: hidden !important;
+                animation: bg-move 250s infinite;
+
+                #slid_img {
+                    width: 100%;
+                }
+
+                .b-word {
+                    font-weight: 200;
+                    font-size: 64px;
+                }
+
+                .slideshow {
+                    padding: 0rem 0 5rem 0;
+                    width: 100%;
+                    height: clamp(500px, 50vh, 900px);
+                    position: relative;
+
+                    .side-text {
+                        margin: auto;
+                        text-align: center;
+                        text-justify: inter-word;
+                        color: #fff;
+                    }
+
+                    #side-text-p {
+                        text-shadow: 5px 5px 25px rgba($color: #111, $alpha: 0.7);
+                        ;
+                    }
+
+                    .slider {
+                        background-color: rgba($color: #fff, $alpha: 0.04);
+                        padding: 20px;
+                        margin: 20px;
+                        margin-right: 0px;
+                        height: 80%;
+                        width: 100%;
+                        height: 100%;
+                        right: 0;
+                        border-radius: 4px 0 0 4px;
+                        // box-shadow: 5px 5px 25px rgba($color: $accentDark, $alpha: 0.7);
+
+                        .next-btn {
+                            position: absolute;
+                            right: 10px;
+                            z-index: 999;
+                        }
+                    }
+
+                    @keyframes flip {
+                        0% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+
+                        50% {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+
+                    .next {
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 1rem;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover {
+                            transition: .3s;
+                            transform: scale(1.1);
+                        }
+
+                        @keyframes go-ease {
+                            0% {
+                                transform: translateX(0) rotate(0);
+                                opacity: 1;
+                            }
+
+                            50% {
+                                transform: translateX(400px) rotate(180deg);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(0) rotate(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // quantum quorum
+        .qq-page {
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            // background-color: black;
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873708/sapian-group/bg-qq_v1bmej.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        // sapian capital
+        .sapianCapital-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            color: white;
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873710/sapian-group/bg-capital2_uro8xi.jpg) no-repeat;
+            background-size: cover;
+            text-shadow: 2px 2px 5px black;
+            // background-color: blue;
+
+            a {
+                background-color: white;
+                color: #04005c;
+                padding: 0.5rem 2rem;
+                border-radius: 4px;
+                text-shadow: none;
+                transition: .3s;
+
+                &:hover {
+                    transition: .3s;
+                    text-decoration: none;
+                    box-shadow: 0 5px 25px #04005c;
+                }
+            }
+        }
+
+        // ollorun
+        .ollorun-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            // background-color: white;
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg) no-repeat;
+            background-size: cover;
+
+            a {
+                background: rgb(101, 255, 207);
+                background: linear-gradient(18deg, rgba(101, 255, 207, 1) 0%, rgba(54, 134, 243, 1) 100%);
+                color: white;
+                padding: 0.5rem 2rem;
+                border-radius: 4px;
+                text-shadow: none;
+                transition: .3s;
+
+                &:hover {
+                    transition: .3s;
+                    text-decoration: none;
+                    box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+                }
+            }
+        }
+
+        //sapian hospitality
+        .sapianHospitality-page {
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873707/sapian-group/bg-hospitality_znwjve.png) no-repeat;
+            background-size: cover;
+        }
+
+        //fgn
+        .fgn-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873708/sapian-group/bg-fgn_vyoahy.png) no-repeat;
+            background-size: cover;
+            color: white;
+
+            a {
+                background: rgb(101, 255, 207);
+                background: #8e2cf9;
+                color: white;
+                padding: 0.5rem 2rem;
+                border-radius: 4px;
+                text-shadow: none;
+                transition: .3s;
+
+                &:hover {
+                    transition: .3s;
+                    text-decoration: none;
+                    box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+                }
+            }
+        }
+
+        //ozeetyBlockchain
+        .ozeetyBlockchain-page {
+            color: white !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            clip-path: circle(0%);
+            background: url(https://res.cloudinary.com/sapiangroup/image/upload/w_auto,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png) no-repeat;
+            background-size: cover;
+
+            h3 {
+                font-weight: 100;
+                color: #f1b500;
+            }
+
+            a {
+                background: #f1b500;
+                color: white;
+                padding: 1rem 2.2rem;
+                border-radius: 50px;
+                text-shadow: none;
+                transition: .3s;
+
+                &:hover {
+                    transition: .3s;
+                    text-decoration: none;
+                    box-shadow: 0 5px 25px rgba($color: #f1b500, $alpha: 0.5);
+                }
+            }
+        }
+
+        @keyframes open {
+            to {
+                clip-path: circle(100%);
+            }
+        }
+
+        @keyframes close {
+            from {
+                clip-path: circle(100%);
+            }
+
+            to {
+                clip-path: circle(0%);
+            }
+        }
+
+        .close {
+            width: 40px;
+            height: 40px;
+            opacity: 1 !important;
+            z-index: 999;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+
+            svg {
+
+                #inner {
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: .3s;
+                }
+
+                &:hover #inner {
+                    transition: .3s;
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+
+    .workflow {
+        padding: 5% 0;
+        background-color: rgb(248, 248, 248);
+        font-size: 18px;
+
+        img{
+            animation: world  6s infinite;
+            @keyframes world {
+                0%{
+                    transform: translateY(0);
+                }
+
+                50%{
+                    transform: translateY(-25px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.footer{
+    background-color: $footer;
+    width: 100%;
+    height: 50vh;
+    color: white;
+}
