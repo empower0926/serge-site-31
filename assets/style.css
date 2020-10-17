@@ -33,6 +33,10 @@ h2 {
   font-weight: 200;
 }
 
+nav {
+  display: none !important;
+}
+
 nav .navbar-toggler:focus {
   outline: none !important;
 }
@@ -170,6 +174,12 @@ main {
   z-index: 1;
   -webkit-animation: to-front 2s ease forwards 5s;
           animation: to-front 2s ease forwards 5s;
+}
+
+main .sec-1 {
+  position: relative;
+  top: 0;
+  height: 100vh;
 }
 
 main .sec-1 .learn-more {
@@ -326,7 +336,6 @@ main .sec-1 .scroll-guid .scroll {
 main .sec-2 {
   position: relative;
   color: white;
-  margin-top: calc(5.2vh + 5vw);
   background-color: #205cff;
   padding-bottom: 5rem;
 }
@@ -422,55 +431,117 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
-  padding: 5rem 0;
-  background: url(img/bg-sec-3.svg);
-  background-size: 150%;
-  background-position: center;
+  padding: 8rem 0;
   position: relative;
-  color: white;
+  color: #1d262d;
 }
 
-main .sec-3 .side-img {
-  width: 75%;
-  -webkit-animation: move-clock 3s ease-in-out infinite;
-          animation: move-clock 3s ease-in-out infinite;
+main .sec-3 .client-man svg #gear-1 {
+  -webkit-animation: rotate 12s infinite;
+          animation: rotate 12s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
 }
 
-main .sec-3 .side-img img {
-  -webkit-backface-visibility: hidden !important;
-          backface-visibility: hidden !important;
-  -webkit-transform: translateZ(0) !important;
-          transform: translateZ(0) !important;
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-@-webkit-keyframes move-clock {
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+main .sec-3 .client-man svg #gear-2 {
+  -webkit-animation: rotate-2 12s infinite;
+          animation: rotate-2 12s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes rotate-2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+main .sec-3 .man-years {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  -webkit-animation: move-up ease-in-out 8s infinite;
+          animation: move-up ease-in-out 8s infinite;
+}
+
+main .sec-3 .clients {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  -webkit-animation: move-up ease-in-out 8s infinite 4s;
+          animation: move-up ease-in-out 8s infinite 4s;
+}
+
+@-webkit-keyframes move-up {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
   50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
 }
 
-@keyframes move-clock {
+@keyframes move-up {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
   50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
+}
+
+main .sec-3 img {
+  width: 100%;
 }
 
 main .sec-5 {
@@ -480,6 +551,8 @@ main .sec-5 {
 }
 
 main .what-we-do {
+  background-color: #205cff;
+  color: white;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -495,12 +568,6 @@ main .what-we-do .comp-logo {
 
 main .what-we-do .comp-p {
   opacity: 0;
-}
-
-main .what-we-do .companies {
-  background: url(img/bg-sec-3.svg);
-  background-size: 150%;
-  background-position: center;
 }
 
 main .what-we-do .companies .col {
@@ -566,10 +633,12 @@ main .what-we-do .companies #flashgroup {
 }
 
 main .what-we-do .flashgroup-page {
+  padding-bottom: 20rem;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
 }
@@ -613,6 +682,7 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow .side-text {
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow #side-text-p {
   text-shadow: 5px 5px 25px rgba(17, 17, 17, 0.7);
+  font-size: clamp(11px, 1.5vw, 16px);
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
@@ -620,17 +690,35 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
   padding: 20px;
   margin: 20px;
   margin-right: 0px;
-  height: 80%;
   width: 100%;
-  height: 100%;
+  min-height: 80%;
   right: 0;
   border-radius: 4px 0 0 4px;
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn {
+  width: 25px;
+  height: 25px;
   position: absolute;
   right: 10px;
   z-index: 999;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn svg #inner {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn svg:hover #inner {
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 @-webkit-keyframes flip {
@@ -915,8 +1003,8 @@ main .what-we-do .ozeetyBlockchain-page a:hover {
 }
 
 main .what-we-do .close {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   opacity: 1 !important;
   z-index: 999;
   position: absolute;
@@ -944,11 +1032,12 @@ main .workflow {
   padding: 5% 0;
   background-color: #f8f8f8;
   font-size: 18px;
+  color: #1d262d;
 }
 
 main .workflow img {
-  -webkit-animation: world  6s infinite;
-          animation: world  6s infinite;
+  -webkit-animation: world 6s infinite;
+          animation: world 6s infinite;
 }
 
 @-webkit-keyframes world {

@@ -41,6 +41,7 @@ h2 {
 }
 
 nav {
+    display: none !important;
     .navbar-toggler {
         &:focus {
             outline: none !important;
@@ -150,6 +151,10 @@ main {
     animation: to-front 2s ease forwards 5s;
 
     .sec-1 {
+        position: relative;
+        top: 0;
+        
+        height: 100vh;
         .learn-more {
             margin-top: 1rem;
             border: none;
@@ -270,7 +275,7 @@ main {
         position: relative;
         color: white;
         // height: 100vh;
-        margin-top: calc(5.2vh + 5vw);
+        // margin-top: 7.5rem;
         background-color: $accentDark;
         padding-bottom: 5rem;
 
@@ -335,39 +340,91 @@ main {
     }
 
     .sec-3 {
-        // display: none;
-        padding: 5rem 0;
-        // height: 100vh;
-        background: url(img/bg-sec-3.svg);
-        background-size: 150%;
-        background-position: center;
+        padding: 8rem 0;
         position: relative;
-        color: white;
+        color: $footer;
 
-        .side-img {
+        .client-man {
+            // position: relative;
 
-            img {
-                backface-visibility: hidden !important;
-                transform: translateZ(0) !important;
+            svg {
+
+                //    width: 75%;
+                #gear-1 {
+                    animation: rotate 12s infinite;
+                    transform-origin: center;
+                    transform-box: fill-box;
+
+                    @keyframes rotate {
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+
+                #gear-2 {
+                    animation: rotate-2 12s infinite;
+                    transform-origin: center;
+                    transform-box: fill-box;
+
+                    @keyframes rotate-2 {
+                        to {
+                            transform: rotate(-360deg);
+                        }
+                    }
+                }
             }
 
-            width: 75%;
-            animation: move-clock 3s ease-in-out infinite;
 
-            @keyframes move-clock {
-                0% {
-                    transform: translateY(0);
-                }
+        }
 
-                50% {
-                    transform: translateY(10px);
-                }
+        .man-years {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            // opacity: 0;
+            // transform-origin: left;
+            animation: move-up ease-in-out 8s infinite;
+        }
 
-                100% {
-                    transform: translateY(0)
-                }
+        .clients {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            // opacity: 0;
+            // transform-origin: left;
+            animation: move-up ease-in-out 8s infinite 4s;
+        }
+
+        @keyframes move-up {
+            0% {
+                opacity: 0;
+                transform: rotateY(-90deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateY(-90deg);
             }
         }
+
+        img {
+            width: 100%;
+        }
+
     }
 
     .sec-5 {
@@ -377,6 +434,9 @@ main {
     }
 
     .what-we-do {
+        background-color: $accentDark;
+        color: rgb(255, 255, 255);
+
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
         }
@@ -394,12 +454,10 @@ main {
         }
 
         .companies {
-            background: url(img/bg-sec-3.svg);
-            background-size: 150%;
-            background-position: center;
-            .col{
+            .col {
                 padding: 4px !important;
             }
+
             // background-attachment: fixed;
             .company {
                 position: relative;
@@ -420,7 +478,7 @@ main {
                 // background: url(img/subs/qq.svg) no-repeat;
                 background-color: #04005c;
                 background-position: center;
-                background-size: cover; 
+                background-size: cover;
             }
 
             #sapianCapital {
@@ -471,11 +529,12 @@ main {
 
         // flashgroup
         .flashgroup-page {
+            padding-bottom: 20rem;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            // height: 100vh;
+            height: 100vh;
             clip-path: circle(0%);
 
             .flashgroup {
@@ -514,7 +573,7 @@ main {
 
                     #side-text-p {
                         text-shadow: 5px 5px 25px rgba($color: #111, $alpha: 0.7);
-                        ;
+                        font-size: clamp(11px, 1.5vw, 16px);
                     }
 
                     .slider {
@@ -522,17 +581,31 @@ main {
                         padding: 20px;
                         margin: 20px;
                         margin-right: 0px;
-                        height: 80%;
                         width: 100%;
-                        height: 100%;
+                        min-height: 80%;
                         right: 0;
                         border-radius: 4px 0 0 4px;
-                        // box-shadow: 5px 5px 25px rgba($color: $accentDark, $alpha: 0.7);
 
                         .next-btn {
+                            width: 25px;
+                            height: 25px;
                             position: absolute;
                             right: 10px;
                             z-index: 999;
+                            transform: rotate(180deg);
+
+                            svg {
+                                #inner {
+                                    transform-origin: center;
+                                    transform-box: fill-box;
+                                    transition: .3s;
+                                }
+
+                                &:hover #inner {
+                                    transition: .3s;
+                                    transform: scale(0.8);
+                                }
+                            }
                         }
                     }
 
@@ -751,8 +824,8 @@ main {
         }
 
         .close {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             opacity: 1 !important;
             z-index: 999;
             position: absolute;
@@ -780,18 +853,21 @@ main {
         padding: 5% 0;
         background-color: rgb(248, 248, 248);
         font-size: 18px;
+        color: $footer;
 
-        img{
-            animation: world  6s infinite;
+        img {
+            animation: world 6s infinite;
+
             @keyframes world {
-                0%{
+                0% {
                     transform: translateY(0);
                 }
 
-                50%{
+                50% {
                     transform: translateY(-25px);
                 }
-                100%{
+
+                100% {
                     transform: translateY(0);
                 }
             }
@@ -813,8 +889,11 @@ main {
     }
 }
 
+// p {
+//     font-size: clamp(1rem, 1.25vw, 1.25rem);
+// }
 
-.footer{
+.footer {
     background-color: $footer;
     width: 100%;
     height: 50vh;

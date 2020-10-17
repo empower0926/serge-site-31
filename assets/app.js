@@ -39,7 +39,7 @@ var pages = [{
     text: "Masternode and Staking rewards wallet for wealth creation and passive income",
   },
   {
-    img: "https://res.cloudinary.com/sapiangroup/image/upload/w_700,q_auto,f_auto/v1601809822/OZEETY_IMAGES/assets/img/station-2_flashgroup-cryptostations.png",
+    img: "/assets/img/cryptostation.png",
     heading: "Cryptostation",
     text: "An all-in-one information station in various models, providing Blockchain based educational information. It also has full ATM-style functionality, with the capability to dispense your own OZTGcard and the possibility to buy crypto directly from the Cryptostation. ",
   },
@@ -131,7 +131,7 @@ function showCompanyData(company, page) {
   let rect = elem.getBoundingClientRect();
 
   let x = rect.left + 40;
-  let y = rect.top + 120;
+  let y = rect.top + 40;
 
   let companyPage = document.getElementById(page);
 
