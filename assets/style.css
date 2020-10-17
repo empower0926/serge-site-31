@@ -498,68 +498,69 @@ main .what-we-do .comp-p {
 }
 
 main .what-we-do .companies {
+  background: url(img/bg-sec-3.svg);
   background-size: 150%;
   background-position: center;
 }
 
+main .what-we-do .companies .col {
+  padding: 4px !important;
+}
+
 main .what-we-do .companies .company {
+  position: relative;
   width: clamp(40px, 10vw, 80px);
   height: clamp(40px, 10vw, 80px);
-  border-radius: 3px;
   background-color: red;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 main .what-we-do .companies .company:hover {
+  z-index: 999 !important;
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
 main .what-we-do .companies #qq {
-  background: url(img/subs/qq.svg) no-repeat;
+  background-color: #04005c;
   background-position: center;
   background-size: cover;
 }
 
-main .what-we-do .companies #qq:hover::after {
-  font-size: 12px;
-  content: 'Quantum Quorum';
-}
-
 main .what-we-do .companies #sapianCapital {
-  background: url(img/subs/sapiancapital.svg) no-repeat;
+  background-color: #030127;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #ollorun {
-  background: url(img/subs/ollorun.svg) no-repeat;
+  background-color: #3f005c;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #sapianHospitality {
-  background: url(img/subs/Hospitality.svg) no-repeat;
+  background-color: #00475c;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #fgn {
-  background: url(img/subs/fgn.svg) no-repeat;
+  background-color: #0070bb;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #ozeety {
-  background: url(img/subs/ozeety.svg) no-repeat;
+  background-color: #37005c;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #flashgroup {
-  background: url(img/subs/flashgroup.svg) no-repeat;
+  background-color: #0030cc;
   background-position: center;
   background-size: cover;
 }
@@ -569,7 +570,6 @@ main .what-we-do .flashgroup-page {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
 }
@@ -577,7 +577,7 @@ main .what-we-do .flashgroup-page {
 main .what-we-do .flashgroup-page .flashgroup {
   position: absolute;
   color: white;
-  background-image: url(https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204222/FLASHMONI_IMAGES/images/home_jzznm2.jpg);
+  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204222/FLASHMONI_IMAGES/images/home_jzznm2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem 0;
@@ -730,7 +730,7 @@ main .what-we-do .qq-page {
   height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873708/sapian-group/bg-qq_v1bmej.jpg) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873708/sapian-group/bg-qq_v1bmej.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -743,7 +743,7 @@ main .what-we-do .sapianCapital-page {
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
   color: white;
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873710/sapian-group/bg-capital2_uro8xi.jpg) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873710/sapian-group/bg-capital2_uro8xi.jpg") no-repeat;
   background-size: cover;
   text-shadow: 2px 2px 5px black;
 }
@@ -774,7 +774,7 @@ main .what-we-do .ollorun-page {
   height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -806,7 +806,7 @@ main .what-we-do .sapianHospitality-page {
   height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873707/sapian-group/bg-hospitality_znwjve.png) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873707/sapian-group/bg-hospitality_znwjve.png") no-repeat;
   background-size: cover;
 }
 
@@ -818,7 +818,7 @@ main .what-we-do .fgn-page {
   height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/v1602873708/sapian-group/bg-fgn_vyoahy.png) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873708/sapian-group/bg-fgn_vyoahy.png") no-repeat;
   background-size: cover;
   color: white;
 }
@@ -851,7 +851,7 @@ main .what-we-do .ozeetyBlockchain-page {
   height: 100vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url(https://res.cloudinary.com/sapiangroup/image/upload/w_auto,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png) no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_auto,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png") no-repeat;
   background-size: cover;
 }
 
