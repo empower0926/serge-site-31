@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 $bg: 'https://res.cloudinary.com/dmeppscpx/image/upload/w_1920,f_auto,q_auto/v1602337522/sapiangroup/bg_sapian-group.png';
-$accent: #90e0ef;
+$accent: #8fe1ef;
 $accentDark: #205cff;
 $bgColor: #fff;
 $bgDark: #04005c;
@@ -41,12 +41,18 @@ h2 {
     font-weight: 200;
 }
 
-nav {
+.nav {
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
 
-    // display: none !important;
-    .navbar-toggler {
-        &:focus {
-            outline: none !important;
+    nav {
+        width: 100%;
+
+        .navbar-toggler {
+            &:focus {
+                outline: none !important;
+            }
         }
     }
 }
@@ -140,6 +146,92 @@ nav {
     }
 }
 
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    svg {
+        width: 100%;
+
+        #rotate {
+            animation: rotates 120s forwards infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        @keyframes rotates {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.scroll-guid {
+    position: absolute;
+    z-index: 999;
+    width: 40px;
+    height: 60px;
+    border-radius: 25px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    border: 3px solid #04005c;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: scroll-guid 2s ease-in-out infinite;
+    transition: .3s;
+
+    &:hover {
+        transition: .3s;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    @keyframes scroll-guid {
+        0% {
+            bottom: 40px;
+        }
+
+        50% {
+            bottom: 55px;
+        }
+
+        100% {
+            bottom: 40px;
+        }
+    }
+
+    .scroll {
+        position: absolute;
+        top: 10px;
+        border-radius: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 5px;
+        height: 20px;
+        background-color: #04005c;
+
+        animation: scroll 2s ease-in-out infinite 2s;
+
+        @keyframes scroll {
+            0% {
+                top: 10px;
+            }
+
+            50% {
+                top: 15px;
+            }
+
+            100% {
+                top: 10px;
+            }
+        }
+    }
+}
+
 main {
     background-color: $bgColor;
     color: $bgDark;
@@ -153,7 +245,9 @@ main {
     animation: to-front 2s ease forwards 5s;
 
     .sec-1 {
+        // background-color: rgba($color: $accent, $alpha: 0.5);
         height: 100vh;
+        position: relative;
 
         .learn-more {
             margin-top: 1rem;
@@ -168,28 +262,6 @@ main {
             width: calc(10vw + 5rem);
         }
 
-        .bg {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
-            svg {
-                width: 100%;
-
-                #rotate {
-                    animation: rotates 120s forwards infinite;
-                    transform-origin: center;
-                    transform-box: fill-box;
-                }
-
-                @keyframes rotates {
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-            }
-        }
-
         @keyframes to-front {
             to {
                 z-index: 3;
@@ -202,70 +274,6 @@ main {
             .heading {
                 svg {
                     width: 30%;
-                }
-            }
-        }
-
-
-        .scroll-guid {
-            position: absolute;
-            width: 40px;
-            height: 60px;
-            border-radius: 25px;
-            background-color: rgba($color: #fff, $alpha: 0.8);
-            border: 3px solid #04005c;
-            bottom: 40px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            animation: scroll-guid 2s ease-in-out infinite;
-            transition: .3s;
-
-            &:hover {
-                transition: .3s;
-                background-color: white;
-                cursor: pointer;
-            }
-
-            @keyframes scroll-guid {
-                0% {
-                    bottom: 40px;
-                }
-
-                50% {
-                    bottom: 55px;
-                }
-
-                100% {
-                    bottom: 40px;
-                }
-            }
-
-            .scroll {
-                position: absolute;
-                top: 10px;
-                border-radius: 50px;
-                left: 0;
-                right: 0;
-                margin: auto;
-                width: 5px;
-                height: 20px;
-                background-color: #04005c;
-
-                animation: scroll 2s ease-in-out infinite 2s;
-
-                @keyframes scroll {
-                    0% {
-                        top: 10px;
-                    }
-
-                    50% {
-                        top: 15px;
-                    }
-
-                    100% {
-                        top: 10px;
-                    }
                 }
             }
         }
@@ -341,20 +349,20 @@ main {
 
     .sec-3 {
         // padding: 2rem 0;
+        // background: url('img/bg-test.svg') no-repeat;
+        background-size: cover;
         position: relative;
         overflow-y: hidden;
-        // color: white;
-        // background-color: #0e202e;
+        color: $footer;
         overflow-x: hidden;
+        font-size: clamp(16px, 1vw, 24px);
 
         .cube {
             position: relative;
             color: $footer;
-            width: 100%;
+            width: 80%;
             height: 500px;
-            // padding: 12rem;
-            // border-radius: 500px 0 0 500px;
-            background-color: rgba($color: #fff, $alpha: 1.0);
+
 
             .fun {
                 position: absolute;
@@ -375,9 +383,10 @@ main {
                     right: 0;
                     bottom: 0;
                     margin: auto;
-                    width: 50%;
-                    height: 50%;
-                    border-radius: 5px;
+                    width: 280px;
+                    height: 280px;
+                    border-radius: 500px;
+                    border: 2px solid white;
                     background-color: rgba($color:$accentDark, $alpha: 0.5);
 
                     img {
@@ -394,9 +403,10 @@ main {
                     right: 0;
                     bottom: 0;
                     margin: auto;
-                    width: 50%;
-                    height: 50%;
-                    border-radius: 5px;
+                    width: 280px;
+                    height: 280px;
+                    border-radius: 500px;
+                    border: 2px solid white;
                     background-color: $accentDark;
 
                     img {
@@ -408,7 +418,7 @@ main {
         }
     }
 
-    .flip{
+    .flip {
         transform: rotateY(180deg);
     }
 
@@ -419,19 +429,47 @@ main {
     }
 
     .what-we-do {
-        // background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1603002349/sapian-group/beautiful-paint-water_rfwbdc.jpg') no-repeat;
-        background: url('img/a.png') no-repeat;
-        background-size: cover;
-        background-position-y: -25vh;
-        color: white;
 
-        p {
-            font-size: clamp(16px, 8vw, 1.2rem);
+        .bg-test {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                object-fit: cover;
+            }
         }
 
-        width: 100%;
+        .bg-dark {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            background-color: black !important;
+            opacity: 0.3;
+        }
+
+        margin: 4rem 0;
+        color: white;
+        border-radius: 0 0 100px 100px;
+        // background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/w_1900/v1603052142/sapian-group/cubes_ferojc.png') no-repeat;
+        // background-size: cover;
+        // background-attachment: fixed;
+        width: 100vw;
         height: 100vh;
         position: relative;
+        
+        p {
+            font-size: clamp(16px, 8vw, 1.2rem);
+            text-shadow: 0 2px 15px rgba($color: #000850, $alpha: 0.8);
+        }
+
+        .comp-content {
+            padding: 2rem 0;
+            width: 100%;
+            // background: rgba($color: $bgDark, $alpha: 0.6);
+        }
 
         .comp-logo {
             width: 340px;
@@ -442,19 +480,21 @@ main {
         }
 
         .companies {
+            perspective: 1000;
             .col {
                 padding: 4px !important;
             }
 
             // background-attachment: fixed;
             .company {
+                transform-style: preserve-3d;
                 position: relative;
                 width: clamp(40px, 10vw, 80px);
                 height: clamp(40px, 10vw, 80px);
-                // border-radius: 3px;
+                border-radius: 5px;
                 background-color: red;
                 transition: .3s;
-
+                
                 &:hover {
                     z-index: 999 !important;
                     cursor: pointer;
@@ -463,50 +503,50 @@ main {
             }
 
             #qq {
-                // background: url(img/subs/qq.svg) no-repeat;
-                background-color: #04005c;
+                background: url(img/qq-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #sapianCapital {
-                // background: url(img/subs/sapiancapital.svg) no-repeat;
-                background-color: #030127;
+                background: url(img/sc-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #ollorun {
-                // background: url(img/subs/ollorun.svg) no-repeat;
-                background-color: #3f005c;
+                background: url(img/ol-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #sapianHospitality {
-                // background: url(img/subs/Hospitality.svg) no-repeat;
-                background-color: #00475c;
+                background: url(img/sh-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #fgn {
-                // background: url(img/subs/fgn.svg) no-repeat;
-                background-color: #0070bb;
+                background: url(img/fgn-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #ozeety {
-                // background: url(img/subs/ozeety.svg) no-repeat;
-                background-color: #37005c;
+                background: url(img/oz-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
 
             #flashgroup {
-                // background: url(img/subs/flashgroup.svg) no-repeat;
-                background-color: #0030cc;
+                background: url(img/flash-btn.svg) no-repeat;
+                // background-color: #fff;
                 background-position: center;
                 background-size: cover;
             }
@@ -693,6 +733,7 @@ main {
 
         // ollorun
         .ollorun-page {
+            color: $footer;
             position: absolute;
             top: 0;
             left: 0;
@@ -890,4 +931,19 @@ main {
     width: 100%;
     height: 50vh;
     color: white;
+}
+
+p {
+    text-align: justify;
+    text-align-last: center;
+    word-spacing: -2px;
+}
+
+@media (min-width: 768px) {
+    .s-p{
+        text-align-last: center;
+    }
+    p {
+        text-align-last: left;
+    }
 }

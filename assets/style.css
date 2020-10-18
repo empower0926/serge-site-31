@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #90e0ef;
+  background: #8fe1ef;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,7 +34,17 @@ h2 {
   font-weight: 200;
 }
 
-nav .navbar-toggler:focus {
+.nav {
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+}
+
+.nav nav {
+  width: 100%;
+}
+
+.nav nav .navbar-toggler:focus {
   outline: none !important;
 }
 
@@ -159,48 +169,17 @@ nav .navbar-toggler:focus {
   }
 }
 
-main {
-  background-color: #fff;
-  color: #04005c;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: to-front 2s ease forwards 5s;
-          animation: to-front 2s ease forwards 5s;
-}
-
-main .sec-1 {
-  height: 100vh;
-}
-
-main .sec-1 .learn-more {
-  margin-top: 1rem;
-  border: none;
-  background-color: #205cff;
-  color: white;
-  padding: 0.5rem 2rem;
-  border-radius: 4px;
-}
-
-main .sec-1 #sapian-logo {
-  width: calc(10vw + 5rem);
-}
-
-main .sec-1 .bg {
+.bg {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-main .sec-1 .bg svg {
+.bg svg {
   width: 100%;
 }
 
-main .sec-1 .bg svg #rotate {
+.bg svg #rotate {
   -webkit-animation: rotates 120s forwards infinite;
           animation: rotates 120s forwards infinite;
   -webkit-transform-origin: center;
@@ -222,28 +201,9 @@ main .sec-1 .bg svg #rotate {
   }
 }
 
-@-webkit-keyframes to-front {
-  to {
-    z-index: 3;
-  }
-}
-
-@keyframes to-front {
-  to {
-    z-index: 3;
-  }
-}
-
-main .sec-1 .main-content {
-  height: 70vh;
-}
-
-main .sec-1 .main-content .heading svg {
-  width: 30%;
-}
-
-main .sec-1 .scroll-guid {
+.scroll-guid {
   position: absolute;
+  z-index: 999;
   width: 40px;
   height: 60px;
   border-radius: 25px;
@@ -259,7 +219,7 @@ main .sec-1 .scroll-guid {
   transition: .3s;
 }
 
-main .sec-1 .scroll-guid:hover {
+.scroll-guid:hover {
   -webkit-transition: .3s;
   transition: .3s;
   background-color: white;
@@ -290,7 +250,7 @@ main .sec-1 .scroll-guid:hover {
   }
 }
 
-main .sec-1 .scroll-guid .scroll {
+.scroll-guid .scroll {
   position: absolute;
   top: 10px;
   border-radius: 50px;
@@ -326,6 +286,58 @@ main .sec-1 .scroll-guid .scroll {
   100% {
     top: 10px;
   }
+}
+
+main {
+  background-color: #fff;
+  color: #04005c;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: to-front 2s ease forwards 5s;
+          animation: to-front 2s ease forwards 5s;
+}
+
+main .sec-1 {
+  height: 100vh;
+  position: relative;
+}
+
+main .sec-1 .learn-more {
+  margin-top: 1rem;
+  border: none;
+  background-color: #205cff;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+}
+
+main .sec-1 #sapian-logo {
+  width: calc(10vw + 5rem);
+}
+
+@-webkit-keyframes to-front {
+  to {
+    z-index: 3;
+  }
+}
+
+@keyframes to-front {
+  to {
+    z-index: 3;
+  }
+}
+
+main .sec-1 .main-content {
+  height: 70vh;
+}
+
+main .sec-1 .main-content .heading svg {
+  width: 30%;
 }
 
 main .sec-2 {
@@ -426,17 +438,19 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
+  background-size: cover;
   position: relative;
   overflow-y: hidden;
+  color: #1d262d;
   overflow-x: hidden;
+  font-size: clamp(16px, 1vw, 24px);
 }
 
 main .sec-3 .cube {
   position: relative;
   color: #1d262d;
-  width: 100%;
+  width: 80%;
   height: 500px;
-  background-color: white;
 }
 
 main .sec-3 .cube .fun {
@@ -467,9 +481,10 @@ main .sec-3 .cube .fun .man-years {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 50%;
-  height: 50%;
-  border-radius: 5px;
+  width: 280px;
+  height: 280px;
+  border-radius: 500px;
+  border: 2px solid white;
   background-color: rgba(32, 92, 255, 0.5);
 }
 
@@ -489,9 +504,10 @@ main .sec-3 .cube .fun .clients {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 50%;
-  height: 50%;
-  border-radius: 5px;
+  width: 280px;
+  height: 280px;
+  border-radius: 500px;
+  border: 2px solid white;
   background-color: #205cff;
 }
 
@@ -514,17 +530,43 @@ main .sec-5 {
 }
 
 main .what-we-do {
-  background: url("img/a.png") no-repeat;
-  background-size: cover;
-  background-position-y: -25vh;
+  margin: 4rem 0;
   color: white;
-  width: 100%;
+  border-radius: 0 0 100px 100px;
+  width: 100vw;
   height: 100vh;
   position: relative;
 }
 
+main .what-we-do .bg-test {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .what-we-do .bg-test img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .what-we-do .bg-dark {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  background-color: black !important;
+  opacity: 0.3;
+}
+
 main .what-we-do p {
   font-size: clamp(16px, 8vw, 1.2rem);
+  text-shadow: 0 2px 15px rgba(0, 8, 80, 0.8);
+}
+
+main .what-we-do .comp-content {
+  padding: 2rem 0;
+  width: 100%;
 }
 
 main .what-we-do .comp-logo {
@@ -535,14 +577,22 @@ main .what-we-do .comp-p {
   opacity: 0;
 }
 
+main .what-we-do .companies {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
 main .what-we-do .companies .col {
   padding: 4px !important;
 }
 
 main .what-we-do .companies .company {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative;
   width: clamp(40px, 10vw, 80px);
   height: clamp(40px, 10vw, 80px);
+  border-radius: 5px;
   background-color: red;
   -webkit-transition: .3s;
   transition: .3s;
@@ -556,43 +606,43 @@ main .what-we-do .companies .company:hover {
 }
 
 main .what-we-do .companies #qq {
-  background-color: #04005c;
+  background: url(img/qq-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #sapianCapital {
-  background-color: #030127;
+  background: url(img/sc-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #ollorun {
-  background-color: #3f005c;
+  background: url(img/ol-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #sapianHospitality {
-  background-color: #00475c;
+  background: url(img/sh-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #fgn {
-  background-color: #0070bb;
+  background: url(img/fgn-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #ozeety {
-  background-color: #37005c;
+  background: url(img/oz-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 main .what-we-do .companies #flashgroup {
-  background-color: #0030cc;
+  background: url(img/flash-btn.svg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -820,6 +870,7 @@ main .what-we-do .sapianCapital-page a:hover {
 }
 
 main .what-we-do .ollorun-page {
+  color: #1d262d;
   position: absolute;
   top: 0;
   left: 0;
@@ -1070,5 +1121,20 @@ main .workflow img {
   width: 100%;
   height: 50vh;
   color: white;
+}
+
+p {
+  text-align: justify;
+  text-align-last: center;
+  word-spacing: -2px;
+}
+
+@media (min-width: 768px) {
+  .s-p {
+    text-align-last: center;
+  }
+  p {
+    text-align-last: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -153,4 +153,4 @@ function showCompanyData(company, page) {
 let fun = document.querySelector('.fun');
 setInterval(()=>{
   fun.classList.toggle('flip');
-},3000);
+},6000);
