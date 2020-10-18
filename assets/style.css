@@ -25,16 +25,13 @@ body {
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   height: 300vh;
+  scroll-behavior: smooth;
 }
 
 h1,
 h2 {
   font-size: clamp(28px, 15vw, 40px);
   font-weight: 200;
-}
-
-nav {
-  display: none !important;
 }
 
 nav .navbar-toggler:focus {
@@ -177,8 +174,6 @@ main {
 }
 
 main .sec-1 {
-  position: relative;
-  top: 0;
   height: 100vh;
 }
 
@@ -431,117 +426,85 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
-  padding: 8rem 0;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+main .sec-3 .cube {
   position: relative;
   color: #1d262d;
-}
-
-main .sec-3 .client-man svg #gear-1 {
-  -webkit-animation: rotate 12s infinite;
-          animation: rotate 12s infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-}
-
-@-webkit-keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-main .sec-3 .client-man svg #gear-2 {
-  -webkit-animation: rotate-2 12s infinite;
-          animation: rotate-2 12s infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-}
-
-@-webkit-keyframes rotate-2 {
-  to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes rotate-2 {
-  to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-main .sec-3 .man-years {
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  background-color: red;
-  -webkit-animation: move-up ease-in-out 8s infinite;
-          animation: move-up ease-in-out 8s infinite;
-}
-
-main .sec-3 .clients {
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  background-color: green;
-  -webkit-animation: move-up ease-in-out 8s infinite 4s;
-          animation: move-up ease-in-out 8s infinite 4s;
-}
-
-@-webkit-keyframes move-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-  }
-}
-
-@keyframes move-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-  }
-}
-
-main .sec-3 img {
   width: 100%;
+  height: 500px;
+  background-color: white;
+}
+
+main .sec-3 .cube .fun {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+  -webkit-perspective: 500;
+          perspective: 500;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+main .sec-3 .cube .fun .man-years {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(60px);
+          transform: translateZ(60px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  background-color: rgba(32, 92, 255, 0.5);
+}
+
+main .sec-3 .cube .fun .man-years img {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(75px) scale(0.5);
+          transform: translateZ(75px) scale(0.5);
+}
+
+main .sec-3 .cube .fun .clients {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  background-color: #205cff;
+}
+
+main .sec-3 .cube .fun .clients img {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-80px) rotateY(180deg) scale(0.8);
+          transform: translateZ(-80px) rotateY(180deg) scale(0.8);
+}
+
+main .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 main .sec-5 {
@@ -551,7 +514,9 @@ main .sec-5 {
 }
 
 main .what-we-do {
-  background-color: #205cff;
+  background: url("img/a.png") no-repeat;
+  background-size: cover;
+  background-position-y: -25vh;
   color: white;
   width: 100%;
   height: 100vh;
@@ -1029,8 +994,10 @@ main .what-we-do .close svg:hover #inner {
 }
 
 main .workflow {
+  position: relative;
+  z-index: 999;
   padding: 5% 0;
-  background-color: #f8f8f8;
+  background-color: #fff;
   font-size: 18px;
   color: #1d262d;
 }
@@ -1097,6 +1064,8 @@ main .workflow img {
 }
 
 .footer {
+  position: relative;
+  z-index: 999;
   background-color: #1d262d;
   width: 100%;
   height: 50vh;

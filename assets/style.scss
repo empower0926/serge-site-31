@@ -32,6 +32,7 @@ body {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     height: 300vh;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -41,7 +42,8 @@ h2 {
 }
 
 nav {
-    display: none !important;
+
+    // display: none !important;
     .navbar-toggler {
         &:focus {
             outline: none !important;
@@ -151,10 +153,8 @@ main {
     animation: to-front 2s ease forwards 5s;
 
     .sec-1 {
-        position: relative;
-        top: 0;
-        
         height: 100vh;
+
         .learn-more {
             margin-top: 1rem;
             border: none;
@@ -340,91 +340,76 @@ main {
     }
 
     .sec-3 {
-        padding: 8rem 0;
+        // padding: 2rem 0;
         position: relative;
-        color: $footer;
+        overflow-y: hidden;
+        // color: white;
+        // background-color: #0e202e;
+        overflow-x: hidden;
 
-        .client-man {
-            // position: relative;
-
-            svg {
-
-                //    width: 75%;
-                #gear-1 {
-                    animation: rotate 12s infinite;
-                    transform-origin: center;
-                    transform-box: fill-box;
-
-                    @keyframes rotate {
-                        to {
-                            transform: rotate(360deg);
-                        }
-                    }
-                }
-
-                #gear-2 {
-                    animation: rotate-2 12s infinite;
-                    transform-origin: center;
-                    transform-box: fill-box;
-
-                    @keyframes rotate-2 {
-                        to {
-                            transform: rotate(-360deg);
-                        }
-                    }
-                }
-            }
-
-
-        }
-
-        .man-years {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 300px;
-            height: 300px;
-            background-color: red;
-            // opacity: 0;
-            // transform-origin: left;
-            animation: move-up ease-in-out 8s infinite;
-        }
-
-        .clients {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 300px;
-            height: 300px;
-            background-color: green;
-            // opacity: 0;
-            // transform-origin: left;
-            animation: move-up ease-in-out 8s infinite 4s;
-        }
-
-        @keyframes move-up {
-            0% {
-                opacity: 0;
-                transform: rotateY(-90deg);
-            }
-
-            50% {
-                opacity: 1;
-                transform: rotateY(0deg);
-            }
-
-            100% {
-                opacity: 0;
-                transform: rotateY(-90deg);
-            }
-        }
-
-        img {
+        .cube {
+            position: relative;
+            color: $footer;
             width: 100%;
-        }
+            height: 500px;
+            // padding: 12rem;
+            // border-radius: 500px 0 0 500px;
+            background-color: rgba($color: #fff, $alpha: 1.0);
 
+            .fun {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transform-origin: center;
+                transform-box: fill-box;
+                perspective: 500;
+                transition: transform 2s ease;
+
+                .man-years {
+                    transform-style: preserve-3d;
+                    transform: translateZ(60px);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 50%;
+                    height: 50%;
+                    border-radius: 5px;
+                    background-color: rgba($color:$accentDark, $alpha: 0.5);
+
+                    img {
+                        transform-style: preserve-3d;
+                        transform: translateZ(75px) scale(0.5);
+                    }
+                }
+
+                .clients {
+                    transform-style: preserve-3d;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 50%;
+                    height: 50%;
+                    border-radius: 5px;
+                    background-color: $accentDark;
+
+                    img {
+                        transform-style: preserve-3d;
+                        transform: translateZ(-80px) rotateY(180deg) scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .flip{
+        transform: rotateY(180deg);
     }
 
     .sec-5 {
@@ -434,8 +419,11 @@ main {
     }
 
     .what-we-do {
-        background-color: $accentDark;
-        color: rgb(255, 255, 255);
+        // background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1603002349/sapian-group/beautiful-paint-water_rfwbdc.jpg') no-repeat;
+        background: url('img/a.png') no-repeat;
+        background-size: cover;
+        background-position-y: -25vh;
+        color: white;
 
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
@@ -850,8 +838,10 @@ main {
     }
 
     .workflow {
+        position: relative;
+        z-index: 999;
         padding: 5% 0;
-        background-color: rgb(248, 248, 248);
+        background-color: #fff;
         font-size: 18px;
         color: $footer;
 
@@ -894,6 +884,8 @@ main {
 // }
 
 .footer {
+    position: relative;
+    z-index: 999;
     background-color: $footer;
     width: 100%;
     height: 50vh;

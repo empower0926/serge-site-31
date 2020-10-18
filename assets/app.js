@@ -125,7 +125,7 @@ function closeDiv(compPage) {
 
 function showCompanyData(company, page) {
 
-  smoothscroll('#'+page);
+  smoothscroll('#' + page);
 
   let elem = document.getElementById(company);
   let rect = elem.getBoundingClientRect();
@@ -148,3 +148,9 @@ function showCompanyData(company, page) {
     companyPage.style.clipPath = "circle(100% at " + x + "px " + y + "px)";
   }, 600);
 }
+
+
+let fun = document.querySelector('.fun');
+setInterval(()=>{
+  fun.classList.toggle('flip');
+},3000);
