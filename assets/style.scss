@@ -538,7 +538,6 @@ main {
 
         // flashgroup
         .flashgroup-page {
-            padding-bottom: 20rem;
             position: absolute;
             top: 0;
             left: 0;
@@ -549,10 +548,9 @@ main {
             .flashgroup {
                 position: absolute;
                 color: white;
-                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204222/FLASHMONI_IMAGES/images/home_jzznm2.jpg');
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603129971/sapian-group/science-fiction-space-wallpaper-awesome-nebula-somewhere-dark-deep-space_jsdzzg.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
-                padding: 5rem 0;
                 width: 100%;
                 height: 110vh !important;
                 overflow: hidden !important;
@@ -920,12 +918,12 @@ p {
     word-spacing: -2px;
 }
 
+.left-last{
+    text-align-last: left !important;
+}
+
 @media (min-width: 768px) {
     .s-p {
-        text-align-last: center;
-    }
-
-    p {
-        text-align-last: left;
+        text-align-last: center !important;
     }
 }
