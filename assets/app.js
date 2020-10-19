@@ -89,13 +89,16 @@ function next() {
 
   let slideText = document.querySelector('#slide-text');
   let slideImage = document.querySelector('#slide-image');
+  let heading = document.querySelector('#flashgroup-heading');
 
   setTimeout(() => {
     slideText.removeAttribute('style');
     slideImage.removeAttribute('style');
+    heading.removeAttribute('style');
   }, 4500);
-  slideImage.style.animation = "flip-right 4s ease";
-  slideText.style.animation = "flip-right 4.5s ease";
+  heading.style.animation = "flip-right 4s ease";
+  slideImage.style.animation = "flip-right 4.5s ease";
+  slideText.style.animation = "flip-right 5s ease";
 
 
   let btn_next = document.querySelector('.next-btn');
@@ -131,13 +134,17 @@ function prev() {
 
   let slideText = document.querySelector('#slide-text');
   let slideImage = document.querySelector('#slide-image');
+  let heading = document.querySelector('#flashgroup-heading');
 
   setTimeout(() => {
     slideText.removeAttribute('style');
     slideImage.removeAttribute('style');
+    heading.removeAttribute('style');
   }, 4500);
-  slideImage.style.animation = "flip-left 4s ease";
-  slideText.style.animation = "flip-left 4.5s ease";
+  heading.style.animation = "flip-left 4s ease";
+  slideImage.style.animation = "flip-left 4.5s ease";
+  slideText.style.animation = "flip-left 5s ease";
+ 
 
 
   let btn_prev = document.querySelector('.prev-btn');
