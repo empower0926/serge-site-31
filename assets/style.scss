@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 $bg: 'https://res.cloudinary.com/dmeppscpx/image/upload/w_1920,f_auto,q_auto/v1602337522/sapiangroup/bg_sapian-group.png';
-$accent: #8fe1ef;
-$accentDark: #005ba5;
+$accent: #205cff;
+$accentDark: #040e4e;
 $bgColor: #fff;
 $bgDark: #040820;
 $footer: #1d262d;
@@ -150,14 +150,25 @@ h2 {
     position: absolute;
     bottom: 0;
     width: 100%;
+    perspective: 1000;
+    transform-style: preserve-3d;
 
     svg {
         width: 100%;
-
         #rotate {
             animation: rotates 120s forwards infinite;
             transform-origin: center;
             transform-box: fill-box;
+        }
+
+        .last {
+            transform-style: preserve-3d;
+            transform: translateZ(-100px) !important;
+        }
+
+        .mid {
+            transform-style: preserve-3d;
+            transform: translateZ(1000px);
         }
 
         @keyframes rotates {
@@ -292,29 +303,6 @@ main {
         }
 
         .map {
-            #map {
-
-                //animation: map 5s ease-in-out infinite;
-                @keyframes map {
-                    0% {
-                        transform: translateY(0px);
-                    }
-
-                    50% {
-                        transform: translateY(-5px);
-                    }
-
-                    100% {
-                        transform: translateY(0px);
-                    }
-                }
-            }
-
-            #map-shadow {
-                opacity: 0.4;
-                transform: translateY(-3px);
-            }
-
             .point {
                 path {
                     transform-origin: center;
@@ -349,7 +337,7 @@ main {
 
     .sec-3 {
         // padding: 2rem 0;
-        // background: url('img/bg-test.svg') no-repeat;
+        // background: url('img/bg-test-2.png') no-repeat;
         background-size: cover;
         position: relative;
         overflow-y: hidden;
@@ -429,7 +417,6 @@ main {
     }
 
     .what-we-do {
-
         .bg-test {
             width: 100%;
             height: 100vh;

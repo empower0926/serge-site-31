@@ -9,12 +9,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #8fe1ef;
+  background: #205cff;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 25px;
-  background: #005ba5;
+  background: #040e4e;
 }
 
 html,
@@ -54,7 +54,7 @@ h2 {
   z-index: 2;
   width: 100%;
   height: 100vh;
-  background-color: #005ba5;
+  background-color: #040e4e;
   -webkit-animation: gone 2s ease forwards 4s;
           animation: gone 2s ease forwards 4s;
 }
@@ -173,6 +173,10 @@ h2 {
   position: absolute;
   bottom: 0;
   width: 100%;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .bg svg {
@@ -185,6 +189,20 @@ h2 {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
+}
+
+.bg svg .last {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-100px) !important;
+          transform: translateZ(-100px) !important;
+}
+
+.bg svg .mid {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(1000px);
+          transform: translateZ(1000px);
 }
 
 @-webkit-keyframes rotates {
@@ -310,7 +328,7 @@ main .sec-1 {
 main .sec-1 .learn-more {
   margin-top: 1rem;
   border: none;
-  background-color: #005ba5;
+  background-color: #040e4e;
   color: white;
   padding: 0.5rem 2rem;
   border-radius: 4px;
@@ -343,48 +361,12 @@ main .sec-1 .main-content .heading svg {
 main .sec-2 {
   position: relative;
   color: white;
-  background-color: #005ba5;
+  background-color: #040e4e;
   padding-bottom: 5rem;
 }
 
 main .sec-2 p {
   letter-spacing: 1.5px;
-}
-
-@-webkit-keyframes map {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes map {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-main .sec-2 .map #map-shadow {
-  opacity: 0.4;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
 }
 
 main .sec-2 .map .point path {
@@ -485,7 +467,7 @@ main .sec-3 .cube .fun .man-years {
   height: 280px;
   border-radius: 500px;
   border: 2px solid white;
-  background-color: rgba(0, 91, 165, 0.5);
+  background-color: rgba(4, 14, 78, 0.5);
 }
 
 main .sec-3 .cube .fun .man-years img {
@@ -508,7 +490,7 @@ main .sec-3 .cube .fun .clients {
   height: 280px;
   border-radius: 500px;
   border: 2px solid white;
-  background-color: #005ba5;
+  background-color: #040e4e;
 }
 
 main .sec-3 .cube .fun .clients img {
