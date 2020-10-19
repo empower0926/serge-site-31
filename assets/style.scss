@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 $bg: 'https://res.cloudinary.com/dmeppscpx/image/upload/w_1920,f_auto,q_auto/v1602337522/sapiangroup/bg_sapian-group.png';
 $accent: #8fe1ef;
-$accentDark: #205cff;
+$accentDark: #005ba5;
 $bgColor: #fff;
-$bgDark: #04005c;
+$bgDark: #040820;
 $footer: #1d262d;
 
 // 003ee7
@@ -459,7 +459,7 @@ main {
         width: 100vw;
         height: 100vh;
         position: relative;
-        
+
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
             text-shadow: 0 2px 15px rgba($color: #000850, $alpha: 0.8);
@@ -481,6 +481,7 @@ main {
 
         .companies {
             perspective: 1000;
+
             .col {
                 padding: 4px !important;
             }
@@ -494,7 +495,7 @@ main {
                 border-radius: 5px;
                 background-color: red;
                 transition: .3s;
-                
+
                 &:hover {
                     z-index: 999 !important;
                     cursor: pointer;
@@ -940,9 +941,10 @@ p {
 }
 
 @media (min-width: 768px) {
-    .s-p{
+    .s-p {
         text-align-last: center;
     }
+
     p {
         text-align-last: left;
     }
