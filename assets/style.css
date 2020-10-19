@@ -558,16 +558,86 @@ main .what-we-do .companies {
           perspective: 1000;
 }
 
-main .what-we-do .companies .col {
-  padding: 4px !important;
+main .what-we-do .companies .call-in:after {
+  position: absolute;
+  color: #1d262d;
+  content: 'click me';
+  border-radius: 500px;
+  z-index: 999;
+  width: 150px;
+  font-size: 28px;
+  top: -72px;
+  left: -70px;
+  text-align: center;
+  padding-top: 55px;
+  height: 150px;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-animation: call-to ease-in-out 3s infinite;
+          animation: call-to ease-in-out 3s infinite;
+}
+
+@-webkit-keyframes call-to {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  20% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  30% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  50% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  70% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes call-to {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  20% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  30% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  50% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  70% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 
 main .what-we-do .companies .company {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
-  width: 8rem;
-  height: 8rem;
+  width: clamp(90px, 10vw, 10rem);
+  height: clamp(90px, 10vw, 10rem);
   border-radius: 5px;
   -webkit-transition: .3s;
   transition: .3s;
