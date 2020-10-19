@@ -155,6 +155,7 @@ h2 {
 
     svg {
         width: 100%;
+
         #rotate {
             animation: rotates 120s forwards infinite;
             transform-origin: center;
@@ -556,8 +557,14 @@ main {
                 overflow: hidden !important;
                 animation: bg-move 250s infinite;
 
-                #slid_img {
+                #slide-image {
                     width: 100%;
+                }
+
+                #slid_img {
+                    text-align: center;
+                    min-width: 240px;
+                    max-width: 300px;
                 }
 
                 .b-word {
@@ -581,42 +588,24 @@ main {
                     #side-text-p {
                         text-shadow: 5px 5px 25px rgba($color: #111, $alpha: 0.7);
                         font-size: clamp(11px, 1.5vw, 16px);
+                        // min-width: 526px;
                     }
 
                     .slider {
-                        background-color: rgba($color: #fff, $alpha: 0.04);
-                        padding: 20px;
-                        margin: 20px;
-                        margin-right: 0px;
+                        margin-top: 3rem;
                         width: 100%;
-                        min-height: 80%;
-                        right: 0;
-                        border-radius: 4px 0 0 4px;
+                        background: rgb(255, 255, 255);
+                        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.7959558823529411) 75%, rgba(255, 255, 255, 0) 100%);
+                        border-radius: 5px;
 
-                        .next-btn {
-                            width: 25px;
-                            height: 25px;
-                            position: absolute;
-                            right: 10px;
-                            z-index: 999;
-                            transform: rotate(180deg);
-
-                            svg {
-                                #inner {
-                                    transform-origin: center;
-                                    transform-box: fill-box;
-                                    transition: .3s;
-                                }
-
-                                &:hover #inner {
-                                    transition: .3s;
-                                    transform: scale(0.8);
-                                }
-                            }
+                        .slide-content{
+                            height: 150px;
                         }
                     }
 
-                    @keyframes flip {
+
+
+                    @keyframes flip-right {
                         0% {
                             transform: translateX(0%);
                             opacity: 1;
@@ -633,26 +622,82 @@ main {
                         }
                     }
 
-                    .next {
-                        width: 35px;
-                        height: 35px;
-                        margin-left: 1rem;
-                        cursor: pointer;
-                        transition: .3s;
-
-                        &:hover {
-                            transition: .3s;
-                            transform: scale(1.1);
+                    @keyframes flip-left {
+                        0% {
+                            transform: translateX(0%);
+                            opacity: 1;
                         }
 
-                        @keyframes go-ease {
+                        50% {
+                            transform: translateX(-100%);
+                            opacity: 0;
+                        }
+
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .slide-btns {
+                    svg {
+                        width: 25px;
+                        height: 25px;
+
+                        #inner {
+                            transform-origin: center;
+                            transform-box: fill-box;
+                            transition: .3s;
+                        }
+
+                        &:hover #inner {
+                            transition: .3s;
+                            transform: scale(0.8);
+                        }
+                    }
+
+                    .next-btn {
+                        width: 25px;
+                        height: 25px;
+                        z-index: 999;
+                        transform: rotate(180deg);
+                        transform-origin: center;
+                        transform-box: fill-box;
+
+                        @keyframes go-ease-right {
+                            0% {
+                                transform: translateX(0) rotate(180deg);
+                                opacity: 1;
+                            }
+
+                            50% {
+                                transform: translateX(400px) rotate(360deg);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(0) rotate(180deg);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .prev-btn {
+                        width: 25px;
+                        height: 25px;
+                        z-index: 999;
+                        transform-origin: center;
+                        transform-box: fill-box;
+
+                        @keyframes go-ease-left {
                             0% {
                                 transform: translateX(0) rotate(0);
                                 opacity: 1;
                             }
 
                             50% {
-                                transform: translateX(400px) rotate(180deg);
+                                transform: translateX(-400px) rotate(-180deg);
                                 opacity: 0;
                             }
 
@@ -918,7 +963,7 @@ p {
     word-spacing: -2px;
 }
 
-.left-last{
+.left-last {
     text-align-last: left !important;
 }
 

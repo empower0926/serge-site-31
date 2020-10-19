@@ -645,8 +645,14 @@ main .what-we-do .flashgroup-page .flashgroup {
           animation: bg-move 250s infinite;
 }
 
-main .what-we-do .flashgroup-page .flashgroup #slid_img {
+main .what-we-do .flashgroup-page .flashgroup #slide-image {
   width: 100%;
+}
+
+main .what-we-do .flashgroup-page .flashgroup #slid_img {
+  text-align: center;
+  min-width: 240px;
+  max-width: 300px;
 }
 
 main .what-we-do .flashgroup-page .flashgroup .b-word {
@@ -674,27 +680,96 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow #side-text-p {
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
-  background-color: rgba(255, 255, 255, 0.04);
-  padding: 20px;
-  margin: 20px;
-  margin-right: 0px;
+  margin-top: 3rem;
   width: 100%;
-  min-height: 80%;
-  right: 0;
-  border-radius: 4px 0 0 4px;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, rgba(0, 0, 0, 0.8)), color-stop(75%, rgba(0, 0, 0, 0.795956)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.795956) 75%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 5px;
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn {
+main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .slide-content {
+  height: 150px;
+}
+
+@-webkit-keyframes flip-right {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-right {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flip-left {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-left {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+main .what-we-do .flashgroup-page .flashgroup .slide-btns svg {
   width: 25px;
   height: 25px;
-  position: absolute;
-  right: 10px;
-  z-index: 999;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn svg #inner {
+main .what-we-do .flashgroup-page .flashgroup .slide-btns svg #inner {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -702,74 +777,78 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn svg #
   transition: .3s;
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .next-btn svg:hover #inner {
+main .what-we-do .flashgroup-page .flashgroup .slide-btns svg:hover #inner {
   -webkit-transition: .3s;
   transition: .3s;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-@-webkit-keyframes flip {
+main .what-we-do .flashgroup-page .flashgroup .slide-btns .next-btn {
+  width: 25px;
+  height: 25px;
+  z-index: 999;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes go-ease-right {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(0) rotate(180deg);
+            transform: translateX(0) rotate(180deg);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(400px) rotate(360deg);
+            transform: translateX(400px) rotate(360deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(0) rotate(180deg);
+            transform: translateX(0) rotate(180deg);
     opacity: 1;
   }
 }
 
-@keyframes flip {
+@keyframes go-ease-right {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(0) rotate(180deg);
+            transform: translateX(0) rotate(180deg);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(400px) rotate(360deg);
+            transform: translateX(400px) rotate(360deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(0) rotate(180deg);
+            transform: translateX(0) rotate(180deg);
     opacity: 1;
   }
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .next {
-  width: 35px;
-  height: 35px;
-  margin-left: 1rem;
-  cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+main .what-we-do .flashgroup-page .flashgroup .slide-btns .prev-btn {
+  width: 25px;
+  height: 25px;
+  z-index: 999;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .next:hover {
-  -webkit-transition: .3s;
-  transition: .3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@-webkit-keyframes go-ease {
+@-webkit-keyframes go-ease-left {
   0% {
     -webkit-transform: translateX(0) rotate(0);
             transform: translateX(0) rotate(0);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateX(400px) rotate(180deg);
-            transform: translateX(400px) rotate(180deg);
+    -webkit-transform: translateX(-400px) rotate(-180deg);
+            transform: translateX(-400px) rotate(-180deg);
     opacity: 0;
   }
   100% {
@@ -779,15 +858,15 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow .next:hover {
   }
 }
 
-@keyframes go-ease {
+@keyframes go-ease-left {
   0% {
     -webkit-transform: translateX(0) rotate(0);
             transform: translateX(0) rotate(0);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateX(400px) rotate(180deg);
-            transform: translateX(400px) rotate(180deg);
+    -webkit-transform: translateX(-400px) rotate(-180deg);
+            transform: translateX(-400px) rotate(-180deg);
     opacity: 0;
   }
   100% {
