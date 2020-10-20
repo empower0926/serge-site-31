@@ -79,9 +79,9 @@ function next() {
     // document.getElementById("fgf-heading").innerHTML = new_left_data.heading;
     document.getElementById("slid_img").src = new_left_data.img;
     document.getElementById("side-text-p").innerHTML = new_left_data.text;
-  }, 1500);
-
-
+    document.getElementById("flashgroup-heading").innerHTML=new_left_data.heading;
+  }, 2000);
+  document.getElementById('next-btn').removeAttribute("onclick");
   let slider = document.querySelector('.slider');
   setTimeout(slide, 300);
   slider.removeAttribute("style");
@@ -106,27 +106,31 @@ function next() {
     btn_next.removeAttribute('style');
   }, 3500);
   btn_next.style.animation = "go-ease-right ease-in-out 3.5s forwards";
+  setTimeout(() => {
+    document.getElementById('next-btn').setAttribute('onclick', "next();");
+}, 5000);
 }
 
 function prev() {
 
-  if (idx > 9 || idx < 0) return;
+  if ( idx < 0 ) return;
 
-  var new_left_data = pages[idx + 1];
-  if (idx != 8) {
-    idx = idx + 1;
+  var new_left_data = pages[idx - 1];
+  if (idx != 0) {
+    idx = idx - 1;
   } else {
-    idx = 0;
-    new_left_data = pages[idx];
+    idx = 8;
+    new_left_data = pages[8];
   }
 
   setTimeout(() => {
-    // document.getElementById("fgf-heading").innerHTML = new_left_data.heading;
+   
     document.getElementById("slid_img").src = new_left_data.img;
     document.getElementById("side-text-p").innerHTML = new_left_data.text;
-  }, 1500);
+    document.getElementById("flashgroup-heading").innerHTML=new_left_data.heading;
+  }, 2000);
 
-
+  document.getElementById('prev-btn').removeAttribute("onclick");
   let slider = document.querySelector('.slider');
   setTimeout(slide, 300);
   slider.removeAttribute("style");
@@ -152,7 +156,12 @@ function prev() {
     btn_prev.removeAttribute('style');
   }, 3500);
   btn_prev.style.animation = "go-ease-left ease-in-out 3.5s forwards";
+  setTimeout(() => {
+        document.getElementById('prev-btn').setAttribute('onclick', "prev();");
+  }, 5000);
 }
+
+
 
 function slide() {
   let slider = document.querySelector('.slider');
@@ -170,6 +179,7 @@ function closeDiv(compPage) {
     paragraph.removeAttribute('style');
     logo.removeAttribute('style');
   }
+ 
 }
 
 function showCompanyData(company, page) {
