@@ -5,7 +5,7 @@ $accentDark: #040e4e;
 $bgColor: #fff;
 $bgDark: #040820;
 
-$sec3: #030b3b;
+$sec3: #040e4e;
 $workflow: #fff;
 $core: #010418;
 $footer: #00020c;
@@ -323,8 +323,8 @@ main {
         color: white;
         // height: 100vh;
         // margin-top: 7.5rem;
-        // background-color: $accentDark;
-        background: url('img/art.png') no-repeat;
+        background-color: $accentDark;
+        // background: url('img/art.svg') no-repeat;
         background-size: cover;
         background-position: bottom;
         padding-bottom: 5rem;
@@ -368,7 +368,7 @@ main {
 
     .sec-3 {
         // padding: 2rem 0;
-        // background: url('img/bg-test-2.png') no-repeat;
+        background: url('img/art.svg') no-repeat;
         background-color: $sec3;
         background-size: cover;
         position: relative;
@@ -407,7 +407,7 @@ main {
                     height: 280px;
                     border-radius: 500px;
                     border: 2px solid white;
-                    background-color: rgba($color:$accentDark, $alpha: 0.5);
+                    background-color: rgba($color: #111, $alpha: 0.5);
 
                     img {
                         transform-style: preserve-3d;
@@ -427,7 +427,8 @@ main {
                     height: 280px;
                     border-radius: 500px;
                     border: 2px solid white;
-                    background-color: $accentDark;
+                    background-color: #111;
+                    box-shadow: 0 0 15px 15px rgba($color: $accent, $alpha: 0.3);
 
                     img {
                         transform-style: preserve-3d;
@@ -991,6 +992,8 @@ main {
         z-index: 999;
         padding: 5% 0;
         background-color: $workflow;
+        background: url(img/workflow.svg) no-repeat;
+        background-size: cover;
         font-size: 18px;
         color: #111;
 

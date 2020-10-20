@@ -375,7 +375,7 @@ main .sec-1 .main-content .heading svg {
 main .sec-2 {
   position: relative;
   color: white;
-  background: url("img/art.png") no-repeat;
+  background-color: #040e4e;
   background-size: cover;
   background-position: bottom;
   padding-bottom: 5rem;
@@ -436,7 +436,8 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
-  background-color: #030b3b;
+  background: url("img/art.svg") no-repeat;
+  background-color: #040e4e;
   background-size: cover;
   position: relative;
   overflow-y: hidden;
@@ -484,7 +485,7 @@ main .sec-3 .cube .fun .man-years {
   height: 280px;
   border-radius: 500px;
   border: 2px solid white;
-  background-color: rgba(4, 14, 78, 0.5);
+  background-color: rgba(17, 17, 17, 0.5);
 }
 
 main .sec-3 .cube .fun .man-years img {
@@ -507,7 +508,9 @@ main .sec-3 .cube .fun .clients {
   height: 280px;
   border-radius: 500px;
   border: 2px solid white;
-  background-color: #040e4e;
+  background-color: #111;
+  -webkit-box-shadow: 0 0 15px 15px rgba(32, 92, 255, 0.3);
+          box-shadow: 0 0 15px 15px rgba(32, 92, 255, 0.3);
 }
 
 main .sec-3 .cube .fun .clients img {
@@ -1186,6 +1189,8 @@ main .workflow {
   z-index: 999;
   padding: 5% 0;
   background-color: #fff;
+  background: url(img/workflow.svg) no-repeat;
+  background-size: cover;
   font-size: 18px;
   color: #111;
 }
@@ -1278,7 +1283,7 @@ main .workflow img {
   z-index: 3;
   width: 17rem;
   height: 17rem;
-  background-color: #030b3b;
+  background-color: #040e4e;
   border-radius: 500px;
 }
 
