@@ -57,6 +57,11 @@ h2 {
     }
 }
 
+.accentText {
+    color: $accent;
+    font-weight: 600;
+}
+
 .intro {
     display: none !important; // remove after development
     position: fixed;
