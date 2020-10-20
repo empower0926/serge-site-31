@@ -422,7 +422,7 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
-  background-color: black;
+  background-color: #030b3b;
   background-size: cover;
   position: relative;
   overflow-y: hidden;
@@ -433,7 +433,7 @@ main .sec-3 {
 
 main .sec-3 .cube {
   position: relative;
-  color: #1d262d;
+  color: #00020c;
   width: 80%;
   height: 500px;
 }
@@ -562,7 +562,7 @@ main .what-we-do .companies {
 
 main .what-we-do .companies .call-in:after {
   position: absolute;
-  color: #1d262d;
+  color: #00020c;
   content: 'click me';
   border-radius: 500px;
   z-index: 999;
@@ -994,7 +994,7 @@ main .what-we-do .sapianCapital-page a:hover {
 }
 
 main .what-we-do .ollorun-page {
-  color: #1d262d;
+  color: #00020c;
   position: absolute;
   top: 0;
   left: 0;
@@ -1174,7 +1174,7 @@ main .workflow {
   padding: 5% 0;
   background-color: #fff;
   font-size: 18px;
-  color: #1d262d;
+  color: #111;
 }
 
 main .workflow img {
@@ -1238,10 +1238,101 @@ main .workflow img {
   }
 }
 
+.core {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: #010418;
+}
+
+.core div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+}
+
+.core .layer-1 {
+  z-index: 3;
+  width: 17rem;
+  height: 17rem;
+  background-color: #030b3b;
+  border-radius: 500px;
+}
+
+.core .layer-2 {
+  z-index: 2;
+  width: 20rem;
+  height: 20rem;
+  background-color: #040e4e;
+  border-radius: 500px;
+}
+
+.core .layer-3 {
+  z-index: 1;
+  width: 22rem;
+  height: 22rem;
+  background-color: #205cff;
+  border-radius: 500px;
+}
+
+.core .glow {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 500px;
+  -webkit-box-shadow: 0 0 75px 50px rgba(4, 14, 78, 0.5);
+          box-shadow: 0 0 75px 50px rgba(4, 14, 78, 0.5);
+  -webkit-animation: glow 3s ease-in-out infinite;
+          animation: glow 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    -webkit-box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+            box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 75px 50px rgba(32, 92, 255, 0.2);
+            box-shadow: 0 0 75px 50px rgba(32, 92, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+            box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+            box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 75px 50px rgba(32, 92, 255, 0.2);
+            box-shadow: 0 0 75px 50px rgba(32, 92, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+            box-shadow: 0 0 15px 50px rgba(32, 92, 255, 0);
+  }
+}
+
+.core .core-div {
+  z-index: 99;
+  width: 15rem;
+  height: 15rem;
+}
+
+.core img {
+  width: 100%;
+}
+
 .footer {
   position: relative;
   z-index: 999;
-  background-color: #040820;
+  background-color: #00020c;
   width: 100%;
   height: 50vh;
   color: white;
