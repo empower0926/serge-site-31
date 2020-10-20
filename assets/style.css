@@ -361,7 +361,9 @@ main .sec-1 .main-content .heading svg {
 main .sec-2 {
   position: relative;
   color: white;
-  background-color: #040e4e;
+  background: url("img/art.png") no-repeat;
+  background-size: cover;
+  background-position: bottom;
   padding-bottom: 5rem;
 }
 
@@ -420,10 +422,11 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
+  background-color: black;
   background-size: cover;
   position: relative;
   overflow-y: hidden;
-  color: #1d262d;
+  color: white;
   overflow-x: hidden;
   font-size: clamp(16px, 1vw, 24px);
 }
@@ -506,7 +509,6 @@ main .flip {
 }
 
 main .what-we-do {
-  margin: 4rem 0;
   color: white;
   border-radius: 0 0 100px 100px;
   width: 100vw;

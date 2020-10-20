@@ -41,6 +41,7 @@ h2 {
     font-weight: 200;
 }
 
+
 .nav {
     position: absolute;
     z-index: 99;
@@ -296,7 +297,10 @@ main {
         color: white;
         // height: 100vh;
         // margin-top: 7.5rem;
-        background-color: $accentDark;
+        // background-color: $accentDark;
+        background: url('img/art.png') no-repeat;
+        background-size: cover;
+        background-position: bottom;
         padding-bottom: 5rem;
 
         p {
@@ -339,10 +343,11 @@ main {
     .sec-3 {
         // padding: 2rem 0;
         // background: url('img/bg-test-2.png') no-repeat;
+        background-color: black;
         background-size: cover;
         position: relative;
         overflow-y: hidden;
-        color: $footer;
+        color: white;
         overflow-x: hidden;
         font-size: clamp(16px, 1vw, 24px);
 
@@ -432,7 +437,7 @@ main {
             opacity: 0.3;
         }
 
-        margin: 4rem 0;
+        // margin: 4rem 0;
         color: white;
         border-radius: 0 0 100px 100px;
         width: 100vw;
