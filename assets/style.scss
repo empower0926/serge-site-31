@@ -991,11 +991,12 @@ main {
         position: relative;
         z-index: 999;
         padding: 5% 0;
-        background-color: $workflow;
-        background: url(img/workflow.svg) no-repeat;
+        background: rgb(6, 16, 84);
+        background: linear-gradient(180deg, rgba(6, 16, 84, 1) 13%, rgba(0, 2, 15, 1) 84%);
+        // background: url(img/deep-blue-texture-background.jpg) no-repeat;
         background-size: cover;
         font-size: 18px;
-        color: #111;
+        color: #fff;
 
         img {
             animation: world 6s infinite;
@@ -1041,6 +1042,10 @@ main {
     text-align: justify;
     text-align-last: center;
     background-color: $core;
+    background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1920/v1603223801/sapian-group/black-stone-texture-dark-slate-background.png_n3fna2.jpg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
     .core {
         overflow: hidden;
         position: relative;
@@ -1116,26 +1121,34 @@ main {
 }
 
 .footer {
+    padding-top: 5rem;
     position: relative;
     z-index: 999;
-    background-color: $footer;
+    background-color: #00020f;
     width: 100%;
     color: white;
-   
-        .logo{
-            img{
-                width: 260px;
-            }
-        }
 
-        ul {
-          padding: 0;
-      
-          li {
-            list-style: none;
-          }
+    .logo {
+        img {
+            width: 260px;
         }
-      
+    }
+
+    .socials {
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: none;
+        }
+    }
+
 }
 
 
