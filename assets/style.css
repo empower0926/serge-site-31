@@ -1357,6 +1357,14 @@ main .workflow img {
   color: white;
 }
 
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
 p {
   text-align: justify;
   text-align-last: center;
