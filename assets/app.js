@@ -64,7 +64,6 @@ var idx = 0;
 
 
 function next() {
-
   if (idx > 9 || idx < 0) return;
 
   var new_left_data = pages[idx + 1];
