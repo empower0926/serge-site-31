@@ -49,6 +49,11 @@ h2 {
   outline: none !important;
 }
 
+.accentText {
+  color: #205cff;
+  font-weight: 600;
+}
+
 .intro {
   display: none !important;
   position: fixed;
