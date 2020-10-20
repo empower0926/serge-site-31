@@ -19,6 +19,7 @@
 
 html,
 body {
+  overflow-x: hidden !important;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -509,10 +510,8 @@ main .flip {
 }
 
 main .what-we-do {
-  overflow: hidden;
   color: white;
-  background-color: red;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
 }
