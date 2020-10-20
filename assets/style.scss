@@ -4,7 +4,11 @@ $accent: #205cff;
 $accentDark: #040e4e;
 $bgColor: #fff;
 $bgDark: #040820;
-$footer: #1d262d;
+
+$sec3: #030b3b;
+$workflow: #fff;
+$core: #010418;
+$footer: #00020c;
 
 // 003ee7
 :root {
@@ -40,6 +44,7 @@ h2 {
     font-size: clamp(28px, 15vw, 40px);
     font-weight: 200;
 }
+
 
 .nav {
     position: absolute;
@@ -301,7 +306,10 @@ main {
         color: white;
         // height: 100vh;
         // margin-top: 7.5rem;
-        background-color: $accentDark;
+        // background-color: $accentDark;
+        background: url('img/art.png') no-repeat;
+        background-size: cover;
+        background-position: bottom;
         padding-bottom: 5rem;
 
         p {
@@ -344,10 +352,11 @@ main {
     .sec-3 {
         // padding: 2rem 0;
         // background: url('img/bg-test-2.png') no-repeat;
+        background-color: $sec3;
         background-size: cover;
         position: relative;
         overflow-y: hidden;
-        color: $footer;
+        color: white;
         overflow-x: hidden;
         font-size: clamp(16px, 1vw, 24px);
 
@@ -417,6 +426,7 @@ main {
     }
 
     .what-we-do {
+        overflow: hidden;
         .bg-test {
             width: 100%;
             height: 100vh;
@@ -432,14 +442,15 @@ main {
         .bg-dark {
             position: absolute;
             width: 100%;
-            height: 120%;
+            height: 100%;
             background-color: black !important;
             opacity: 0.3;
         }
 
-        margin: 4rem 0;
+        // margin: 4rem 0;
         color: white;
-        border-radius: 0 0 100px 100px;
+        background-color: red;
+        // border-radius: 0 0 100px 100px;
         width: 100vw;
         height: 100vh;
         position: relative;
@@ -465,6 +476,7 @@ main {
 
         .companies {
             perspective: 1000;
+
             // position: relative;
             .call-in {
                 &:after {
@@ -963,9 +975,9 @@ main {
         position: relative;
         z-index: 999;
         padding: 5% 0;
-        background-color: #fff;
+        background-color: $workflow;
         font-size: 18px;
-        color: $footer;
+        color: #111;
 
         img {
             animation: world 6s infinite;
@@ -1005,10 +1017,90 @@ main {
 //     font-size: clamp(1rem, 1.25vw, 1.25rem);
 // }
 
+
+.core-sec {
+    color: white;
+    text-align: justify;
+    text-align-last: center;
+    background-color: $core;
+    .core {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 50vh;
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .layer-1 {
+            z-index: 3;
+            width: 17rem;
+            height: 17rem;
+            background-color: $sec3;
+            border-radius: 500px;
+        }
+
+        .layer-2 {
+            z-index: 2;
+            width: 20rem;
+            height: 20rem;
+            background-color: $accentDark;
+            border-radius: 500px;
+        }
+
+        .layer-3 {
+            z-index: 1;
+            width: 22rem;
+            height: 22rem;
+            background-color: $accent;
+            border-radius: 500px;
+        }
+
+        .glow {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 500px;
+            box-shadow: 0 0 75px 50px rgba($color: $accentDark, $alpha: 0.5);
+            animation: glow 3s ease-in-out infinite;
+
+            @keyframes glow {
+                0% {
+                    box-shadow: 0 0 15px 50px rgba($color: $accent, $alpha: 0);
+                }
+
+                50% {
+                    box-shadow: 0 0 75px 50px rgba($color: $accent, $alpha: 0.2);
+                }
+
+                100% {
+                    box-shadow: 0 0 15px 50px rgba($color: $accent, $alpha: 0);
+                }
+
+            }
+        }
+
+        .core-div {
+            z-index: 99;
+            width: 15rem;
+            height: 15rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
 .footer {
     position: relative;
     z-index: 999;
-    background-color: $bgDark;
+    background-color: $footer;
     width: 100%;
     height: 50vh;
     color: white;
