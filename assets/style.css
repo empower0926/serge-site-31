@@ -49,6 +49,14 @@ h2 {
   outline: none !important;
 }
 
+nav {
+  width: 100%;
+}
+
+nav .navbar-toggler:focus {
+  outline: none !important;
+}
+
 .accentText {
   color: #205cff;
   font-weight: 600;
