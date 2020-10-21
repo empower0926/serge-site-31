@@ -10,7 +10,7 @@ function smoothscroll(hash) {
     }
   );
   }else{
-    $("html, body").animate(); 
+    $("html, body").animate({},10,function(){}); 
    $("html, body").animate({
       scrollTop: $(hash).offset().top,
     },
