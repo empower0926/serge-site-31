@@ -1,4 +1,5 @@
 function smoothscroll(hash) {
+  if($(window).width() > 768){
   $("html, body").animate({
       scrollTop: $(hash).offset().top,
     },
@@ -7,6 +8,9 @@ function smoothscroll(hash) {
       window.location.hash = hash;
     }
   );
+  }else{
+      window.location.hash = hash;
+  }
 }
 
 function closeProfile() {
