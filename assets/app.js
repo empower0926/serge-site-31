@@ -1,15 +1,11 @@
 function smoothscroll(hash) {
 
- 
-  $("html, body").animate({
+  $("html, body").animate(
+    {
       scrollTop: $(hash).offset().top,
     },
     800,
-    function () {
-      window.location.hash = hash;
-    }
   );
-  
 }
 
 function closeProfile() {
@@ -24,7 +20,7 @@ var pages = [{
     a_text: "Comming Soon"
   },
   {
-    img: "https://res.cloudinary.com/sapiangroup/image/upload/v1601660967/OZEETY_IMAGES/assets/img/FlashXchanger_flashgroup-cryptostations.png",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1601660967/OZEETY_IMAGES/assets/img/FlashXchanger_flashgroup-cryptostations.png",
     heading: "FlashXchanger",
     text: "Omnichannel exchange for trading derivatives and digital currency",
     a_link: "https://www.flashxchanger.com/",
@@ -38,14 +34,14 @@ var pages = [{
     a_text: "Visit"
   },
   {
-    img: "https://res.cloudinary.com/sapiangroup/image/upload/v1602066481/OZEETY_IMAGES/assets/img/masternode-2-flashgroup-cryptostations.jpg",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1602066481/OZEETY_IMAGES/assets/img/masternode-2-flashgroup-cryptostations.jpg",
     heading: "OZTG Core Wallet",
     text: "Masternode and Staking rewards wallet for wealth creation and passive income",
     a_link: "https://ozeety.com/",
     a_text: "Visit"
   },
   {
-    img: "/assets/img/cryptostation.png",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1603289816/sapian-group/cryptostation_sapian-group.png",
     heading: "Cryptostation",
     text: "An all-in-one information station in various models, providing Blockchain based educational information. It also has full ATM-style functionality, with the capability to dispense your own OZTGcard and the possibility to buy crypto directly from the Cryptostation. ",
     a_link: "https://blog.flashmoni.io/cryptostation-by-flashgroup-3dfb6c218d77",
@@ -59,14 +55,14 @@ var pages = [{
     a_text: "Comming Soon"
   },
   {
-    img: "https://res.cloudinary.com/sapiangroup/image/upload/v1601650675/OZEETY_IMAGES/assets/img/FlashAdchain_flashgroup-cryptostations.png",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1601650675/OZEETY_IMAGES/assets/img/FlashAdchain_flashgroup-cryptostations.png",
     heading: "Adchain",
     text: "A targeted ad service across all our platforms, to provide the user with information and promo offers on their interested areas and location. The revenue from this will be shared with the clients and also contribute towards our charity foundation.",
     a_link: "https://blog.flashmoni.io/what-is-flashadchain-8bdd6abacd8e",
     a_text: "Lern More"
   },
   {
-    img: "/assets/img/handshake.svg",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto,w_200/v1603290401/sapian-group/handshake_sapian-group.svg",
     heading: "Flashcare",
     text: "An independently managed foundation through which the group of companies will contribute towards helping our chosen projects and causes. Self-sustainable humanity is our  mission and we will work hard in collaboration with other NGOs and government bodies to bring this to reality",
     a_link: "https://flashcare.org/",
