@@ -11,11 +11,11 @@ function smoothscroll(hash) {
   );
   }else{
     $("html, body").animate({
-      scrollTop: $(hash).offset().top,
+      scrollTop: $('').offset().top,
     },
     800,
     function () {
-      window.location.hash = hash;
+      window.location.hash = '';
     }
   ); 
    $("html, body").animate({
