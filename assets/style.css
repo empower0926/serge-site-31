@@ -436,7 +436,7 @@ main .sec-2 .map .point path {
 }
 
 main .sec-3 {
-  background: url("img/art.svg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603279823/sapian-group/art_sapian-group.svg") no-repeat;
   background-color: #040e4e;
   background-size: cover;
   position: relative;
@@ -723,7 +723,7 @@ main .what-we-do .flashgroup-page {
 main .what-we-do .flashgroup-page .flashgroup {
   position: absolute;
   color: white;
-  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603129971/sapian-group/science-fiction-space-wallpaper-awesome-nebula-somewhere-dark-deep-space_jsdzzg.jpg");
+  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603129971/sapian-group/science-fiction-space-wallpaper-awesome-nebula-somewhere-dark-deep-space_sapian-group.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -973,7 +973,7 @@ main .what-we-do .qq-page {
   height: 110vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873708/sapian-group/bg-qq_v1bmej.jpg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873708/sapian-group/bg-qq_sapian-group.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -986,7 +986,7 @@ main .what-we-do .sapianCapital-page {
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
   color: white;
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873710/sapian-group/bg-capital2_uro8xi.jpg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873710/sapian-group/bg-capital2_sapian-group.jpg") no-repeat;
   background-size: cover;
   text-shadow: 2px 2px 5px black;
 }
@@ -1018,7 +1018,7 @@ main .what-we-do .ollorun-page {
   height: 110vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1050,7 +1050,7 @@ main .what-we-do .sapianHospitality-page {
   height: 110vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873707/sapian-group/bg-hospitality_znwjve.png") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1602873707/sapian-group/bg-hospitality_sapian-group.png") no-repeat;
   background-size: cover;
 }
 
@@ -1062,7 +1062,7 @@ main .what-we-do .fgn-page {
   height: 110vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873708/sapian-group/bg-fgn_vyoahy.png") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873708/sapian-group/bg-fgn_sapian-group.png") no-repeat;
   background-size: cover;
   color: white;
 }
@@ -1095,7 +1095,7 @@ main .what-we-do .ozeetyBlockchain-page {
   height: 110vh;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_auto,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png") no-repeat;
   background-size: cover;
 }
 
@@ -1262,7 +1262,7 @@ main .workflow img {
   text-align: justify;
   text-align-last: center;
   background-color: #010418;
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1920/v1603223801/sapian-group/black-stone-texture-dark-slate-background.png_n3fna2.jpg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1920/v1603223801/sapian-group/black-stone-texture-dark-slate-background_sapian-group.jpg") no-repeat;
   background-position: bottom;
   background-size: cover;
 }
