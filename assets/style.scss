@@ -446,7 +446,7 @@ main {
     .what-we-do {
         .bg-test {
             width: 100%;
-            height: 100vh;
+            height: 10vh;
             position: absolute;
             top: 0;
             left: 0;
@@ -459,7 +459,7 @@ main {
         .bg-dark {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 120%;
             background-color: black !important;
             opacity: 0.3;
         }
@@ -631,6 +631,19 @@ main {
             height: 100vh;
             clip-path: circle(0%);
 
+            #comp_link{
+                color: white;
+                padding: 0.2rem 2rem;
+                background-color: #8e2cf9;
+                border-radius: 3px;
+                text-decoration: none;
+                transition: .3s;
+                &:hover{
+                    background-color: #6000c7;
+                    box-shadow: 0 0 15px rgba($color: #8e2cf9, $alpha: 0.5);
+                }
+            }
+
             .flashgroup {
                 position: absolute;
                 color: white;
@@ -749,7 +762,7 @@ main {
                         transform: rotate(180deg);
                         transform-origin: center;
                         transform-box: fill-box;
-
+                        cursor: pointer;
                         @keyframes go-ease-right {
                             0% {
                                 transform: translateX(0) rotate(180deg);
@@ -774,7 +787,7 @@ main {
                         z-index: 999;
                         transform-origin: center;
                         transform-box: fill-box;
-
+                        cursor: pointer;
                         @keyframes go-ease-left {
                             0% {
                                 transform: translateX(0) rotate(0);
