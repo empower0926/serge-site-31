@@ -10,14 +10,7 @@ function smoothscroll(hash) {
     }
   );
   }else{
-    $("html, body").animate({
-      scrollTop: $('').offset().top,
-    },
-    800,
-    function () {
-      window.location.hash = '';
-    }
-  ); 
+    $("html, body").animate(); 
    $("html, body").animate({
       scrollTop: $(hash).offset().top,
     },
