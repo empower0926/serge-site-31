@@ -1,4 +1,5 @@
 function smoothscroll(hash) {
+  alert($(window).width() > 768);
   if($(window).width() > 768){
   $("html, body").animate({
       scrollTop: $(hash).offset().top,
