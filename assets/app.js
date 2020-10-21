@@ -17,56 +17,64 @@ var pages = [{
     heading: "Flashwallet",
     text: "All-in-one crypto and fiat wallet",
     a_link: "#",
-    a_text: "Comming Soon"
+    a_text: "Coming Soon",
+    a_class: "coming-soon"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1601660967/OZEETY_IMAGES/assets/img/FlashXchanger_flashgroup-cryptostations.png",
     heading: "FlashXchanger",
     text: "Omnichannel exchange for trading derivatives and digital currency",
     a_link: "https://www.flashxchanger.com/",
-    a_text: "Visit"
+    a_text: "Visit",
+    a_class: "visit"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_450/v1601820525/OZEETY_IMAGES/assets/img/oztcard_flashgroup-cryptostations.png",
     heading: "OZT card",
     text: "Unique biometric all-in-one smart card with onboard encrypted cold storage",
     a_link: "https://oztcard.com/",
-    a_text: "Visit"
+    a_text: "Visit",
+    a_class: "visit"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1602066481/OZEETY_IMAGES/assets/img/masternode-2-flashgroup-cryptostations.jpg",
     heading: "OZTG Core Wallet",
     text: "Masternode and Staking rewards wallet for wealth creation and passive income",
     a_link: "https://ozeety.com/",
-    a_text: "Visit"
+    a_text: "Visit",
+    a_class: "visit"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1603289816/sapian-group/cryptostation_sapian-group.png",
     heading: "Cryptostation",
     text: "An all-in-one information station in various models, providing Blockchain based educational information. It also has full ATM-style functionality, with the capability to dispense your own OZTGcard and the possibility to buy crypto directly from the Cryptostation. ",
     a_link: "https://blog.flashmoni.io/cryptostation-by-flashgroup-3dfb6c218d77",
-    a_text: "Lern More"
+    a_text: "Lern More",
+    a_class: "visit"
   },
   {
-    img: "/assets/img/subs/flashcom.svg",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/v1602774069/sapian-group/Flashcom_sapian-group.svg",
     heading: "Flashcom",
     text: "A dedicated team to design all graphics and user interfaces for corporate branding and image across the whole group of companies",
     a_link: "#",
-    a_text: "Comming Soon"
+    a_text: "Learn More",
+    a_class: "visit"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto/v1601650675/OZEETY_IMAGES/assets/img/FlashAdchain_flashgroup-cryptostations.png",
     heading: "Adchain",
     text: "A targeted ad service across all our platforms, to provide the user with information and promo offers on their interested areas and location. The revenue from this will be shared with the clients and also contribute towards our charity foundation.",
     a_link: "https://blog.flashmoni.io/what-is-flashadchain-8bdd6abacd8e",
-    a_text: "Lern More"
+    a_text: "Lern More",
+    a_class: "visit"
   },
   {
     img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto,w_200/v1603290401/sapian-group/handshake_sapian-group.svg",
     heading: "Flashcare",
     text: "An independently managed foundation through which the group of companies will contribute towards helping our chosen projects and causes. Self-sustainable humanity is our  mission and we will work hard in collaboration with other NGOs and government bodies to bring this to reality",
     a_link: "https://flashcare.org/",
-    a_text: "Visit"
+    a_text: "Visit",
+    a_class: "visit"
   },
 ];
 
@@ -86,9 +94,13 @@ function next() {
 
   // changing link
   setTimeout(() => {
-    document.getElementById("comp_link").innerHTML = new_left_data.a_text;
-    document.getElementById("comp_link").setAttribute('href', new_left_data.a_link);
-    document.getElementById("comp_link").setAttribute('target', '_BLANK');
+
+    let aLink = document.getElementById("comp_link");
+    
+    aLink.innerHTML = new_left_data.a_text;
+    aLink.setAttribute('href', new_left_data.a_link);
+    aLink.setAttribute('target', '_BLANK');
+    aLink.className = new_left_data.a_class;
   }, 1500);
 
   // changing image
@@ -156,9 +168,12 @@ function prev() {
 
   // changing link
   setTimeout(() => {
-    document.getElementById("comp_link").innerHTML = new_left_data.a_text;
-    document.getElementById("comp_link").setAttribute('href', new_left_data.a_link);
-    document.getElementById("comp_link").setAttribute('target', '_BLANK');
+    let aLink = document.getElementById("comp_link");
+    
+    aLink.innerHTML = new_left_data.a_text;
+    aLink.setAttribute('href', new_left_data.a_link);
+    aLink.setAttribute('target', '_BLANK');
+    aLink.className = new_left_data.a_class;
   }, 1500);
 
   // changing image

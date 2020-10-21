@@ -929,10 +929,10 @@
         <section id="what-we-do" class="what-we-do d-flex justify-content-center">
             <div class="bg-test">
                 <img class="parallax"
-                    src="https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_2200/v1603223720/sapian-group/bg-test_sapian-group.png"
+                    src="https://res.cloudinary.com/sapiangroup/image/upload/v1603313384/sapian-group/crystals_gpsfxx.svg"
                     alt="what we do section background">
             </div>
-            <div class="bg-dark"></div>
+            
             <div class="my-auto comp-content">
                 <div class="container">
                     <div class="row">
@@ -1075,7 +1075,7 @@
                 </div>
                 <!-- flashgroup -->
                 <div id="flashgroup" class="flashgroup d-flex justify-content-center">
-                    <div class="container-fluid my-auto">
+                    <div class="container-fluid slider-container">
                         <div class="row">
                             <div class="col-sm-12 d-flex justify-content-center">
                                 <div class="my-auto d-block d-md-none">
@@ -1109,10 +1109,9 @@
                             <div class="col-sm-12">
                                 <div class="slideshow d-flex justify-content-center">
                                     <!-- slideshow -->
-                                    <div class="row w-100 d-flex justify-content-center">
+                                    <div class="row w-100 justify-content-center">
                                         <div class="col-sm-6 slider d-flex justify-content-center">
-                                            <div class="row my-auto">
-
+                                            <div class="row my-auto slide-parent">
                                                 <div class="col-sm-12">
                                                     <h4 id="flashgroup-heading" class="text-center">Flashwallet</h4>
                                                 </div>
@@ -1134,7 +1133,7 @@
                                                     </div>
 
                                                     <div class="col-sm-12 text-center">
-                                                        <a id="comp_link" href="#">Comming Soon</a>
+                                                        <a id="comp_link" href="#" class="coming-soon">Comming Soon</a>
                                                     </div>
                                                 </div>
 
@@ -1574,6 +1573,7 @@
     <script>
         AOS.init();
         var image = document.getElementsByClassName('parallax');
+
         new simpleParallax(image, {
             delay: .6,
             transition: 'cubic-bezier(0,0,0,1)'

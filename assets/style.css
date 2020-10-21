@@ -528,29 +528,26 @@ main .flip {
 main .what-we-do {
   color: white;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   position: relative;
 }
 
+main .what-we-do .simpleParallax {
+  height: 120vh !important;
+}
+
 main .what-we-do .bg-test {
-  width: 100%;
-  height: 10vh;
+  width: 100% !important;
+  height: 100% !important;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 main .what-we-do .bg-test img {
+  height: 150%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-main .what-we-do .bg-dark {
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  background-color: black !important;
-  opacity: 0.3;
 }
 
 main .what-we-do p {
@@ -743,7 +740,7 @@ main .what-we-do .flashgroup-page .flashgroup {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 110vh !important;
+  height: 120vh !important;
   overflow: hidden !important;
   -webkit-animation: bg-move 250s infinite;
           animation: bg-move 250s infinite;
@@ -751,6 +748,15 @@ main .what-we-do .flashgroup-page .flashgroup {
 
 main .what-we-do .flashgroup-page .flashgroup #slide-image {
   width: 100%;
+}
+
+main .what-we-do .flashgroup-page .flashgroup .coming-soon {
+  display: none !important;
+  background: none !important;
+}
+
+main .what-we-do .flashgroup-page .flashgroup .visit {
+  background-color: #8e2cf9 !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup #slid_img {
@@ -764,10 +770,18 @@ main .what-we-do .flashgroup-page .flashgroup .b-word {
   font-size: 64px;
 }
 
+main .what-we-do .flashgroup-page .flashgroup .slider-container {
+  margin-top: 7rem;
+}
+
+main .what-we-do .flashgroup-page .flashgroup .slide-parent {
+  width: clamp(340px, 50%, 540px);
+}
+
 main .what-we-do .flashgroup-page .flashgroup .slideshow {
   padding: 0rem 0 5rem 0;
   width: 100%;
-  height: clamp(500px, 50vh, 900px);
+  height: clamp(300px, 50vh, 900px);
   position: relative;
 }
 
@@ -784,6 +798,7 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow #side-text-p {
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
+  padding: 1rem;
   margin-top: 3rem;
   width: 100%;
   background: white;
@@ -792,7 +807,11 @@ main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
   border-radius: 5px;
 }
 
-main .what-we-do .flashgroup-page .flashgroup .slideshow .slider .slide-content {
+main .what-we-do .flashgroup-page .flashgroup .slideshow #slid_img {
+  width: 350px;
+}
+
+main .what-we-do .flashgroup-page .flashgroup .slideshow #slide-text {
   height: 150px;
 }
 
@@ -1206,9 +1225,9 @@ main .workflow {
   position: relative;
   z-index: 999;
   padding: 5% 0;
-  background: #061054;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #061054), color-stop(84%, #00020f));
-  background: linear-gradient(180deg, #061054 13%, #00020f 84%);
+  background: #050910;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #070c14), color-stop(84%, #00020f));
+  background: linear-gradient(180deg, #070c14 13%, #00020f 84%);
   background-size: cover;
   font-size: 18px;
   color: #fff;
