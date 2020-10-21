@@ -10,6 +10,7 @@ function smoothscroll(hash) {
     }
   );
   }else{
+   setTimeout(function () {
     $("html, body").animate({
       scrollTop: $(hash).offset().top,
     },
@@ -17,15 +18,9 @@ function smoothscroll(hash) {
     function () {
       window.location.hash = hash;
     }
-  ); 
-  $("html, body").animate({
-    scrollTop: $(hash).offset().top,
-  },
-  800,
-  function () {
-    window.location.hash = hash;
-  }
-);
+  );
+   },800) ;
+  
   }
 }
 
