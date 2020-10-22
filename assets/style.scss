@@ -37,11 +37,11 @@ body {
     font-family: 'Poppins', sans-serif;
     height: 300vh;
     scroll-behavior: smooth;
-  
-    
+
+
 }
 
-body{
+body {
     overflow-x: hidden !important;
 }
 
@@ -83,8 +83,8 @@ nav {
         }
     }
 
-    .navbar-brand{
-        img{
+    .navbar-brand {
+        img {
             width: 120px !important;
         }
     }
@@ -455,9 +455,10 @@ main {
     }
 
     .what-we-do {
-        .simpleParallax{
+        .simpleParallax {
             height: 120vh !important;
         }
+
         .bg-test {
             width: 100% !important;
             height: 100% !important;
@@ -481,7 +482,8 @@ main {
 
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
-            text-shadow: 0 2px 15px rgba($color: #000850, $alpha: 0.8);
+            text-align: justify;
+            text-align-last: center;
         }
 
         .comp-content {
@@ -568,62 +570,110 @@ main {
                 // height: 10rem;
                 border-radius: 5px;
                 // background-color: red;
-                transition: .3s;
+                transition: .3s !important;
 
                 &:hover {
                     z-index: 999 !important;
                     cursor: pointer;
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }
 
             #qq {
-                background: url(img/qq-btn.svg) no-repeat;
-                // background-color: #fff;
+                background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/qq_mctffq.svg') no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-color: black;
+                }
             }
 
             #sapianCapital {
-                background: url(img/sc-btn.svg) no-repeat;
-                // background-color: #fff;
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397707/sapian-group/btn7/sapian-capital_a2aygx.svg');
+                background-repeat: no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/sapian-capital_rxwray.svg');
+                    background-color: $accent;
+                }
             }
 
             #ollorun {
-                background: url(img/ol-btn.svg) no-repeat;
-                // background-color: #fff;
+                background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397440/sapian-group/btn7/ollorun_jaopdx.svg') no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-color: #3120A9;
+                }
             }
 
             #sapianHospitality {
-                background: url(img/sh-btn.svg) no-repeat;
-                // background-color: #fff;
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/sapian-asset_umtqha.svg');
+                background-repeat: no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    // background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/sapian-asset_lmgije.svg');
+                    background-color: gold;
+                }
             }
 
             #fgn {
-                background: url(img/fgn-btn.svg) no-repeat;
-                // background-color: #fff;
+                background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/fgn_ziyv7f.svg') no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-color: #8e2cf9;
+                }
             }
 
             #ozeety {
-                background: url(img/oz-btn.svg) no-repeat;
-                // background-color: #fff;
+                background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/ozeety_eefwrg.svg') no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-color: black;
+                }
             }
 
             #flashgroup {
-                background: url(img/flash-btn.svg) no-repeat;
-                // background-color: #fff;
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/flash-group_q1e2zd.svg');
+                background-repeat: no-repeat;
+                background-color: #fff;
                 background-position: center;
                 background-size: cover;
+
+                transition: .3s;
+
+                &:hover {
+                    background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/flash-group_jrq5re.svg');
+                    background-color: #3403bb;
+                }
             }
 
         }
@@ -636,17 +686,18 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 120vh;
             clip-path: circle(0%);
 
-            #comp_link{
+            #comp_link {
                 color: white;
                 padding: 0.2rem 2rem;
                 background-color: #8e2cf9;
                 border-radius: 3px;
                 text-decoration: none;
                 transition: .3s;
-                &:hover{
+
+                &:hover {
                     background-color: #6000c7;
                     box-shadow: 0 0 15px rgba($color: #8e2cf9, $alpha: 0.5);
                 }
@@ -669,12 +720,12 @@ main {
                 }
 
 
-                .coming-soon{
+                .coming-soon {
                     display: none !important;
                     background: none !important;
                 }
 
-                .visit{
+                .visit {
                     background-color: #8e2cf9 !important;
                 }
 
@@ -682,7 +733,7 @@ main {
                 #slid_img {
                     width: 100%;
                     text-align: center;
-                    
+
                 }
 
                 .b-word {
@@ -690,11 +741,11 @@ main {
                     font-size: 64px;
                 }
 
-                .slider-container{
+                .slider-container {
                     margin-top: 7rem;
                 }
 
-                .slide-parent{
+                .slide-parent {
                     width: clamp(100%, 50%, 50vw);
                 }
 
@@ -713,6 +764,7 @@ main {
                     #side-text-p {
                         text-shadow: 5px 5px 25px rgba($color: #111, $alpha: 0.7);
                         font-size: clamp(11px, 1.5vw, 16px);
+                        text-align: center !important;
                         // min-width: 526px;
                     }
 
@@ -725,11 +777,11 @@ main {
                         border-radius: 5px;
                     }
 
-                    #slid_img{
+                    #slid_img {
                         width: 350px;
                     }
 
-                    #slide-text{
+                    #slide-text {
                         height: 150px;
                     }
 
@@ -793,6 +845,7 @@ main {
                         transform-origin: center;
                         transform-box: fill-box;
                         cursor: pointer;
+
                         @keyframes go-ease-right {
                             0% {
                                 transform: translateX(0) rotate(180deg);
@@ -818,6 +871,7 @@ main {
                         transform-origin: center;
                         transform-box: fill-box;
                         cursor: pointer;
+
                         @keyframes go-ease-left {
                             0% {
                                 transform: translateX(0) rotate(0);
@@ -846,7 +900,7 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
             // background-color: black;
             background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1602873708/sapian-group/bg-qq_sapian-group.jpg') no-repeat;
@@ -859,7 +913,7 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
             color: white;
             background: url('https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873710/sapian-group/bg-capital2_sapian-group.jpg') no-repeat;
@@ -890,11 +944,34 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
             // background-color: white;
-            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1598163489/OLLORUN_IMAGES/images/img/BG/BG_04_ollorun_reibrh.jpg') no-repeat;
+            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603391374/sapian-group/ollorun_sapian_group.svg') no-repeat;
             background-size: cover;
+            text-shadow: none !important;
+
+            p {
+                text-align-last: left !important;
+            }
+
+            .packs {
+                animation: float 6s infinite;
+
+                @keyframes float {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: translateY(-30px);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
 
             a {
                 background: rgb(101, 255, 207);
@@ -920,10 +997,18 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
-            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1602873707/sapian-group/bg-hospitality_sapian-group.png') no-repeat;
+            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603402583/sapian-group/asset-bg_wsxzcw.jpg') no-repeat;
             background-size: cover;
+
+            .comp-logo{
+                img{
+                    mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/sapian-asset_lmgije.svg);
+                    mask-size: cover;
+                    mask-position: center;
+                }
+            }
         }
 
         //fgn
@@ -932,7 +1017,7 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
             background: url('https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1602873708/sapian-group/bg-fgn_sapian-group.png') no-repeat;
             background-size: cover;
@@ -962,10 +1047,14 @@ main {
             top: 0;
             left: 0;
             width: 100%;
-            height: 110vh;
+            height: 120vh;
             clip-path: circle(0%);
             background: url('https://res.cloudinary.com/sapiangroup/image/upload/w_1900,f_auto,q_auto/v1598203426/OZEETY_IMAGES/assets/img/bloc3-bg_flashgroup-cryptostations.png') no-repeat;
             background-size: cover;
+
+            p {
+                text-align-last: left !important;
+            }
 
             h3 {
                 font-weight: 100;
@@ -1030,7 +1119,7 @@ main {
         }
     }
 
-   
+
     .workflow {
         position: relative;
         z-index: 999;
@@ -1041,7 +1130,7 @@ main {
         background-size: cover;
         font-size: 18px;
         color: #fff;
-        
+
         img {
             animation: world 6s infinite;
 
@@ -1198,7 +1287,7 @@ main {
 
 p {
     text-align: justify;
-    text-align-last: center;
+    // text-align-last: center;
     letter-spacing: 1.4px !important;
     word-spacing: -2px;
 }
@@ -1208,6 +1297,20 @@ p {
 }
 
 @media (min-width: 768px) {
+
+
+    .ollorun-page {
+        p {
+            text-align-last: left !important;
+        }
+    }
+
+    .ozeetyBlockchain-page {
+        p {
+            text-align-last: left !important;
+        }
+    }
+
     .s-p {
         text-align-last: center !important;
     }
