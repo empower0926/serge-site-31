@@ -19,7 +19,6 @@
 
 html,
 body {
-  overflow-x: hidden !important;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -27,6 +26,10 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 300vh;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
 }
 
 h1,
@@ -57,7 +60,7 @@ nav .navbar-toggler:focus {
   outline: none !important;
 }
 
-nav img {
+nav .navbar-brand img {
   width: 120px !important;
 }
 

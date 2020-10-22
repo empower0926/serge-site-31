@@ -31,7 +31,6 @@ $footer: #00020c;
 
 html,
 body {
-    overflow-x: hidden !important;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -40,6 +39,10 @@ body {
     scroll-behavior: smooth;
   
     
+}
+
+body{
+    overflow-x: hidden !important;
 }
 
 h1,
@@ -80,8 +83,10 @@ nav {
         }
     }
 
-    img{
-        width: 120px !important;
+    .navbar-brand{
+        img{
+            width: 120px !important;
+        }
     }
 }
 
