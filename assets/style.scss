@@ -79,6 +79,10 @@ nav {
             outline: none !important;
         }
     }
+
+    img{
+        width: 120px !important;
+    }
 }
 
 .accentText {
@@ -656,6 +660,7 @@ main {
 
                 #slide-image {
                     width: 100%;
+                    height: 150px !important;
                 }
 
 
@@ -670,9 +675,9 @@ main {
 
 
                 #slid_img {
+                    width: 100%;
                     text-align: center;
-                    min-width: 240px;
-                    max-width: 300px;
+                    
                 }
 
                 .b-word {
@@ -685,13 +690,12 @@ main {
                 }
 
                 .slide-parent{
-                    width: clamp(340px, 50%, 540px);
+                    width: clamp(100%, 50%, 50vw);
                 }
 
                 .slideshow {
                     padding: 0rem 0 5rem 0;
                     width: 100%;
-                    height: clamp(300px, 50vh, 900px);
                     position: relative;
 
                     .side-text {
@@ -723,8 +727,6 @@ main {
                     #slide-text{
                         height: 150px;
                     }
-
-
 
                     @keyframes flip-right {
                         0% {
@@ -1192,6 +1194,7 @@ main {
 p {
     text-align: justify;
     text-align-last: center;
+    letter-spacing: 1.4px !important;
     word-spacing: -2px;
 }
 

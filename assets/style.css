@@ -57,6 +57,10 @@ nav .navbar-toggler:focus {
   outline: none !important;
 }
 
+nav img {
+  width: 120px !important;
+}
+
 .accentText {
   color: #205cff;
   font-weight: 600;
@@ -748,6 +752,7 @@ main .what-we-do .flashgroup-page .flashgroup {
 
 main .what-we-do .flashgroup-page .flashgroup #slide-image {
   width: 100%;
+  height: 150px !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup .coming-soon {
@@ -760,9 +765,8 @@ main .what-we-do .flashgroup-page .flashgroup .visit {
 }
 
 main .what-we-do .flashgroup-page .flashgroup #slid_img {
+  width: 100%;
   text-align: center;
-  min-width: 240px;
-  max-width: 300px;
 }
 
 main .what-we-do .flashgroup-page .flashgroup .b-word {
@@ -775,13 +779,12 @@ main .what-we-do .flashgroup-page .flashgroup .slider-container {
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slide-parent {
-  width: clamp(340px, 50%, 540px);
+  width: clamp(100%, 50%, 50vw);
 }
 
 main .what-we-do .flashgroup-page .flashgroup .slideshow {
   padding: 0rem 0 5rem 0;
   width: 100%;
-  height: clamp(300px, 50vh, 900px);
   position: relative;
 }
 
@@ -1423,6 +1426,7 @@ main .workflow img {
 p {
   text-align: justify;
   text-align-last: center;
+  letter-spacing: 1.4px !important;
   word-spacing: -2px;
 }
 

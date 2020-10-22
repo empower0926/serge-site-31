@@ -69,7 +69,7 @@ var pages = [{
     a_class: "visit"
   },
   {
-    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto,w_200/v1603290401/sapian-group/handshake_sapian-group.svg",
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto,f_auto,w_900/v1603290401/sapian-group/handshake_sapian-group.svg",
     heading: "Flashcare",
     text: "An independently managed foundation through which the group of companies will contribute towards helping our chosen projects and causes. Self-sustainable humanity is our  mission and we will work hard in collaboration with other NGOs and government bodies to bring this to reality",
     a_link: "https://flashcare.org/",
