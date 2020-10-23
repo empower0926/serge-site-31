@@ -61,7 +61,7 @@
     <main>
 
         <!-- nav -->
-        <div class="nav">
+        <!-- <div class="nav">
             <nav class="navbar navbar-expand-lg p-3 p-md-5">
                 <a class="navbar-brand" href="#" style="width: 84px;"><img
                         src="https://res.cloudinary.com/sapiangroup/image/upload/v1603276271/sapian-group/sc-logo_sapian-group.svg"
@@ -75,16 +75,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <!-- <li class="nav-item active">
-                            <a class="nav-link mx-2" href="#">About</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link mx-2" href="javascript:smoothscroll('#what-we-do')">What we do?</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </div>
+        </div> -->
 
         <!-- section 1-->
         <div class="scroll-guid d-none d-md-block" onclick="smoothscroll('#scroll-point')">
@@ -964,10 +961,18 @@
                                 <!-- desktop -->
                                 <div class="row d-none d-md-flex" data-aos="fade-up" data-aos-duration="900"
                                     data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic">
+
+                                    <div class="col">
+                                        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700"
+                                            data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
+                                            id="flashgroup" onclick="showCompanyData('flashgroup', 'flashgroup-page')"
+                                            class="company call-in"></div>
+                                    </div>
+
                                     <div class="col">
                                         <div data-aos="fade-up" data-aos-duration="1200"
                                             data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
-                                            id="qq" onclick="showCompanyData('qq', 'qq-page')" class="company call-in">
+                                            id="qq" onclick="showCompanyData('qq', 'qq-page')" class="company">
                                         </div>
                                     </div>
                                     <div class="col">
@@ -975,12 +980,6 @@
                                             data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
                                             id="sapianCapital"
                                             onclick="showCompanyData('sapianCapital', 'sapianCapital-page')"
-                                            class="company"></div>
-                                    </div>
-                                    <div class="col">
-                                        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300"
-                                            data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
-                                            id="ollorun" onclick="showCompanyData('ollorun', 'ollorun-page')"
                                             class="company"></div>
                                     </div>
                                     <div class="col">
@@ -1003,9 +1002,9 @@
                                             class="company"></div>
                                     </div>
                                     <div class="col">
-                                        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700"
+                                        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300"
                                             data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
-                                            id="flashgroup" onclick="showCompanyData('flashgroup', 'flashgroup-page')"
+                                            id="ollorun" onclick="showCompanyData('ollorun', 'ollorun-page')"
                                             class="company"></div>
                                     </div>
                                 </div>
@@ -1014,9 +1013,16 @@
                                 <div class="row d-block d-md-none">
                                     <div class="col-sm-12">
                                         <div class="row">
+
+                                            <div class="col">
+                                                <div id="flashgroup"
+                                                    onclick="showCompanyData('flashgroup', 'flashgroup-page')"
+                                                    class="company call-in"></div>
+                                            </div>
+
                                             <div class="col">
                                                 <div id="qq" onclick="showCompanyData('qq', 'qq-page')"
-                                                    class="company call-in">
+                                                    class="company">
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -1024,10 +1030,7 @@
                                                     onclick="showCompanyData('sapianCapital', 'sapianCapital-page')"
                                                     class="company"></div>
                                             </div>
-                                            <div class="col">
-                                                <div id="ollorun" onclick="showCompanyData('ollorun', 'ollorun-page')"
-                                                    class="company"></div>
-                                            </div>
+                                            
                                         </div>
 
                                         <div class="row mt-4">
@@ -1051,8 +1054,7 @@
 
                                         <div class="row mt-4">
                                             <div class="col d-flex justify-content-center">
-                                                <div id="flashgroup"
-                                                    onclick="showCompanyData('flashgroup', 'flashgroup-page')"
+                                                <div id="ollorun" onclick="showCompanyData('ollorun', 'ollorun-page')"
                                                     class="company"></div>
                                             </div>
                                         </div>
@@ -1293,21 +1295,18 @@
                             style="fill:#fff" />
                     </svg>
                 </div>
-                <div class="container-fluid my-auto mt-3">
+                <div class="container-fluid" style="margin-top: 6rem;">
                     <div class="row justify-content-center">
-                        <div class="col-sm-12">
-                            
+                        <div class="col-sm-12 d-flex justify-content-center">
+                            <div class="comp-logo">
+                                <img class="w-100" src="https://res.cloudinary.com/sapiangroup/image/upload/f_auto,w_1200/v1603397440/sapian-group/btn7/ollorun_jaopdx.svg"
+                                    alt="ollorun logo">
+                            </div>
                         </div>
 
-                        <div class="col-sm-5 d-flex">
+                        <div class="col-sm-5 d-flex" style="margin-top: 2rem;">
                             <div class="my-auto">
-
-                                <div class="comp-logo d-flex justify-content-center justify-content-md-start">
-                                    <img class="w-50" src="https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_400/v1598163569/OLLORUN_IMAGES/images/elements/logo02_ollorun_df7xdq.png"
-                                        alt="ollorun logo">
-                                </div>
-
-                                <div class="mt-4">
+                                <div>
                                     <p class="text-justify">
                                         Ollorun is the sales channel for our network and affiliate marketing for our
                                         products and
@@ -1318,20 +1317,16 @@
                                     </p>
                                 </div>
 
-                                <div class="mt-5 d-none d-md-block">
+                                <div class="mt-5 text-center text-md-left">
                                     <a target="_blank" href="https://ollorun.com/">Visit Ollorun</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-4 d-flex justify-content-center justify-content-md-end">
-                            <img class="w-75 my-auto packs"
+                        <div class="col-sm-4 d-flex justify-content-center justify-content-md-end" style="margin-top: 2rem;">
+                            <img class="w-75 my-auto packs d-none d-md-block"
                                 src="https://res.cloudinary.com/sapiangroup/image/upload/v1598163577/OLLORUN_IMAGES/images/elements/Packs_H_W_ollorun_lcwea6.png"
                                 alt="">
-                        </div>
-
-                        <div class="mt-5 d-flex justify-content-center d-block d-md-none">
-                            <a target="_blank" href="https://ollorun.com/">Visit Ollorun</a>
                         </div>
                     </div>
                 </div>
@@ -1440,10 +1435,10 @@
                             style="fill:#fff" />
                     </svg>
                 </div>
-                <div class="container-fluid my-auto">
+                <div class="container" style="margin-top: clamp(4rem, 10%, 12rem);">
                     <div class="row justify-content-center">
                         <div class="col-sm-12 d-flex justify-content-center">
-                            <div class="comp-logo d-flex justify-content-center">
+                            <div class="comp-logo text-center">
                                 <img src="https://res.cloudinary.com/sapiangroup/image/upload/v1601741549/OZEETY_IMAGES/assets/img/OZTG-gold-flashgroup-cryptostations.svg  "
                                     alt="ozeety logo">
                             </div>
@@ -1467,7 +1462,12 @@
                         </div>
 
                         <div class="col-sm-4 text-center text-md-right">
-                            <img class="w-50" src="https://res.cloudinary.com/sapiangroup/image/upload/w_500,f_auto,q_auto/v1601800246/OZEETY_IMAGES/assets/img/coin-flashgroup-cryptostations.png" alt="">
+                            <div class="w-100 d-none d-md-block">
+                                <img class="w-100" src="https://res.cloudinary.com/sapiangroup/image/upload/w_900,f_auto/v1601800246/OZEETY_IMAGES/assets/img/coin-flashgroup-cryptostations.png" alt="">
+                            </div>
+                            <div class="w-100 d-block d-md-none">
+                                <img class="w-75" src="https://res.cloudinary.com/sapiangroup/image/upload/w_900,f_auto/v1601800246/OZEETY_IMAGES/assets/img/coin-flashgroup-cryptostations.png" alt="">
+                            </div>
                         </div>
 
                         <div class="col-sm-12 d-flex justify-content-center mt-4">
@@ -1536,7 +1536,7 @@
                         <div class="layer-1" data-aos="zoom-in" data-aos-duration="1500"></div>
                         <div class="core-div">
                             <img data-aos="zoom-in" data-aos-duration="1500"
-                                src="https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1603275324/sapian-group/core_sapian-group.svg"
+                                src="https://res.cloudinary.com/sapiangroup/image/upload/v1603275324/sapian-group/core_sapian-group.svg"
                                 alt="core">
                         </div>
                     </div>
@@ -1565,7 +1565,7 @@
                 <div class="row p-5">
                     <div class="col-sm-12 col-md-4 text-center text-md-left">
                         <div class="logo">
-                            <img src="https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_200/v1603276271/sapian-group/sc-logo_sapian-group.svg"
+                            <img src="https://res.cloudinary.com/sapiangroup/image/upload/v1603276271/sapian-group/sc-logo_sapian-group.svg"
                                 style="width: 75%;" alt="sapian group logo">
                         </div>
                     </div>

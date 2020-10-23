@@ -76,7 +76,7 @@ h2 {
 
 nav {
     width: 100%;
-
+    
     .navbar-toggler {
         &:focus {
             outline: none !important;
@@ -295,9 +295,10 @@ main {
     animation: to-front 2s ease forwards 5s;
 
     .sec-1 {
-        // background-color: rgba($color: $accent, $alpha: 0.5);
+        background-size: cover;
         height: 100vh;
         position: relative;
+        color: $footer;
 
         .learn-more {
             margin-top: 1rem;
@@ -309,7 +310,7 @@ main {
         }
 
         #sapian-logo {
-            width: calc(10vw + 5rem);
+            width: clamp(5rem, 50%, 15rem);
         }
 
         @keyframes to-front {
@@ -939,7 +940,7 @@ main {
 
         // ollorun
         .ollorun-page {
-            color: $footer;
+            color: white;
             position: absolute;
             top: 0;
             left: 0;
@@ -947,8 +948,11 @@ main {
             height: 120vh;
             clip-path: circle(0%);
             // background-color: white;
-            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603391374/sapian-group/ollorun_sapian_group.svg') no-repeat;
+            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603450226/sapian-group/ollorun-bg_c4zaks.png') no-repeat;
+            background-position: center;
             background-size: cover;
+            backface-visibility: hidden;
+            transform: translateZ(0) !important;
             text-shadow: none !important;
 
             p {
