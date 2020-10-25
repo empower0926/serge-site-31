@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&display=swap");
 :root {
   font-size: 16px;
 }
@@ -23,12 +23,12 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   height: 300vh;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: 'Heebo', sans-serif;
   overflow-x: hidden !important;
 }
 
@@ -36,6 +36,11 @@ h1,
 h2 {
   font-size: clamp(28px, 15vw, 40px);
   font-weight: 200;
+}
+
+p {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 200 !important;
 }
 
 .nav {
@@ -53,7 +58,28 @@ h2 {
 }
 
 nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-perspective: 100;
+          perspective: 100;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   width: 100%;
+}
+
+nav a {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  color: white !important;
+  -webkit-transition: .3s !important;
+  transition: .3s !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+nav a:hover {
+  -webkit-transform: translateZ(1.7px);
+          transform: translateZ(1.7px);
+  color: #04f7ff !important;
 }
 
 nav .navbar-toggler:focus {
@@ -61,7 +87,7 @@ nav .navbar-toggler:focus {
 }
 
 nav .navbar-brand img {
-  width: 120px !important;
+  width: 78px !important;
 }
 
 .accentText {
@@ -70,14 +96,8 @@ nav .navbar-brand img {
 }
 
 .intro {
-  display: none !important;
-  position: fixed;
-  z-index: 2;
   width: 100%;
-  height: 100vh;
-  background-color: #040e4e;
-  -webkit-animation: gone 2s ease forwards 4s;
-          animation: gone 2s ease forwards 4s;
+  position: relative;
 }
 
 .intro .group {
@@ -116,48 +136,106 @@ nav .navbar-brand img {
   }
 }
 
-.intro .logo #sapian {
-  width: calc(20vw + 5rem);
-  -webkit-animation: fill-line 2s ease forwards 3.5s !important;
-          animation: fill-line 2s ease forwards 3.5s !important;
+.intro .logo-parent {
+  position: relative;
 }
 
-.intro .logo #sapian path:nth-child(1) {
+.intro .logo-parent .silver {
+  position: absolute;
+  width: calc(15vw + 12rem);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603646319/sapian-group/Sapian_Logo_mnwwyl.svg);
+          mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603646319/sapian-group/Sapian_Logo_mnwwyl.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+          mask-position: bottom;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  opacity: 0;
+  -webkit-animation: silver ease-in-out 2s forwards 3s;
+          animation: silver ease-in-out 2s forwards 3s;
+}
+
+@-webkit-keyframes silver {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes silver {
+  to {
+    opacity: 1;
+  }
+}
+
+.intro .logo-parent .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: to-silver ease-in-out 2s forwards 3s;
+          animation: to-silver ease-in-out 2s forwards 3s;
+}
+
+@-webkit-keyframes to-silver {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes to-silver {
+  to {
+    opacity: 0;
+  }
+}
+
+.intro .logo-parent .logo #sapian {
+  width: calc(15vw + 12rem);
+}
+
+.intro .logo-parent .logo #sapian path:nth-child(1) {
   stroke-dasharray: 455.84344482421875px;
   stroke-dashoffset: 455.84344482421875px;
   -webkit-animation: sapian 2s ease forwards;
           animation: sapian 2s ease forwards;
 }
 
-.intro .logo #sapian path:nth-child(2) {
+.intro .logo-parent .logo #sapian path:nth-child(2) {
   stroke-dasharray: 455.8554992675781px;
   stroke-dashoffset: 455.8554992675781px;
   -webkit-animation: sapian 2s ease forwards 0.3s;
           animation: sapian 2s ease forwards 0.3s;
 }
 
-.intro .logo #sapian path:nth-child(3) {
+.intro .logo-parent .logo #sapian path:nth-child(3) {
   stroke-dasharray: 246.47296142578125px;
   stroke-dashoffset: 246.47296142578125px;
   -webkit-animation: sapian 2s ease forwards 0.6s;
           animation: sapian 2s ease forwards 0.6s;
 }
 
-.intro .logo #sapian path:nth-child(4) {
+.intro .logo-parent .logo #sapian path:nth-child(4) {
   stroke-dasharray: 635.5220947265625px;
   stroke-dashoffset: 635.5220947265625px;
   -webkit-animation: sapian 2s ease forwards 0.9s;
           animation: sapian 2s ease forwards 0.9s;
 }
 
-.intro .logo #sapian path:nth-child(5) {
+.intro .logo-parent .logo #sapian path:nth-child(5) {
   stroke-dasharray: 499.5021057128906px;
   stroke-dashoffset: 499.5021057128906px;
   -webkit-animation: sapian 2s ease forwards 1.2s;
           animation: sapian 2s ease forwards 1.2s;
 }
 
-.intro .logo #sapian path:nth-child(6) {
+.intro .logo-parent .logo #sapian path:nth-child(6) {
   stroke-dasharray: 559.6683349609375px;
   stroke-dashoffset: 559.6683349609375px;
   -webkit-animation: sapian 2s ease forwards 1.5s;
@@ -173,20 +251,6 @@ nav .navbar-brand img {
 @keyframes sapian {
   to {
     stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes fill-line {
-  to {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-@keyframes fill-line {
-  to {
-    -webkit-transform: scale(2);
-            transform: scale(2);
   }
 }
 
@@ -243,25 +307,22 @@ nav .navbar-brand img {
 .scroll-guid {
   position: absolute;
   z-index: 999;
-  width: 40px;
-  height: 60px;
+  width: 35px;
+  height: 50px;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 3px solid #04005c;
+  border: 3px solid white;
   bottom: 40px;
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: scroll-guid 2s ease-in-out infinite;
-          animation: scroll-guid 2s ease-in-out infinite;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-animation: scroll-guid 2s ease-in-out infinite 4s;
+          animation: scroll-guid 2s ease-in-out infinite 4s;
 }
 
 .scroll-guid:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
@@ -298,7 +359,7 @@ nav .navbar-brand img {
   margin: auto;
   width: 5px;
   height: 20px;
-  background-color: #04005c;
+  background-color: white;
   -webkit-animation: scroll 2s ease-in-out infinite 2s;
           animation: scroll 2s ease-in-out infinite 2s;
 }
@@ -342,19 +403,97 @@ main {
 }
 
 main .sec-1 {
-  background-size: cover;
   height: 100vh;
+  -webkit-perspective: 1000;
+          perspective: 1000;
   position: relative;
-  color: #00020c;
+  color: white;
+  background-color: #020400;
 }
 
-main .sec-1 .learn-more {
-  margin-top: 1rem;
-  border: none;
-  background-color: #040e4e;
-  color: white;
-  padding: 0.5rem 2rem;
-  border-radius: 4px;
+main .sec-1 .motto {
+  margin-top: 5em;
+  font-weight: 100;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+main .sec-1 .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0) scale(1);
+            transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(100px) translateY(100px) scale(0);
+            transform: translateX(100px) translateY(100px) scale(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0) scale(1);
+            transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(100px) translateY(100px) scale(0);
+            transform: translateX(100px) translateY(100px) scale(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main .sec-1 .bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .sec-1 .bg img {
+  z-index: -1;
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
+          animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
+}
+
+@-webkit-keyframes move-earth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move-earth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 main .sec-1 #sapian-logo {
@@ -384,9 +523,9 @@ main .sec-1 .main-content .heading svg {
 main .sec-2 {
   position: relative;
   color: white;
-  background-color: #040e4e;
-  background-size: cover;
-  background-position: bottom;
+  background: #020400;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #020400), color-stop(84%, #040e4e));
+  background: linear-gradient(180deg, #020400 13%, #040e4e 84%);
   padding-bottom: 5rem;
 }
 
@@ -773,12 +912,79 @@ main .what-we-do .companies #flashgroup:hover {
 
 main .what-we-do .flashgroup-page {
   position: absolute;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204257/FLASHMONI_IMAGES/images/services_zweajh.jpg") no-repeat;
+  background-size: cover;
+  color: #c97c1f;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120vh;
+  height: 100%;
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .slider {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .slider .flash-comp {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .slider .flash-comp img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .slider .glass {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .flash-link {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+}
+
+main .what-we-do .flashgroup-page .flashgroup-content .flash-link a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #c97c1f;
+  padding: 0.5rem 2rem;
 }
 
 main .what-we-do .flashgroup-page #comp_link {
@@ -795,274 +1001,6 @@ main .what-we-do .flashgroup-page #comp_link:hover {
   background-color: #6000c7;
   -webkit-box-shadow: 0 0 15px rgba(142, 44, 249, 0.5);
           box-shadow: 0 0 15px rgba(142, 44, 249, 0.5);
-}
-
-main .what-we-do .flashgroup-page .flashgroup {
-  position: absolute;
-  color: white;
-  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603129971/sapian-group/science-fiction-space-wallpaper-awesome-nebula-somewhere-dark-deep-space_sapian-group.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 120vh !important;
-  overflow: hidden !important;
-  -webkit-animation: bg-move 250s infinite;
-          animation: bg-move 250s infinite;
-}
-
-main .what-we-do .flashgroup-page .flashgroup #slide-image {
-  width: 100%;
-  height: 150px !important;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .coming-soon {
-  display: none !important;
-  background: none !important;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .visit {
-  background-color: #8e2cf9 !important;
-}
-
-main .what-we-do .flashgroup-page .flashgroup #slid_img {
-  width: 100%;
-  text-align: center;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .b-word {
-  font-weight: 200;
-  font-size: 64px;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slider-container {
-  margin-top: 7rem;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-parent {
-  width: clamp(100%, 50%, 50vw);
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow {
-  padding: 0rem 0 5rem 0;
-  width: 100%;
-  position: relative;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow .side-text {
-  margin: auto;
-  text-align: center;
-  text-justify: inter-word;
-  color: #fff;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow #side-text-p {
-  text-shadow: 5px 5px 25px rgba(17, 17, 17, 0.7);
-  font-size: clamp(11px, 1.5vw, 16px);
-  text-align: center !important;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow .slider {
-  padding: 1rem;
-  margin-top: 3rem;
-  width: 100%;
-  background: white;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, rgba(0, 0, 0, 0.8)), color-stop(75%, rgba(0, 0, 0, 0.795956)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.795956) 75%, rgba(255, 255, 255, 0) 100%);
-  border-radius: 5px;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow #slid_img {
-  width: 350px;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slideshow #slide-text {
-  height: 150px;
-}
-
-@-webkit-keyframes flip-right {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes flip-right {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes flip-left {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes flip-left {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-btns svg {
-  width: 25px;
-  height: 25px;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-btns svg #inner {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-btns svg:hover #inner {
-  -webkit-transition: .3s;
-  transition: .3s;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-btns .next-btn {
-  width: 25px;
-  height: 25px;
-  z-index: 999;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-  cursor: pointer;
-}
-
-@-webkit-keyframes go-ease-right {
-  0% {
-    -webkit-transform: translateX(0) rotate(180deg);
-            transform: translateX(0) rotate(180deg);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(400px) rotate(360deg);
-            transform: translateX(400px) rotate(360deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(180deg);
-            transform: translateX(0) rotate(180deg);
-    opacity: 1;
-  }
-}
-
-@keyframes go-ease-right {
-  0% {
-    -webkit-transform: translateX(0) rotate(180deg);
-            transform: translateX(0) rotate(180deg);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(400px) rotate(360deg);
-            transform: translateX(400px) rotate(360deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(180deg);
-            transform: translateX(0) rotate(180deg);
-    opacity: 1;
-  }
-}
-
-main .what-we-do .flashgroup-page .flashgroup .slide-btns .prev-btn {
-  width: 25px;
-  height: 25px;
-  z-index: 999;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-  cursor: pointer;
-}
-
-@-webkit-keyframes go-ease-left {
-  0% {
-    -webkit-transform: translateX(0) rotate(0);
-            transform: translateX(0) rotate(0);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(-400px) rotate(-180deg);
-            transform: translateX(-400px) rotate(-180deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0);
-            transform: translateX(0) rotate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes go-ease-left {
-  0% {
-    -webkit-transform: translateX(0) rotate(0);
-            transform: translateX(0) rotate(0);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateX(-400px) rotate(-180deg);
-            transform: translateX(-400px) rotate(-180deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0);
-            transform: translateX(0) rotate(0);
-    opacity: 1;
-  }
 }
 
 main .what-we-do .qq-page {

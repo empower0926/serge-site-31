@@ -1,7 +1,6 @@
 function smoothscroll(hash) {
 
-  $("html, body").animate(
-    {
+  $("html, body").animate({
       scrollTop: $(hash).offset().top,
     },
     800,
@@ -13,69 +12,69 @@ function closeProfile() {
   pop.style.animation = "pop-down 0.6s ease-in-out forwards";
 }
 var pages = [{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377434/sapian-group/FlashWallet_flashgroup_slider-_sapian-group_fhgnhb.png",
-  heading: "Flashwallet",
-  text: "All-in-one crypto and fiat wallet",
-  a_link: "#",
-  a_text: "Coming Soon",
-  a_class: "coming-soon"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/FlashXchanger_flashgroup_slider-_sapian-group_kitsq5.png",
-  heading: "FlashXchanger",
-  text: "Omnichannel exchange for trading derivatives and digital currency",
-  a_link: "https://www.flashxchanger.com/",
-  a_text: "Visit",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377435/sapian-group/oztcard_flashgroup_slider-_sapian-group_amvmer.png",
-  heading: "OZT card",
-  text: "Unique biometric all-in-one smart card with onboard encrypted cold storage",
-  a_link: "https://oztcard.com/",
-  a_text: "Visit",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377435/sapian-group/masternode-2_flashgroup_slider-_sapian-group_ekvruy.png",
-  heading: "OZTG Core Wallet",
-  text: "Masternode and Staking rewards wallet for wealth creation and passive income",
-  a_link: "https://ozeety.com/",
-  a_text: "Visit",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/cryptostation_flashgroup_slider-_sapian-group_vytb17.png",
-  heading: "Cryptostation",
-  text: "An all-in-one information station in various models, providing Blockchain based educational information. It also has full ATM-style functionality, with the capability to dispense your own OZTGcard and the possibility to buy crypto directly from the Cryptostation. ",
-  a_link: "https://blog.flashmoni.io/cryptostation-by-flashgroup-3dfb6c218d77",
-  a_text: "Lern More",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603378148/Flashcom__flashgroup_slider-_sapian-group_t2vysj.svg",
-  heading: "Flashcom",
-  text: "A dedicated team to design all graphics and user interfaces for corporate branding and image across the whole group of companies",
-  a_link: "#",
-  a_text: "Learn More",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/FlashAdchain_flashgroup_slider-_sapian-group_sywwow.png",
-  heading: "Adchain",
-  text: "A targeted ad service across all our platforms, to provide the user with information and promo offers on their interested areas and location. The revenue from this will be shared with the clients and also contribute towards our charity foundation.",
-  a_link: "https://blog.flashmoni.io/what-is-flashadchain-8bdd6abacd8e",
-  a_text: "Lern More",
-  a_class: "visit"
-},
-{
-  img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603290401/sapian-group/handshake_sapian-group.svg",
-  heading: "Flashcare",
-  text: "An independently managed foundation through which the group of companies will contribute towards helping our chosen projects and causes. Self-sustainable humanity is our  mission and we will work hard in collaboration with other NGOs and government bodies to bring this to reality",
-  a_link: "https://flashcare.org/",
-  a_text: "Visit",
-  a_class: "visit"
-},
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377434/sapian-group/FlashWallet_flashgroup_slider-_sapian-group_fhgnhb.png",
+    heading: "Flashwallet",
+    text: "All-in-one crypto and fiat wallet",
+    a_link: "#",
+    a_text: "Coming Soon",
+    a_class: "coming-soon"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/FlashXchanger_flashgroup_slider-_sapian-group_kitsq5.png",
+    heading: "FlashXchanger",
+    text: "Omnichannel exchange for trading derivatives and digital currency",
+    a_link: "https://www.flashxchanger.com/",
+    a_text: "Visit",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377435/sapian-group/oztcard_flashgroup_slider-_sapian-group_amvmer.png",
+    heading: "OZT card",
+    text: "Unique biometric all-in-one smart card with onboard encrypted cold storage",
+    a_link: "https://oztcard.com/",
+    a_text: "Visit",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377435/sapian-group/masternode-2_flashgroup_slider-_sapian-group_ekvruy.png",
+    heading: "OZTG Core Wallet",
+    text: "Masternode and Staking rewards wallet for wealth creation and passive income",
+    a_link: "https://ozeety.com/",
+    a_text: "Visit",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/cryptostation_flashgroup_slider-_sapian-group_vytb17.png",
+    heading: "Cryptostation",
+    text: "An all-in-one information station in various models, providing Blockchain based educational information. It also has full ATM-style functionality, with the capability to dispense your own OZTGcard and the possibility to buy crypto directly from the Cryptostation. ",
+    a_link: "https://blog.flashmoni.io/cryptostation-by-flashgroup-3dfb6c218d77",
+    a_text: "Lern More",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603378148/Flashcom__flashgroup_slider-_sapian-group_t2vysj.svg",
+    heading: "Flashcom",
+    text: "A dedicated team to design all graphics and user interfaces for corporate branding and image across the whole group of companies",
+    a_link: "#",
+    a_text: "Learn More",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603377433/sapian-group/FlashAdchain_flashgroup_slider-_sapian-group_sywwow.png",
+    heading: "Adchain",
+    text: "A targeted ad service across all our platforms, to provide the user with information and promo offers on their interested areas and location. The revenue from this will be shared with the clients and also contribute towards our charity foundation.",
+    a_link: "https://blog.flashmoni.io/what-is-flashadchain-8bdd6abacd8e",
+    a_text: "Lern More",
+    a_class: "visit"
+  },
+  {
+    img: "https://res.cloudinary.com/sapiangroup/image/upload/q_auto/v1603290401/sapian-group/handshake_sapian-group.svg",
+    heading: "Flashcare",
+    text: "An independently managed foundation through which the group of companies will contribute towards helping our chosen projects and causes. Self-sustainable humanity is our  mission and we will work hard in collaboration with other NGOs and government bodies to bring this to reality",
+    a_link: "https://flashcare.org/",
+    a_text: "Visit",
+    a_class: "visit"
+  },
 ];
 
 
@@ -97,7 +96,7 @@ function next() {
   setTimeout(() => {
 
     let aLink = document.getElementById("comp_link");
-    
+
     aLink.innerHTML = new_left_data.a_text;
     aLink.setAttribute('href', new_left_data.a_link);
     aLink.setAttribute('target', '_BLANK');
@@ -170,7 +169,7 @@ function prev() {
   // changing link
   setTimeout(() => {
     let aLink = document.getElementById("comp_link");
-    
+
     aLink.innerHTML = new_left_data.a_text;
     aLink.setAttribute('href', new_left_data.a_link);
     aLink.setAttribute('target', '_BLANK');
@@ -283,3 +282,30 @@ let fun = document.querySelector('.fun');
 setInterval(() => {
   fun.classList.toggle('flip');
 }, 6000);
+
+let sec = document.getElementsByClassName('sec-1');
+let duration = 4;
+// setInterval(shootStart, 1000);
+
+function shootStart() {
+
+  let dot = document.createElement('div');
+  dot.className = 'dot';
+
+  sec.innerHTML += dot.innerHTML;
+
+  var t = Math.floor(Math.random() * (98 - 1)) + 1;
+  var l = Math.floor(Math.random() * (98 - 1)) + 1;
+  var delay = Math.floor(Math.random() * (5 - 1)) + 1;
+
+  dot.style.left = l + "%";
+  dot.style.top = t + "%";
+
+  dot.style.animation = "blink";
+  dot.style.animationDuration = duration + "s";
+  dot.style.animationIterationCount = "forwards";
+  dot.style.animationDelay = delay + "s";
+  setTimeout(() => {
+    dot.removeAttribute('style');
+  }, duration);
+}

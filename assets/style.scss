@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&display=swap');
 $bg: 'https://res.cloudinary.com/dmeppscpx/image/upload/w_1920,f_auto,q_auto/v1602337522/sapiangroup/bg_sapian-group.png';
 $accent: #205cff;
 $accentDark: #040e4e;
@@ -34,7 +34,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     height: 300vh;
     scroll-behavior: smooth;
 
@@ -42,6 +41,7 @@ body {
 }
 
 body {
+    font-family: 'Heebo', sans-serif;
     overflow-x: hidden !important;
 }
 
@@ -49,6 +49,11 @@ h1,
 h2 {
     font-size: clamp(28px, 15vw, 40px);
     font-weight: 200;
+}
+
+p {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 200 !important;
 }
 
 // debug
@@ -75,8 +80,24 @@ h2 {
 }
 
 nav {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    perspective: 100;
+    transform-style: preserve-3d;
+
+    a {
+        transform-style: preserve-3d;
+        color: white !important;
+        transition: .3s !important;
+        transform-origin: center;
+
+        &:hover {
+            transform: translateZ(1.7px);
+            color: rgb(4, 247, 255) !important;
+        }
+    }
+
     width: 100%;
-    
+
     .navbar-toggler {
         &:focus {
             outline: none !important;
@@ -85,7 +106,7 @@ nav {
 
     .navbar-brand {
         img {
-            width: 120px !important;
+            width: 78px !important;
         }
     }
 }
@@ -95,14 +116,10 @@ nav {
     font-weight: 600;
 }
 
+
 .intro {
-    display: none !important; // remove after development
-    position: fixed;
-    z-index: 2;
     width: 100%;
-    height: 100vh;
-    background-color: $accentDark;
-    animation: gone 2s ease forwards 4s;
+    position: relative;
 
     .group {
         opacity: 0;
@@ -125,63 +142,98 @@ nav {
         }
     }
 
-    .logo {
-        #sapian {
-            width: calc(20vw + 5rem);
-            animation: fill-line 2s ease forwards 3.5s !important;
+    .logo-parent {
+        position: relative;
 
-            path {
-                &:nth-child(1) {
-                    stroke-dasharray: 455.84344482421875px;
-                    stroke-dashoffset: 455.84344482421875px;
-                    animation: sapian 2s ease forwards;
+        .silver {
+            position: absolute;
+            width: calc(15vw + 12rem);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603646319/sapian-group/Sapian_Logo_mnwwyl.svg);
+            mask-repeat: no-repeat;
+            mask-position: bottom;
+            mask-size: contain;
+            opacity: 0;
+
+            animation: silver ease-in-out 2s forwards 3s;
+
+            @keyframes silver {
+                to {
+                    opacity: 1;
                 }
+            }
+        }
 
-                &:nth-child(2) {
-                    stroke-dasharray: 455.8554992675781px;
-                    stroke-dashoffset: 455.8554992675781px;
-                    animation: sapian 2s ease forwards 0.3s;
-                }
+        .logo {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
 
-                &:nth-child(3) {
-                    stroke-dasharray: 246.47296142578125px;
-                    stroke-dashoffset: 246.47296142578125px;
-                    animation: sapian 2s ease forwards 0.6s;
-                }
+            animation: to-silver ease-in-out 2s forwards 3s;
 
-                &:nth-child(4) {
-                    stroke-dasharray: 635.5220947265625px;
-                    stroke-dashoffset: 635.5220947265625px;
-                    animation: sapian 2s ease forwards 0.9s;
-                }
-
-                &:nth-child(5) {
-                    stroke-dasharray: 499.5021057128906px;
-                    stroke-dashoffset: 499.5021057128906px;
-                    animation: sapian 2s ease forwards 1.2s;
-                }
-
-                &:nth-child(6) {
-                    stroke-dasharray: 559.6683349609375px;
-                    stroke-dashoffset: 559.6683349609375px;
-                    animation: sapian 2s ease forwards 1.5s;
-                }
-
-                @keyframes sapian {
-                    to {
-                        stroke-dashoffset: 0;
-                    }
+            @keyframes to-silver {
+                to {
+                    opacity: 0;
                 }
             }
 
-            @keyframes fill-line {
+            #sapian {
+                width: calc(15vw + 12rem);
 
-                to {
-                    transform: scale(2);
+                path {
+                    &:nth-child(1) {
+                        stroke-dasharray: 455.84344482421875px;
+                        stroke-dashoffset: 455.84344482421875px;
+                        animation: sapian 2s ease forwards;
+                    }
+
+                    &:nth-child(2) {
+                        stroke-dasharray: 455.8554992675781px;
+                        stroke-dashoffset: 455.8554992675781px;
+                        animation: sapian 2s ease forwards 0.3s;
+                    }
+
+                    &:nth-child(3) {
+                        stroke-dasharray: 246.47296142578125px;
+                        stroke-dashoffset: 246.47296142578125px;
+                        animation: sapian 2s ease forwards 0.6s;
+                    }
+
+                    &:nth-child(4) {
+                        stroke-dasharray: 635.5220947265625px;
+                        stroke-dashoffset: 635.5220947265625px;
+                        animation: sapian 2s ease forwards 0.9s;
+                    }
+
+                    &:nth-child(5) {
+                        stroke-dasharray: 499.5021057128906px;
+                        stroke-dashoffset: 499.5021057128906px;
+                        animation: sapian 2s ease forwards 1.2s;
+                    }
+
+                    &:nth-child(6) {
+                        stroke-dasharray: 559.6683349609375px;
+                        stroke-dashoffset: 559.6683349609375px;
+                        animation: sapian 2s ease forwards 1.5s;
+                    }
+
+                    @keyframes sapian {
+                        to {
+                            stroke-dashoffset: 0;
+                        }
+                    }
                 }
             }
         }
     }
+
 }
 
 .bg {
@@ -221,21 +273,20 @@ nav {
 .scroll-guid {
     position: absolute;
     z-index: 999;
-    width: 40px;
-    height: 60px;
+    width: 35px;
+    height: 50px;
     border-radius: 25px;
-    background-color: rgba($color: #fff, $alpha: 0.8);
-    border: 3px solid #04005c;
+    // background-color: rgba($color: #fff, $alpha: 0.8);
+    border: 3px solid white;
     bottom: 40px;
     left: 0;
     right: 0;
     margin: auto;
-    animation: scroll-guid 2s ease-in-out infinite;
-    transition: .3s;
+    animation: scroll-guid 2s ease-in-out infinite 4s;
 
     &:hover {
         transition: .3s;
-        background-color: white;
+        background-color: rgba($color: #fff, $alpha: 0.5);
         cursor: pointer;
     }
 
@@ -262,7 +313,7 @@ nav {
         margin: auto;
         width: 5px;
         height: 20px;
-        background-color: #04005c;
+        background-color: white;
 
         animation: scroll 2s ease-in-out infinite 2s;
 
@@ -295,18 +346,70 @@ main {
     animation: to-front 2s ease forwards 5s;
 
     .sec-1 {
-        background-size: cover;
         height: 100vh;
+        perspective: 1000;
         position: relative;
-        color: $footer;
+        color: white;
+        background-color: #020400;
 
-        .learn-more {
-            margin-top: 1rem;
-            border: none;
-            background-color: $accentDark;
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 4px;
+        .motto {
+            margin-top: 5em;
+            font-weight: 100;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            opacity: 1;
+            // filter: blur(1px);
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0) translateY(0) scale(1);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: translateX(100px) translateY(100px) scale(0);
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .bg {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                z-index: -1;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center;
+                animation: move-earth 6s cubic-bezier(.66, 0, .65, 1.37) forwards;
+            }
+        }
+
+
+        @keyframes move-earth {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         #sapian-logo {
@@ -335,10 +438,10 @@ main {
         color: white;
         // height: 100vh;
         // margin-top: 7.5rem;
-        background-color: $accentDark;
+        background: rgb(2, 4, 0);
+        background: linear-gradient(180deg, rgba(2, 4, 0, 1) 13%, rgba(4, 14, 78, 1) 84%);
         // background: url('img/art.svg') no-repeat;
-        background-size: cover;
-        background-position: bottom;
+        // background-position: bottom;
         padding-bottom: 5rem;
 
         p {
@@ -679,16 +782,80 @@ main {
 
         }
 
-        // companies
-
         // flashgroup
         .flashgroup-page {
             position: absolute;
+            background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto/v1598204257/FLASHMONI_IMAGES/images/services_zweajh.jpg') no-repeat;
+            background-size: cover;
+            color: #c97c1f;
             top: 0;
             left: 0;
             width: 100%;
-            height: 120vh;
+            height: 100%;
             clip-path: circle(0%);
+
+            .flashgroup-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                .slider {
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+
+                    .flash-comp {
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: auto;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            opacity: 0.8;
+                            filter: blur(2px);
+                        }
+                    }
+
+                    .glass {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 2;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: auto;
+                        background-color: rgba($color: #fff, $alpha: 0.1);
+                    }
+                }
+
+                .flash-link {
+                    width: 100%;
+                    height: 300px;
+                    position: absolute;
+                    bottom: 100px;
+                    left: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        border: 1px solid #c97c1f;
+                        padding: 0.5rem 2rem;
+                    }
+                }
+
+            }
 
             #comp_link {
                 color: white;
@@ -701,195 +868,6 @@ main {
                 &:hover {
                     background-color: #6000c7;
                     box-shadow: 0 0 15px rgba($color: #8e2cf9, $alpha: 0.5);
-                }
-            }
-
-            .flashgroup {
-                position: absolute;
-                color: white;
-                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603129971/sapian-group/science-fiction-space-wallpaper-awesome-nebula-somewhere-dark-deep-space_sapian-group.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                height: 120vh !important;
-                overflow: hidden !important;
-                animation: bg-move 250s infinite;
-
-                #slide-image {
-                    width: 100%;
-                    height: 150px !important;
-                }
-
-
-                .coming-soon {
-                    display: none !important;
-                    background: none !important;
-                }
-
-                .visit {
-                    background-color: #8e2cf9 !important;
-                }
-
-
-                #slid_img {
-                    width: 100%;
-                    text-align: center;
-
-                }
-
-                .b-word {
-                    font-weight: 200;
-                    font-size: 64px;
-                }
-
-                .slider-container {
-                    margin-top: 7rem;
-                }
-
-                .slide-parent {
-                    width: clamp(100%, 50%, 50vw);
-                }
-
-                .slideshow {
-                    padding: 0rem 0 5rem 0;
-                    width: 100%;
-                    position: relative;
-
-                    .side-text {
-                        margin: auto;
-                        text-align: center;
-                        text-justify: inter-word;
-                        color: #fff;
-                    }
-
-                    #side-text-p {
-                        text-shadow: 5px 5px 25px rgba($color: #111, $alpha: 0.7);
-                        font-size: clamp(11px, 1.5vw, 16px);
-                        text-align: center !important;
-                        // min-width: 526px;
-                    }
-
-                    .slider {
-                        padding: 1rem;
-                        margin-top: 3rem;
-                        width: 100%;
-                        background: rgb(255, 255, 255);
-                        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.7959558823529411) 75%, rgba(255, 255, 255, 0) 100%);
-                        border-radius: 5px;
-                    }
-
-                    #slid_img {
-                        width: 350px;
-                    }
-
-                    #slide-text {
-                        height: 150px;
-                    }
-
-                    @keyframes flip-right {
-                        0% {
-                            transform: translateX(0%);
-                            opacity: 1;
-                        }
-
-                        50% {
-                            transform: translateX(100%);
-                            opacity: 0;
-                        }
-
-                        100% {
-                            transform: translateX(0%);
-                            opacity: 1;
-                        }
-                    }
-
-                    @keyframes flip-left {
-                        0% {
-                            transform: translateX(0%);
-                            opacity: 1;
-                        }
-
-                        50% {
-                            transform: translateX(-100%);
-                            opacity: 0;
-                        }
-
-                        100% {
-                            transform: translateX(0%);
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                .slide-btns {
-                    svg {
-                        width: 25px;
-                        height: 25px;
-
-                        #inner {
-                            transform-origin: center;
-                            transform-box: fill-box;
-                            transition: .3s;
-                        }
-
-                        &:hover #inner {
-                            transition: .3s;
-                            transform: scale(0.8);
-                        }
-                    }
-
-                    .next-btn {
-                        width: 25px;
-                        height: 25px;
-                        z-index: 999;
-                        transform: rotate(180deg);
-                        transform-origin: center;
-                        transform-box: fill-box;
-                        cursor: pointer;
-
-                        @keyframes go-ease-right {
-                            0% {
-                                transform: translateX(0) rotate(180deg);
-                                opacity: 1;
-                            }
-
-                            50% {
-                                transform: translateX(400px) rotate(360deg);
-                                opacity: 0;
-                            }
-
-                            100% {
-                                transform: translateX(0) rotate(180deg);
-                                opacity: 1;
-                            }
-                        }
-                    }
-
-                    .prev-btn {
-                        width: 25px;
-                        height: 25px;
-                        z-index: 999;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                        cursor: pointer;
-
-                        @keyframes go-ease-left {
-                            0% {
-                                transform: translateX(0) rotate(0);
-                                opacity: 1;
-                            }
-
-                            50% {
-                                transform: translateX(-400px) rotate(-180deg);
-                                opacity: 0;
-                            }
-
-                            100% {
-                                transform: translateX(0) rotate(0);
-                                opacity: 1;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -1006,8 +984,8 @@ main {
             background: url('https://res.cloudinary.com/sapiangroup/image/upload/f_auto,q_auto,w_1900/v1603402583/sapian-group/asset-bg_wsxzcw.jpg') no-repeat;
             background-size: cover;
 
-            .comp-logo{
-                img{
+            .comp-logo {
+                img {
                     mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/sapian-asset_lmgije.svg);
                     mask-size: cover;
                     mask-position: center;
