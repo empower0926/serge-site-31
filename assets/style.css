@@ -141,8 +141,9 @@ nav .navbar-brand img {
 }
 
 .intro .logo-parent .silver {
+  display: none;
   position: absolute;
-  width: calc(8vw + 12rem);
+  width: calc(8vw + 8rem);
   top: 0;
   bottom: 0;
   left: 0;
@@ -180,8 +181,6 @@ nav .navbar-brand img {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-animation: to-silver ease-in-out 2s forwards 3s;
-          animation: to-silver ease-in-out 2s forwards 3s;
 }
 
 @-webkit-keyframes to-silver {
@@ -197,7 +196,7 @@ nav .navbar-brand img {
 }
 
 .intro .logo-parent .logo #sapian {
-  width: calc(8vw + 12rem);
+  width: calc(8vw + 8rem);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -419,7 +418,7 @@ main .sec-1 {
 
 main .sec-1 .motto {
   margin-top: 2em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 18px;
   letter-spacing: 1.2px;
   text-shadow: 5px 5px 5px #020735;
@@ -478,25 +477,49 @@ main .sec-1 .bg {
   background-size: cover;
 }
 
-main .sec-1 .bg .simpleParallax {
-  overflow: hidden !important;
-  -webkit-transform: translateZ(0) translateX(-50px) scale(1.1) !important;
-          transform: translateZ(0) translateX(-50px) scale(1.1) !important;
-}
-
 main .sec-1 .bg img {
   opacity: 1;
-  width: 200%;
+  width: 320%;
   height: 100% !important;
   -o-object-fit: cover !important;
      object-fit: cover !important;
   -o-object-position: bottom;
      object-position: bottom;
-  -webkit-animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
-          animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
+  -webkit-animation: fade-bg 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards, move-bg 6s ease-in-out infinite;
+          animation: fade-bg 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards, move-bg 6s ease-in-out infinite;
 }
 
-@-webkit-keyframes move-earth {
+@-webkit-keyframes move-bg {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-bg {
   from {
     opacity: 0;
   }
@@ -505,7 +528,7 @@ main .sec-1 .bg img {
   }
 }
 
-@keyframes move-earth {
+@keyframes fade-bg {
   from {
     opacity: 0;
   }
@@ -1511,6 +1534,8 @@ p {
 @media (min-width: 768px) {
   .sec-1 .bg img {
     width: 100% !important;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
     opacity: 1 !important;
   }
   .sec-1 .motto {

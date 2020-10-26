@@ -121,7 +121,6 @@ nav {
 .intro {
     width: 100%;
     position: relative;
-
     .group {
         opacity: 0;
         animation: fade 2s ease forwards 3.5s;
@@ -147,8 +146,9 @@ nav {
         position: relative;
 
         .silver {
+            display: none;
             position: absolute;
-            width: calc(8vw + 12rem);
+            width: calc(8vw + 8rem);
             top: 0;
             bottom: 0;
             left: 0;
@@ -176,7 +176,7 @@ nav {
             left: 0;
             right: 0;
             margin: auto;
-            animation: to-silver ease-in-out 2s forwards 3s;
+            // animation: to-silver ease-in-out 2s forwards 3s;
 
             @keyframes to-silver {
                 to {
@@ -185,7 +185,7 @@ nav {
             }
 
             #sapian {
-                width: calc(8vw + 12rem);
+                width: calc(8vw + 8rem);
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -361,7 +361,7 @@ main {
 
         .motto {
             margin-top: 2em;
-            font-weight: 300;
+            font-weight: 100;
             font-size: 18px;
             letter-spacing: 1.2px;
             text-shadow: 5px 5px 5px rgba($color: #020735, $alpha: 1);
@@ -405,27 +405,36 @@ main {
             background-position: center;
             background-size: cover;
 
-            .simpleParallax {
-                overflow: hidden !important;
-                transform: translateZ(0) translateX(-50px) scale(1.1) !important;
-            }
-
             // background: url(img/shiny-space-abstract-background.jpg) no-repeat;
             // background-size: cover;
             // background-position: center;
             // opacity: 0.5;
             img {
                 opacity: 1;
-                width: 200%;
+                width: 320%;
                 height: 100% !important;
                 object-fit: cover !important;
                 object-position: bottom;
-                animation: move-earth 6s cubic-bezier(.66, 0, .65, 1.37) forwards;
+                animation: fade-bg 6s cubic-bezier(.66, 0, .65, 1.37) forwards, move-bg 6s ease-in-out infinite;
+            }
+        }
+
+        @keyframes move-bg {
+            0%{
+                transform: translateY(0);
+            }
+
+            50%{
+                transform: translateY(10px);
+            }
+
+            100%{
+                transform: translateY(0);
             }
         }
 
 
-        @keyframes move-earth {
+        @keyframes fade-bg {
             from {
                 opacity: 0;
             }
@@ -1308,7 +1317,8 @@ p {
         .bg {
             img {
                 width: 100% !important;
-                opacity: 1!important;
+                transform: translateX(-25px);
+                opacity: 1 !important;
             }
         }
 
