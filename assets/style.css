@@ -58,7 +58,6 @@ p {
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.5);
   -webkit-perspective: 100;
           perspective: 100;
   -webkit-transform-style: preserve-3d;
@@ -67,6 +66,7 @@ nav {
 }
 
 nav a {
+  font-size: 14px !important;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   color: white !important;
@@ -142,7 +142,7 @@ nav .navbar-brand img {
 
 .intro .logo-parent .silver {
   position: absolute;
-  width: calc(15vw + 12rem);
+  width: calc(8vw + 12rem);
   top: 0;
   bottom: 0;
   left: 0;
@@ -152,10 +152,10 @@ nav .navbar-brand img {
           mask-image: url(https://res.cloudinary.com/sapiangroup/image/upload/v1603646319/sapian-group/Sapian_Logo_mnwwyl.svg);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-position: bottom;
-          mask-position: bottom;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
   opacity: 0;
   -webkit-animation: silver ease-in-out 2s forwards 3s;
           animation: silver ease-in-out 2s forwards 3s;
@@ -175,7 +175,7 @@ nav .navbar-brand img {
 
 .intro .logo-parent .logo {
   position: absolute;
-  top: 0;
+  top: 3px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -197,7 +197,13 @@ nav .navbar-brand img {
 }
 
 .intro .logo-parent .logo #sapian {
-  width: calc(15vw + 12rem);
+  width: calc(8vw + 12rem);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .intro .logo-parent .logo #sapian path:nth-child(1) {
@@ -408,14 +414,15 @@ main .sec-1 {
           perspective: 1000;
   position: relative;
   color: white;
-  background-color: #020400;
+  background-color: black;
 }
 
 main .sec-1 .motto {
-  margin-top: 5em;
-  font-weight: 100;
-  font-size: 32px;
-  letter-spacing: 2px;
+  margin-top: 2em;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  text-shadow: 5px 5px 5px #020735;
 }
 
 main .sec-1 .dot {
@@ -462,18 +469,29 @@ main .sec-1 .dot {
 main .sec-1 .bg {
   z-index: -1;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#020024));
+  background: linear-gradient(180deg, black 0%, #020024 100%);
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+main .sec-1 .bg .simpleParallax {
+  overflow: hidden !important;
+  -webkit-transform: translateZ(0) translateX(-50px) scale(1.1) !important;
+          transform: translateZ(0) translateX(-50px) scale(1.1) !important;
 }
 
 main .sec-1 .bg img {
-  z-index: -1;
-  width: 100% !important;
+  opacity: 1;
+  width: 200%;
   height: 100% !important;
   -o-object-fit: cover !important;
      object-fit: cover !important;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
   -webkit-animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
           animation: move-earth 6s cubic-bezier(0.66, 0, 0.65, 1.37) forwards;
 }
@@ -523,9 +541,9 @@ main .sec-1 .main-content .heading svg {
 main .sec-2 {
   position: relative;
   color: white;
-  background: #020400;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #020400), color-stop(84%, #040e4e));
-  background: linear-gradient(180deg, #020400 13%, #040e4e 84%);
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), to(#020024));
+  background: linear-gradient(180deg, #020024 0%, #020024 100%);
   padding-bottom: 5rem;
 }
 
@@ -1491,6 +1509,13 @@ p {
 }
 
 @media (min-width: 768px) {
+  .sec-1 .bg img {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+  .sec-1 .motto {
+    font-size: 24px !important;
+  }
   .ollorun-page p {
     text-align-last: left !important;
   }
