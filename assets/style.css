@@ -58,6 +58,7 @@ p {
 }
 
 nav {
+  background-color: rgba(0, 0, 0, 0.9);
   -webkit-perspective: 100;
           perspective: 100;
   -webkit-transform-style: preserve-3d;
