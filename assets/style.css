@@ -451,8 +451,8 @@ main .sec-1 .clouds img:nth-child(2) {
 main .sec-1 .clouds img:nth-child(3) {
   -webkit-transform: translateX(900px);
           transform: translateX(900px);
-  -webkit-animation: clouds 12s linear infinite;
-          animation: clouds 12s linear infinite;
+  -webkit-animation: clouds 22s linear infinite;
+          animation: clouds 22s linear infinite;
 }
 
 @-webkit-keyframes clouds {
