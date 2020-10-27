@@ -121,6 +121,7 @@ nav {
 .intro {
     width: 100%;
     position: relative;
+
     .group {
         opacity: 0;
         animation: fade 2s ease forwards 3.5s;
@@ -359,7 +360,7 @@ main {
         background-color: black;
 
 
-        .clouds{
+        .clouds {
             position: absolute;
             top: 0;
             left: 0;
@@ -367,43 +368,45 @@ main {
             height: 100vh;
             overflow: hidden;
 
-            img{
+            img {
                 width: 100%;
                 position: absolute;
                 opacity: 0.06;
 
-                &:nth-child(1){
+                &:nth-child(1) {
                     display: none;
                     transform: translateX(400px);
                     animation: clouds 12s linear infinite;
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     display: none;
                     transform: translateX(700px);
                     animation: clouds 12s ease-in-out infinite;
                 }
-                &:nth-child(3){
+
+                &:nth-child(3) {
                     // display: none;
                     transform: translateX(900px);
                     animation: clouds 22s linear infinite;
                 }
 
                 @keyframes clouds {
-                    0%{
+                    0% {
                         transform: translateX(0);
                     }
 
-                    50%{
+                    50% {
                         transform: translateX(200px);
                     }
 
-                    100%{
+                    100% {
                         transform: translateX(0);
                     }
                 }
             }
 
-            
+
         }
 
         .motto {
@@ -447,15 +450,9 @@ main {
             left: 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(2, 0, 36, 1) 100%);
             overflow: hidden;
-
-            // background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603308927/sapian-group/diamonds_sapian-group.jpg') no-repeat;
             background-position: center;
             background-size: cover;
 
-            // background: url(img/shiny-space-abstract-background.jpg) no-repeat;
-            // background-size: cover;
-            // background-position: center;
-            // opacity: 0.5;
             img {
                 opacity: 1;
                 width: 320%;
@@ -467,15 +464,15 @@ main {
         }
 
         @keyframes move-bg {
-            0%{
+            0% {
                 transform: translateY(0);
             }
 
-            50%{
+            50% {
                 transform: translateY(10px);
             }
 
-            100%{
+            100% {
                 transform: translateY(0);
             }
         }
@@ -515,12 +512,8 @@ main {
     .sec-2 {
         position: relative;
         color: white;
-        // height: 100vh;
-        // margin-top: 7.5rem;
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 1) 100%);
-        // background: url('img/art.svg') no-repeat;
-        // background-position: bottom;
         padding-bottom: 5rem;
 
         p {
@@ -1359,7 +1352,7 @@ p {
 
 @media (min-width: 768px) {
 
-    nav{
+    nav {
         background: none !important;
     }
 
