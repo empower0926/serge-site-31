@@ -10,6 +10,8 @@ $workflow: #fff;
 $core: #010418;
 $footer: #00020c;
 
+$opacity: 0.3;
+
 // 003ee7
 :root {
     font-size: 16px;
@@ -875,27 +877,8 @@ main {
 
                 .slider {
                     width: 100%;
-                    height: 300px;
+                    height: 100%;
                     position: relative;
-
-                    // .flash-comp {
-                    //     z-index: 1;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     position: absolute;
-                    //     top: 0;
-                    //     left: 0;
-                    //     bottom: 0;
-                    //     right: 0;
-                    //     margin: auto;
-
-                    //     img {
-                    //         width: 100%;
-                    //         height: 100%;
-                    //         object-fit: cover;
-                    //         opacity: 0.8;
-                    //         filter: blur(2px);
-                    //     }
                 }
 
                 .glass {
@@ -908,8 +891,7 @@ main {
                     bottom: 0;
                     right: 0;
                     margin: auto;
-                    // background-color: rgba($color: #fff, $alpha: 0.1);
-
+                    
                     .fg-slider {
                         display: flex;
                         flex-direction: column;
@@ -925,9 +907,6 @@ main {
                     .fg-slide {
                         width: 100%;
                     }
-
-
-
                     .fg-cell {
                         position: relative;
                         display: flex;
@@ -939,12 +918,12 @@ main {
                         
                         &:nth-child(1) {
                             background: rgb(14, 154, 255);
-                            background: linear-gradient(45deg, rgba(14, 154, 255, 0.3) 0%, rgba(125, 201, 255, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(14, 154, 255, $opacity) 0%, rgba(125, 201, 255, $opacity) 100%) !important;
                         }
 
                         &:nth-child(2) {
                             background: rgb(120, 106, 241);
-                            background: linear-gradient(45deg, rgba(120, 106, 241, 0.3) 0%, rgba(180, 143, 249, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(120, 106, 241, $opacity) 0%, rgba(180, 143, 249, $opacity) 100%) !important;
 
                             a {
                                 background: rgb(120, 106, 241);
@@ -952,14 +931,14 @@ main {
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+                                    box-shadow: 0 5px 25px rgba(54, 134, 243, $opacity);
                                 }
                             }
                         }
 
                         &:nth-child(3) {
                             background: rgb(201, 146, 6);
-                            background: linear-gradient(45deg, rgba(201, 146, 6, 0.3) 0%, rgba(207, 186, 17, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(201, 146, 6, $opacity) 0%, rgba(207, 186, 17, $opacity) 100%) !important;
 
                             a {
                                 background: rgb(201, 146, 6);
@@ -967,14 +946,14 @@ main {
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(201, 146, 6, 0.3);
+                                    box-shadow: 0 5px 25px rgba(201, 146, 6, $opacity);
                                 }
                             }
                         }
 
                         &:nth-child(4) {
                             background: rgb(91, 28, 136);
-                            background: linear-gradient(45deg, rgba(91, 28, 136, 0.3) 0%, rgba(127, 80, 163, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(91, 28, 136, $opacity) 0%, rgba(127, 80, 163, $opacity) 100%) !important;
 
                             a {
                                 background: rgb(91, 28, 136);
@@ -982,19 +961,19 @@ main {
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(91, 28, 136, 0.3);
+                                    box-shadow: 0 5px 25px rgba(91, 28, 136, $opacity);
                                 }
                             }
                         }
 
                         &:nth-child(5) {
                             background: rgb(144, 29, 171);
-                            background: linear-gradient(45deg, rgba(144, 29, 171, 0.3) 0%, rgba(232, 87, 162, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(144, 29, 171, $opacity) 0%, rgba(232, 87, 162, $opacity) 100%) !important;
                         }
 
                         &:nth-child(6) {
                             background: rgb(105, 240, 251);
-                            background: linear-gradient(45deg, rgba(105, 240, 251, 0.3) 0%, rgba(156, 253, 199, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(105, 240, 251, $opacity) 0%, rgba(156, 253, 199, $opacity) 100%) !important;
 
                             a {
                                 background: rgb(105, 240, 251);
@@ -1002,27 +981,27 @@ main {
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(105, 240, 251, 0.3);
+                                    box-shadow: 0 5px 25px rgba(105, 240, 251, $opacity);
                                 }
                             }
                         }
 
                         &:nth-child(7) {
-                            background-color: rgba(255, 255, 255, 0.3) !important;
+                            background-color: rgba(255, 255, 255, $opacity) !important;
 
                             a {
                                 background-color: rgb(150, 146, 146) !important;
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(3, 3, 3, 0.3);
+                                    box-shadow: 0 5px 25px rgba(3, 3, 3, $opacity);
                                 }
                             }
                         }
 
                         &:nth-child(8) {
                             background: rgb(239, 191, 24);
-                            background: linear-gradient(45deg, rgba(239, 191, 24, 0.3) 0%, rgba(255, 255, 47, 0.3) 100%) !important;
+                            background: linear-gradient(45deg, rgba(239, 191, 24, $opacity) 0%, rgba(255, 255, 47, $opacity) 100%) !important;
 
                             a {
                                 background: rgb(239, 191, 24);
@@ -1030,7 +1009,7 @@ main {
 
                                 &:hover {
                                     transition: .3s;
-                                    box-shadow: 0 5px 25px rgba(239, 191, 24, 0.3);
+                                    box-shadow: 0 5px 25px rgba(239, 191, 24, $opacity);
                                 }
                             }
                         }
@@ -1052,6 +1031,8 @@ main {
                     }
 
                     .flickity-prev-next-button {
+                        width: 24px !important;
+                        height: 24px !important;
                         &.previous {
                             left: 15px;
                         }
@@ -1070,13 +1051,9 @@ main {
                         flex-shrink: 0;
                         bottom: -35px;
                         left: 35px;
-                        // border-radius: 2px;
-                        // box-shadow: -2px 6px 19px 0px #7f818e;
                         transition: .3s ease;
-
-                        &:hover {
-                            transform: scale(1.03);
-                        }
+                        transform: translateZ(0);
+                        backface-visibility: hidden;
                     }
 
                     .fg-img {
@@ -1119,19 +1096,13 @@ main {
                     }
 
                     .fg-see {
-                        margin-top: 20px;
-                        // text-align: center;
-                        // background-color: #fff;
-                        // color: #fbadaf;
-                        // font-weight: 600;
-                        // padding: 8px;
-                        // font-size: 14px;
-                        // // width: 160px;
-                        // border-radius: 20px;
+                        position: absolute;
+                        bottom: 12px;
+                        right: 12px;
 
                         a {
                             color: white;
-                            padding: 0.5rem 2rem;
+                            padding: 0.5rem 3rem;
                             border-radius: 4px;
                             text-shadow: none;
                             transition: .3s;
@@ -1353,9 +1324,7 @@ main {
             .flash-link {
                 width: 100%;
                 height: 300px;
-                position: absolute;
-                // bottom: 100px;
-                left: 0;
+                
 
                 a {
                     text-decoration: none;
@@ -1477,7 +1446,7 @@ main {
             &:hover {
                 transition: .3s;
                 text-decoration: none;
-                box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+                box-shadow: 0 5px 25px rgba(54, 134, 243, $opacity);
             }
         }
     }
@@ -1527,7 +1496,7 @@ main {
             &:hover {
                 transition: .3s;
                 text-decoration: none;
-                box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+                box-shadow: 0 5px 25px rgba(54, 134, 243, $opacity);
             }
         }
     }

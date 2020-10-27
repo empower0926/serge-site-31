@@ -1043,7 +1043,7 @@ main .what-we-do .flashgroup-page .flashgroup-content {
 
 main .what-we-do .flashgroup-page .flashgroup-content .slider {
   width: 100%;
-  height: 300px;
+  height: 100%;
   position: relative;
 }
 
@@ -1225,6 +1225,11 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next
   height: 50%;
 }
 
+main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next-button {
+  width: 24px !important;
+  height: 24px !important;
+}
+
 main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next-button.previous {
   left: 15px;
 }
@@ -1245,11 +1250,10 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-photo {
   left: 35px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-}
-
-main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-photo:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-img {
@@ -1291,12 +1295,14 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-sum {
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-see {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-see a {
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   border-radius: 4px;
   text-shadow: none;
   -webkit-transition: .3s;
@@ -1494,8 +1500,6 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-page-dots
 main .what-we-do .flashgroup-page .flash-link {
   width: 100%;
   height: 300px;
-  position: absolute;
-  left: 0;
 }
 
 main .what-we-do .flashgroup-page .flash-link a {
