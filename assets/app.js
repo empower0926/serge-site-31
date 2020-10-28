@@ -277,7 +277,6 @@ function showCompanyData(company, page) {
   }, 600);
 }
 
-
 let fun = document.querySelector('.fun');
 setInterval(() => {
   fun.classList.toggle('flip');
@@ -308,4 +307,22 @@ function shootStart() {
   setTimeout(() => {
     dot.removeAttribute('style');
   }, duration);
+}
+
+
+function showFounders() {
+
+  let page = document.querySelector('#founders');
+  let btn = document.querySelector('#founders-btn');
+
+  let x = 100;
+  let y = 100;
+
+  console.log(x);
+
+  page.style.clipPath = "circle(0% at " + x + "% " + y + "%";
+  page.style.animation = "open .6s ease-in-out forwards";
+  setTimeout(() => {
+    page.style.clipPath = "circle(100% at " + x + "% " + y + "%)";
+  }, 600);
 }

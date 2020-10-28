@@ -394,6 +394,27 @@ nav .navbar-brand img {
   }
 }
 
+.founders-btn {
+  position: absolute;
+  z-index: 999;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(68, 0, 156, 0.6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 1.5rem;
+  outline: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.founders-btn:hover {
+  background-color: #205cff;
+  -webkit-box-shadow: 0 0 15px #040e4e;
+          box-shadow: 0 0 15px #040e4e;
+}
+
 main {
   background-color: #fff;
   color: #040820;
@@ -2013,6 +2034,9 @@ p {
 }
 
 @media (min-width: 768px) {
+  .founders-content {
+    margin: 2rem;
+  }
   nav {
     background: none !important;
   }
@@ -2034,5 +2058,32 @@ p {
   .s-p {
     text-align-last: center !important;
   }
+}
+
+.founders {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: circle(0% at 0% 0%);
+          clip-path: circle(0% at 0% 0%);
+}
+
+.founders .founders-content {
+  background-color: #350066;
+  font-size: 16px !important;
+  border-radius: 5px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.founders .founders-content .founders-img img {
+  border-radius: 4px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-shadow: 0px 5px 15px rgba(23, 0, 41, 0.9);
+          box-shadow: 0px 5px 15px rgba(23, 0, 41, 0.9);
 }
 /*# sourceMappingURL=style.css.map */

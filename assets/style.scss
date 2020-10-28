@@ -340,6 +340,25 @@ nav {
             }
         }
     }
+    
+}
+
+.founders-btn {
+    position: absolute;
+    z-index: 999;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgba($color: #44009c, $alpha: 0.6);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 1.5rem;
+    outline: none;
+    transition: .3s;
+    &:hover{
+        background-color: $accent;
+        box-shadow: 0 0 15px $accentDark;
+    }
 }
 
 main {
@@ -360,7 +379,6 @@ main {
         position: relative;
         color: white;
         background-color: black;
-
 
         .clouds {
             position: absolute;
@@ -891,7 +909,7 @@ main {
                     bottom: 0;
                     right: 0;
                     margin: auto;
-                    
+
                     .fg-slider {
                         display: flex;
                         flex-direction: column;
@@ -907,6 +925,7 @@ main {
                     .fg-slide {
                         width: 100%;
                     }
+
                     .fg-cell {
                         position: relative;
                         display: flex;
@@ -915,7 +934,7 @@ main {
                         height: 350px;
                         margin-right: 50px;
                         border-radius: 4px;
-                        
+
                         &:nth-child(1) {
                             background: rgb(14, 154, 255);
                             background: linear-gradient(45deg, rgba(14, 154, 255, $opacity) 0%, rgba(125, 201, 255, $opacity) 100%) !important;
@@ -1033,6 +1052,7 @@ main {
                     .flickity-prev-next-button {
                         width: 24px !important;
                         height: 24px !important;
+
                         &.previous {
                             left: 15px;
                         }
@@ -1324,7 +1344,7 @@ main {
             .flash-link {
                 width: 100%;
                 height: 300px;
-                
+
 
                 a {
                     text-decoration: none;
@@ -1758,6 +1778,10 @@ p {
 
 @media (min-width: 768px) {
 
+    .founders-content{
+        margin: 2rem;
+    }
+
     nav {
         background: none !important;
     }
@@ -1790,5 +1814,37 @@ p {
 
     .s-p {
         text-align-last: center !important;
+    }
+}
+
+
+//founders
+.founders {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 0% 0%);
+    // background-color: #020735;
+    // padding: 1.5rem;
+
+
+    .founders-content {
+        background-color: rgba($color: #350066, $alpha: 1);
+        font-size: 16px !important;
+        border-radius: 5px;
+        // margin: 2rem;
+        padding: 1.5rem;
+        color: white;
+
+        .founders-img {
+            img {
+                border-radius: 4px;
+                width: 100%;
+                object-fit: contain;
+                box-shadow: 0px 5px 15px rgba($color: #170029, $alpha: 0.9);
+            }
+        }
     }
 }
