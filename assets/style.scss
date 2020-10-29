@@ -750,7 +750,7 @@ main {
                 transition: .3s !important;
                 outline: none;
                 border: none;
-
+                
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);
@@ -758,9 +758,8 @@ main {
             }
 
             #qq {
-                background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/qq_mctffq.svg') no-repeat;
+                background: url('https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/qq_mctffq.svg') no-repeat;
                 background-color: #fff;
-                background-position: center;
                 background-size: cover;
 
                 transition: .3s;
@@ -799,10 +798,9 @@ main {
             }
 
             #sapianHospitality {
-                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/sapian-asset_umtqha.svg');
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/sapian-asset_umtqha.svg');
                 background-repeat: no-repeat;
                 background-color: #fff;
-                background-position: center;
                 background-size: cover;
 
                 transition: .3s;
@@ -840,16 +838,15 @@ main {
             }
 
             #flashgroup {
-                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/flash-group_q1e2zd.svg');
+                background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/flash-group_q1e2zd.svg');
                 background-repeat: no-repeat;
                 background-color: #fff;
-                background-position: center;
                 background-size: cover;
 
                 transition: .3s;
 
                 &:hover {
-                    background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/flash-group_jrq5re.svg');
+                    background-image: url('https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603399337/sapian-group/btn7/flash-group_jrq5re.svg');
                     background-color: #3403bb;
                 }
             }

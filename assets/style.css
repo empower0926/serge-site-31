@@ -930,9 +930,8 @@ main .what-we-do .companies .company:hover {
 }
 
 main .what-we-do .companies #qq {
-  background: url("https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/qq_mctffq.svg") no-repeat;
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/qq_mctffq.svg") no-repeat;
   background-color: #fff;
-  background-position: center;
   background-size: cover;
   -webkit-transition: .3s;
   transition: .3s;
@@ -971,10 +970,9 @@ main .what-we-do .companies #ollorun:hover {
 }
 
 main .what-we-do .companies #sapianHospitality {
-  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/sapian-asset_umtqha.svg");
+  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/sapian-asset_umtqha.svg");
   background-repeat: no-repeat;
   background-color: #fff;
-  background-position: center;
   background-size: cover;
   -webkit-transition: .3s;
   transition: .3s;
@@ -1011,17 +1009,16 @@ main .what-we-do .companies #ozeety:hover {
 }
 
 main .what-we-do .companies #flashgroup {
-  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/v1603397439/sapian-group/btn7/flash-group_q1e2zd.svg");
+  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603397439/sapian-group/btn7/flash-group_q1e2zd.svg");
   background-repeat: no-repeat;
   background-color: #fff;
-  background-position: center;
   background-size: cover;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 main .what-we-do .companies #flashgroup:hover {
-  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/v1603399337/sapian-group/btn7/flash-group_jrq5re.svg");
+  background-image: url("https://res.cloudinary.com/sapiangroup/image/upload/q_auto,w_200/v1603399337/sapian-group/btn7/flash-group_jrq5re.svg");
   background-color: #3403bb;
 }
 
