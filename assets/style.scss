@@ -657,7 +657,6 @@ main {
         color: white;
         width: 100%;
         position: relative;
-        z-index: 99999;
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
             text-align: justify;
@@ -679,6 +678,9 @@ main {
         }
 
         .companies {
+            perspective: 1000;
+
+            // position: relative;
             .call-in {
                 &:after {
                     position: absolute;
@@ -732,14 +734,15 @@ main {
             }
 
             .company {
+                position: relative;
                 width: clamp(90px, 10vw, 10rem);
                 height: clamp(90px, 10vw, 10rem);
                 border-radius: 5px;
                 transition: .3s !important;
-                position: relative;
                 outline: none;
                 border: none;
                 &:hover {
+                    z-index: 999 !important;
                     cursor: pointer;
                     transform: scale(1.1);
                 }
