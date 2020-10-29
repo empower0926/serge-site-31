@@ -805,28 +805,12 @@ main .flip {
 }
 
 main .what-we-do {
+  background: url("https://res.cloudinary.com/sapiangroup/image/upload/v1603313384/sapian-group/crystals_gpsfxx.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   width: 100%;
-  height: 120vh;
   position: relative;
-}
-
-main .what-we-do .simpleParallax {
-  height: 120vh !important;
-}
-
-main .what-we-do .bg-test {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-main .what-we-do .bg-test img {
-  height: 150%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 main .what-we-do p {
@@ -2061,6 +2045,7 @@ p {
 }
 
 .founders {
+  display: none;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -2071,7 +2056,6 @@ p {
 }
 
 .founders .founders-content {
-  display: none;
   background-color: #350066;
   font-size: 16px !important;
   border-radius: 5px;

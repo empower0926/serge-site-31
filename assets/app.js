@@ -238,6 +238,11 @@ function slide() {
 }
 
 function closeDiv(compPage) {
+
+  let parent = document.querySelector('#what-we-do');
+  parent.style.transition = "max-height .3 !important";
+  parent.style.minHeight = "0";
+
   let companyPage = document.getElementById(compPage);
   companyPage.style.animation = "close .6s ease-in-out forwards"
 
@@ -253,6 +258,9 @@ function closeDiv(compPage) {
 
 function showCompanyData(company, page) {
 
+  let parent = document.querySelector('#what-we-do');
+  parent.style.transition = "max-height .3 !important";
+  parent.style.minHeight = "120vh";
   smoothscroll('#' + page);
 
   let elem = document.getElementById(company);
