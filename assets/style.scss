@@ -678,16 +678,12 @@ main {
         }
 
         .companies {
-            perspective: 1000;
-
-            // position: relative;
             .call-in {
                 &:after {
                     position: absolute;
                     color: $footer;
                     content: 'click me';
                     border-radius: 500px;
-                    z-index: 999;
                     width: 150px;
                     font-size: 28px;
                     top: -72px;
@@ -734,7 +730,6 @@ main {
             }
 
             .company {
-                position: relative;
                 width: clamp(90px, 10vw, 10rem);
                 height: clamp(90px, 10vw, 10rem);
                 border-radius: 5px;
@@ -742,7 +737,6 @@ main {
                 outline: none;
                 border: none;
                 &:hover {
-                    z-index: 999 !important;
                     cursor: pointer;
                     transform: scale(1.1);
                 }
