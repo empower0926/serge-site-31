@@ -10,7 +10,7 @@ $workflow: #fff;
 $core: #010418;
 $footer: #00020c;
 
-$opacity: 0.3;
+$opacity: 0.5;
 
 // 003ee7
 :root {
@@ -878,7 +878,7 @@ main {
                 .slider {
                     width: 100%;
                     height: 100%;
-                    position: relative;
+                    position: absolute;
                 }
 
                 .glass {
@@ -909,14 +909,14 @@ main {
                     }
 
                     .fg-cell {
-                        position: relative;
+                        position: absolute;
                         display: flex;
                         padding: 25px;
                         width: 50%;
                         height: 350px;
                         margin-right: 50px;
                         border-radius: 4px;
-
+                        
                         &:nth-child(1) {
                             background: rgb(14, 154, 255);
                             background: linear-gradient(45deg, rgba(14, 154, 255, $opacity) 0%, rgba(125, 201, 255, $opacity) 100%) !important;
@@ -1066,13 +1066,12 @@ main {
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
-                        color: #ffffff;
                         font-weight: 600;
                     }
 
                     .fg-content {
                         padding: 0 20px;
-                        color: #ffffff;
+                        color: white;
 
                     }
 
@@ -1092,8 +1091,9 @@ main {
 
                     .fg-sum {
                         margin-top: 20px;
-                        font-size: 14px;
+                        font-size: 15px;
                         display: block;
+                        font-weight: 400 !important;
                         max-height: 250px;
                     }
 
@@ -1113,8 +1113,6 @@ main {
                         }
 
                     }
-
-
 
                     @media (max-width: 1103px) {
                         .fg-cell {
@@ -1149,8 +1147,7 @@ main {
 
                     @media (max-width: 420px) {
                         .fg-see {
-                            // width: 120px;
-                            font-size: 13px;
+                            font-size: 14px;
                         }
 
                         .fg-photo {

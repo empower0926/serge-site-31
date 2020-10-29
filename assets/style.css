@@ -1049,7 +1049,7 @@ main .what-we-do .flashgroup-page .flashgroup-content {
 main .what-we-do .flashgroup-page .flashgroup-content .slider {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass {
@@ -1094,7 +1094,7 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-slide {
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1107,12 +1107,12 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell {
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(1) {
   background: #0e9aff;
-  background: linear-gradient(45deg, rgba(14, 154, 255, 0.3) 0%, rgba(125, 201, 255, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(14, 154, 255, 0.5) 0%, rgba(125, 201, 255, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(2) {
   background: #786af1;
-  background: linear-gradient(45deg, rgba(120, 106, 241, 0.3) 0%, rgba(180, 143, 249, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(120, 106, 241, 0.5) 0%, rgba(180, 143, 249, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(2) a {
@@ -1123,13 +1123,13 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(2) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
-          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
+          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(3) {
   background: #c99206;
-  background: linear-gradient(45deg, rgba(201, 146, 6, 0.3) 0%, rgba(207, 186, 17, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(201, 146, 6, 0.5) 0%, rgba(207, 186, 17, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(3) a {
@@ -1140,13 +1140,13 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(3) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(201, 146, 6, 0.3);
-          box-shadow: 0 5px 25px rgba(201, 146, 6, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(201, 146, 6, 0.5);
+          box-shadow: 0 5px 25px rgba(201, 146, 6, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(4) {
   background: #5b1c88;
-  background: linear-gradient(45deg, rgba(91, 28, 136, 0.3) 0%, rgba(127, 80, 163, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(91, 28, 136, 0.5) 0%, rgba(127, 80, 163, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(4) a {
@@ -1157,18 +1157,18 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(4) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(91, 28, 136, 0.3);
-          box-shadow: 0 5px 25px rgba(91, 28, 136, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(91, 28, 136, 0.5);
+          box-shadow: 0 5px 25px rgba(91, 28, 136, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(5) {
   background: #901dab;
-  background: linear-gradient(45deg, rgba(144, 29, 171, 0.3) 0%, rgba(232, 87, 162, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(144, 29, 171, 0.5) 0%, rgba(232, 87, 162, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(6) {
   background: #69f0fb;
-  background: linear-gradient(45deg, rgba(105, 240, 251, 0.3) 0%, rgba(156, 253, 199, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(105, 240, 251, 0.5) 0%, rgba(156, 253, 199, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(6) a {
@@ -1179,12 +1179,12 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(6) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(105, 240, 251, 0.3);
-          box-shadow: 0 5px 25px rgba(105, 240, 251, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(105, 240, 251, 0.5);
+          box-shadow: 0 5px 25px rgba(105, 240, 251, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(7) {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(7) a {
@@ -1194,13 +1194,13 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(7) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(3, 3, 3, 0.3);
-          box-shadow: 0 5px 25px rgba(3, 3, 3, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(3, 3, 3, 0.5);
+          box-shadow: 0 5px 25px rgba(3, 3, 3, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(8) {
   background: #efbf18;
-  background: linear-gradient(45deg, rgba(239, 191, 24, 0.3) 0%, rgba(255, 255, 47, 0.3) 100%) !important;
+  background: linear-gradient(45deg, rgba(239, 191, 24, 0.5) 0%, rgba(255, 255, 47, 0.5) 100%) !important;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(8) a {
@@ -1211,8 +1211,8 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-cell:nth-child(8) a:hover {
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 0 5px 25px rgba(239, 191, 24, 0.3);
-          box-shadow: 0 5px 25px rgba(239, 191, 24, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(239, 191, 24, 0.5);
+          box-shadow: 0 5px 25px rgba(239, 191, 24, 0.5);
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-page-dots {
@@ -1270,13 +1270,12 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: #ffffff;
   font-weight: 600;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-content {
   padding: 0 20px;
-  color: #ffffff;
+  color: white;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass fieldset,
@@ -1294,8 +1293,9 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass h1 {
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-sum {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 15px;
   display: block;
+  font-weight: 400 !important;
   max-height: 250px;
 }
 
@@ -1347,7 +1347,7 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-see a {
 
 @media (max-width: 420px) {
   main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-see {
-    font-size: 13px;
+    font-size: 14px;
   }
   main .what-we-do .flashgroup-page .flashgroup-content .glass .fg-photo {
     width: 130px;
@@ -1648,8 +1648,8 @@ main .ollorun-page a:hover {
   -webkit-transition: .3s;
   transition: .3s;
   text-decoration: none;
-  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
-          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
+          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
 }
 
 main .sapianHospitality-page {
@@ -1702,8 +1702,8 @@ main .fgn-page a:hover {
   -webkit-transition: .3s;
   transition: .3s;
   text-decoration: none;
-  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
-          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.3);
+  -webkit-box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
+          box-shadow: 0 5px 25px rgba(54, 134, 243, 0.5);
 }
 
 main .ozeetyBlockchain-page {
