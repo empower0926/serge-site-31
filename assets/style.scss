@@ -340,7 +340,7 @@ nav {
             }
         }
     }
-    
+
 }
 
 .founders-btn {
@@ -355,7 +355,8 @@ nav {
     padding: 0.4rem 1.5rem;
     outline: none;
     transition: .3s;
-    &:hover{
+
+    &:hover {
         background-color: $accent;
         box-shadow: 0 0 15px $accentDark;
     }
@@ -657,6 +658,7 @@ main {
         color: white;
         width: 100%;
         position: relative;
+
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
             text-align: justify;
@@ -678,12 +680,23 @@ main {
         }
 
         .companies {
+            .mobile-btns {
+                // 7482
+                button {
+                    width: 100px;
+                    height: 100px;
+                    z-index: 998;
+                }
+            }
+
+            // position: relative;
             .call-in {
                 &:after {
                     position: absolute;
                     color: $footer;
                     content: 'click me';
                     border-radius: 500px;
+                    z-index: 999;
                     width: 150px;
                     font-size: 28px;
                     top: -72px;
@@ -730,12 +743,14 @@ main {
             }
 
             .company {
+                position: relative;
                 width: clamp(90px, 10vw, 10rem);
                 height: clamp(90px, 10vw, 10rem);
                 border-radius: 5px;
                 transition: .3s !important;
                 outline: none;
                 border: none;
+
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);
@@ -901,7 +916,7 @@ main {
                         height: 350px;
                         margin-right: 50px;
                         border-radius: 4px;
-                        
+
                         &:nth-child(1) {
                             background: rgb(14, 154, 255);
                             background: linear-gradient(45deg, rgba(14, 154, 255, $opacity) 0%, rgba(125, 201, 255, $opacity) 100%) !important;
@@ -1742,7 +1757,7 @@ p {
 
 @media (min-width: 768px) {
 
-    .founders-content{
+    .founders-content {
         margin: 2rem;
     }
 

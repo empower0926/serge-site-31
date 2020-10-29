@@ -246,6 +246,10 @@ function closeDiv(compPage) {
   let companyPage = document.getElementById(compPage);
   companyPage.style.animation = "close .6s ease-in-out forwards"
 
+  setTimeout(() => {
+    companyPage.style.zIndex = "991";
+  }, 600);
+
   let logo = companyPage.querySelector('.comp-logo');
   let paragraph = companyPage.querySelector('.comp-p');
 
@@ -259,9 +263,11 @@ function closeDiv(compPage) {
 function showCompanyData(company, page) {
 
   let parent = document.querySelector('#what-we-do');
+
   parent.style.transition = "max-height .3 !important";
   parent.style.minHeight = "120vh";
   smoothscroll('#' + page);
+
 
   let elem = document.getElementById(company);
   let rect = elem.getBoundingClientRect();
@@ -278,6 +284,7 @@ function showCompanyData(company, page) {
     logo.style.animation = "fade-up 1s ease-in-out forwards";
     paragraph.style.animation = "fade-up 1.5s ease-in-out forwards 1s";
   }
+  companyPage.style.zIndex = "999";
   companyPage.style.clipPath = "circle(0% at " + x + "px " + y + "px)";
   companyPage.style.animation = "open .6s ease-in-out forwards";
   setTimeout(() => {

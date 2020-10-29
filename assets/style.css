@@ -832,11 +832,18 @@ main .what-we-do .comp-p {
   opacity: 0;
 }
 
+main .what-we-do .companies .mobile-btns button {
+  width: 100px;
+  height: 100px;
+  z-index: 998;
+}
+
 main .what-we-do .companies .call-in:after {
   position: absolute;
   color: #00020c;
   content: 'click me';
   border-radius: 500px;
+  z-index: 999;
   width: 150px;
   font-size: 28px;
   top: -72px;
@@ -906,6 +913,7 @@ main .what-we-do .companies .call-in:after {
 }
 
 main .what-we-do .companies .company {
+  position: relative;
   width: clamp(90px, 10vw, 10rem);
   height: clamp(90px, 10vw, 10rem);
   border-radius: 5px;
