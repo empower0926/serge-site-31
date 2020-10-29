@@ -1242,8 +1242,8 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next
 main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next-button svg {
   left: 25%;
   top: 25%;
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next-button {
@@ -2071,6 +2071,7 @@ p {
 }
 
 .founders .founders-content {
+  display: none;
   background-color: #350066;
   font-size: 16px !important;
   border-radius: 5px;
