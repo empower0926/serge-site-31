@@ -737,6 +737,8 @@ main {
                 border-radius: 5px;
                 transition: .3s !important;
                 position: relative;
+                outline: none;
+                border: none;
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);
