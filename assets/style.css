@@ -913,9 +913,6 @@ main .what-we-do .companies .call-in:after {
 }
 
 main .what-we-do .companies .company {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: relative;
   width: clamp(90px, 10vw, 10rem);
   height: clamp(90px, 10vw, 10rem);
   border-radius: 5px;
@@ -924,7 +921,6 @@ main .what-we-do .companies .company {
 }
 
 main .what-we-do .companies .company:hover {
-  z-index: 999 !important;
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);

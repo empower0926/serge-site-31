@@ -734,24 +734,13 @@ main {
                 }
             }
 
-            // .col {
-            //     padding: 4px !important;
-            // }
-
-            // background-attachment: fixed;
             .company {
-                transform-style: preserve-3d;
-                position: relative;
                 width: clamp(90px, 10vw, 10rem);
                 height: clamp(90px, 10vw, 10rem);
-                // width: 10rem;
-                // height: 10rem;
                 border-radius: 5px;
-                // background-color: red;
                 transition: .3s !important;
 
                 &:hover {
-                    z-index: 999 !important;
                     cursor: pointer;
                     transform: scale(1.1);
                 }
