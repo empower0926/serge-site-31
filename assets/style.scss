@@ -651,13 +651,13 @@ main {
     }
 
     .what-we-do {
-
         background: url('https://res.cloudinary.com/sapiangroup/image/upload/v1603313384/sapian-group/crystals_gpsfxx.svg') no-repeat;
         background-size: cover;
         background-position: center;
         color: white;
         width: 100%;
         position: relative;
+        z-index: 99999;
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
             text-align: justify;
