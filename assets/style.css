@@ -918,6 +918,8 @@ main .what-we-do .companies .company {
   border-radius: 5px;
   -webkit-transition: .3s !important;
   transition: .3s !important;
+  position: relative;
+  z-index: 9999;
 }
 
 main .what-we-do .companies .company:hover {

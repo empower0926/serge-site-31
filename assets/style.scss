@@ -739,7 +739,8 @@ main {
                 height: clamp(90px, 10vw, 10rem);
                 border-radius: 5px;
                 transition: .3s !important;
-
+                position: relative;
+                z-index: 9999;
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);
