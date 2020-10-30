@@ -1003,7 +1003,7 @@ main {
 
                         &:nth-child(8) {
 
-                            background: linear-gradient(342deg, rgba(62,55,2,1) 0%, rgba(22,22,21,1) 100%);
+                            background: linear-gradient(342deg, rgba(62, 55, 2, 1) 0%, rgba(22, 22, 21, 1) 100%);
 
                             a {
                                 background: linear-gradient(45deg, rgba(239, 191, 24, 0.5) 0%, rgba(255, 255, 47, 0.5) 100%) !important;
@@ -1761,13 +1761,9 @@ p {
 
 @media (min-width: 768px) {
 
-    .sec-3 {
-        p {
-            text-align-last: left !important;
-        }
-    }
-
-    .workflow {
+    .workflow,
+    .sec-3,
+    .founders {
         p {
             text-align-last: left !important;
         }
@@ -1812,7 +1808,17 @@ p {
 //founders
 .founders {
     width: 100%;
-    background-color: #00020f;
+    background-color: black;
+    padding: 0 1rem;
+    overflow: hidden;
+
+    p {
+        text-align-last: center;
+    }
+
+    span {
+        display: block;
+    }
 
     .founders-content {
         // background-color: rgba($color: #350066, $alpha: 1);
@@ -1821,11 +1827,13 @@ p {
         padding: 2rem 0;
 
         .founders-img {
+            text-align: center;
+
             img {
                 border-radius: 4px;
                 width: 100%;
                 object-fit: contain;
-                box-shadow: 0px 5px 25px 8px rgba($color: #5200bd, $alpha: 0.1);
+                // box-shadow: 0px 5px 25px 8px rgba($color: #5200bd, $alpha: 0.1);
             }
         }
     }
