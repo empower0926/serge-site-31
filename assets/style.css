@@ -1399,7 +1399,7 @@ main .what-we-do .flashgroup-page .flashgroup-content .glass .flickity-prev-next
   width: 32px;
   height: 32px;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   background: white;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
