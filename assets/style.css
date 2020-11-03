@@ -23,7 +23,6 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 300vh;
   scroll-behavior: smooth;
 }
 
@@ -2053,6 +2052,21 @@ p {
   background-color: black;
   padding: 0 1rem;
   overflow: hidden;
+}
+
+.founders a {
+  padding: 0.1rem 1rem;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 1.5px;
+  background-color: #7c1de7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.founders a:hover {
+  background-color: #205cff;
 }
 
 .founders p {
