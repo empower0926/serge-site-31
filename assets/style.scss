@@ -658,7 +658,7 @@ main {
         color: white;
         width: 100%;
         position: relative;
-
+        display: none;
         p {
             font-size: clamp(16px, 8vw, 1.2rem);
             text-align: justify;
@@ -751,7 +751,6 @@ main {
                 transition: .3s !important;
                 outline: none;
                 border: none;
-
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);

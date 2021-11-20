@@ -813,6 +813,7 @@ main .what-we-do {
   color: white;
   width: 100%;
   position: relative;
+  display: none;
 }
 
 main .what-we-do p {
